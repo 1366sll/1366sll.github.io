@@ -1,55 +1,129 @@
 /*文章的整体背景，渐变色设置*/
-#web_bg {
-	background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-	#background: #FFEFBA;
-	/* fallback for old browsers */
-	#background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);
-	/* Chrome 10-25, Safari 5.1-6 */
-	#background: linear-gradient(to right, #FFFFFF, #FFEFBA);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background: #2BC0E4;
-	/* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #EAECC6, #2BC0E4);
-	/* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #EAECC6, #2BC0E4);
-	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
 
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#web_bg {
+	  /* 背景图像的地址（url括号里）  */
+	  background: linear-gradient(
+			60deg,
+			rgba(255, 165, 150, 0.5) 5%,
+			rgba(0, 228, 255, 0.35)
+		),
+	  	url(https://img1.imgtp.com/2023/07/31/oDDopP5Q.jpg);
+	  /* 背景图像不重复 */
+	  background-repeat: no-repeat;
+	  /* 背景图像大小 */
+	  background-size: cover;
 }
 
 /* 主页所有文章页面背景 */
-#aside_content .card-widget,
+#aside_content>.card-widget,
 #recent-posts>.recent-post-item,
 .layout_page>div:first-child:not(.recent-posts),
 .layout_post>#page,
 .layout_post>#post,
 .read-mode .layout_post>#post {
 	/* 以下代表透明度为0.5 */
-	background: rgba(255, 255, 255, .5);
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.2) 0,
+		rgba(243, 112, 85, 0.2) 15%,
+		rgba(239, 78, 123, 0.2) 30%,
+		rgba(161, 102, 171, 0.2) 44%,
+		rgba(80, 115, 184, 0.2) 58%,
+		rgba(16, 152, 173, 0.2) 72%,
+		rgba(7, 179, 155, 0.2) 86%,
+		rgba(109, 186, 130, 0.2) 100%),
+		rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 100% 100%;
 }
 
 /*侧边栏页面*/
 #aside-content>.card-widget {
-	background: rgba(255, 255, 255, .6);
+	background: linear-gradient(-45deg,
+		rgba(232, 216, 185, 0.9),
+		rgba(236, 206, 197, 0.8),
+		rgba(163, 233, 235, .6),
+		rgba(189, 189, 240, 1),
+		rgba(238, 193, 234, .85));
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 250% 200%;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite !important;
 }
 
 #aside-content>.sticky_layout>.card-widget {
-	background: rgba(255, 255, 255, .6);
+	background: linear-gradient(-45deg,
+		rgba(238, 193, 234, .85),
+		rgba(232, 216, 185, 0.9),
+		rgba(236, 206, 197, 0.8),
+		rgba(163, 233, 235, 0.8),
+		rgba(189, 189, 240, 1));
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 250% 200%;
+	-webkit-animation: Gradient 10s ease infinite;
+	-moz-animation: Gradient 10s ease infinite;
+	animation: Gradient 10s ease infinite !important;
 }
 
 /*文章页面*/
 .layout>#post {
-	background: rgba(255, 255, 255, .6);
+	background: rgba(252, 153, 164, 0.8);
 }
 
 /*分类页面*/
 .layout>#page {
 
-	background: rgba(255, 255, 255, .6);
+	background: rgba(243, 217, 220, 0.8);
 }
 
 /*时间轴页面*/
 .layout>#archive {
-	background: rgba(255, 255, 255, .6);
+	background: rgba(242, 148, 242, 0.8);
 }
 
 
