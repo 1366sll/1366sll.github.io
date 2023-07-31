@@ -41,6 +41,29 @@
 	}
 }
 
+@keyframes Gradient2 {
+	0% {
+		background-position: 45% 50%;
+	}
+
+	25% {
+		background-position: 45% 45%;
+	}
+
+	50% {
+		background-position: 50% 45%;
+	}
+
+
+	75% {
+		background-position: 50% 50%;
+	}
+
+	100% {
+		background-position: 45% 50%;
+	}
+}
+
 #web_bg {
 	  /* 背景图像的地址（url括号里）  */
 	  background: linear-gradient(
@@ -52,7 +75,8 @@
 	  /* 背景图像不重复 */
 	  background-repeat: no-repeat;
 	  /* 背景图像大小 */
-	  background-size: cover;
+	  background-size: 105% 105%;
+	  animation: Gradient2 4s ease infinite !important;
 }
 
 /* 主页所有文章页面背景 */
