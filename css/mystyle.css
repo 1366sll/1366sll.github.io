@@ -43,24 +43,24 @@
 
 @keyframes Gradient2 {
 	0% {
-		background-position: 45% 50%;
+		background-position: 45% 60%;
 	}
 
 	25% {
-		background-position: 45% 45%;
+		background-position: 45% 40%;
 	}
 
 	50% {
-		background-position: 50% 45%;
+		background-position: 50% 40%;
 	}
 
 
 	75% {
-		background-position: 50% 50%;
+		background-position: 50% 60%;
 	}
 
 	100% {
-		background-position: 45% 50%;
+		background-position: 45% 60%;
 	}
 }
 
@@ -75,8 +75,8 @@
 	  /* 背景图像不重复 */
 	  background-repeat: no-repeat;
 	  /* 背景图像大小 */
-	  background-size: 105% 105%;
-	  animation: Gradient2 4s ease infinite !important;
+	  background-size: 105% 130%;
+	  animation: Gradient2 15s ease infinite !important;
 }
 
 /* 主页所有文章页面背景 */
@@ -86,7 +86,6 @@
 .layout_post>#page,
 .layout_post>#post,
 .read-mode .layout_post>#post {
-	/* 以下代表透明度为0.5 */
 	background: linear-gradient(
 		90deg,
 		rgba(247, 149, 51, 0.2) 0,
@@ -136,18 +135,56 @@
 
 /*文章页面*/
 .layout>#post {
-	background: rgba(252, 153, 164, 0.8);
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.2) 0,
+		rgba(243, 112, 85, 0.2) 15%,
+		rgba(239, 78, 123, 0.2) 30%,
+		rgba(161, 102, 171, 0.2) 44%,
+		rgba(80, 115, 184, 0.2) 58%,
+		rgba(16, 152, 173, 0.2) 72%,
+		rgba(7, 179, 155, 0.2) 86%,
+		rgba(109, 186, 130, 0.2) 100%),
+		rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 100% 100%;
 }
 
 /*分类页面*/
 .layout>#page {
-
-	background: rgba(243, 217, 220, 0.8);
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.2) 0,
+		rgba(243, 112, 85, 0.2) 15%,
+		rgba(239, 78, 123, 0.2) 30%,
+		rgba(161, 102, 171, 0.2) 44%,
+		rgba(80, 115, 184, 0.2) 58%,
+		rgba(16, 152, 173, 0.2) 72%,
+		rgba(7, 179, 155, 0.2) 86%,
+		rgba(109, 186, 130, 0.2) 100%),
+		rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 100% 100%;
 }
 
 /*时间轴页面*/
 .layout>#archive {
-	background: rgba(242, 148, 242, 0.8);
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.2) 0,
+		rgba(243, 112, 85, 0.2) 15%,
+		rgba(239, 78, 123, 0.2) 30%,
+		rgba(161, 102, 171, 0.2) 44%,
+		rgba(80, 115, 184, 0.2) 58%,
+		rgba(16, 152, 173, 0.2) 72%,
+		rgba(7, 179, 155, 0.2) 86%,
+		rgba(109, 186, 130, 0.2) 100%),
+		rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 5px rgb(66, 68, 68);
+	position: relative;
+	background-size: 100% 100%;
 }
 
 
@@ -268,8 +305,427 @@
 }
 #site-name{
     position: relative;
-    font-size: 24px; /*一定要把字体调大点，否则效果惨不忍睹！*/
+    font-size: 32px; /*一定要把字体调大点，否则效果惨不忍睹！*/
 }
 :root{
     --lyx-theme:#ed709b /*我的主题色*/
 }
+
+@font-face {
+	/*字体名称，名字可以随便起，但是注意要一致，建议英文*/
+    font-family: 'main';
+    font-display: swap;
+    src: url('./main.ttf') format("truetype");
+}
+
+@font-face {
+	/*字体名称，名字可以随便起，但是注意要一致，建议英文*/
+    font-family: 'typing';
+    font-display: swap;
+    src: url('./typing.ttf') format("truetype");
+}
+
+/* 全局默认鼠标指针 */
+body,
+html {
+	cursor: url('./mouse/WitchSpring/正常选择.cur'), auto !important;
+}
+
+/* 悬停图片时的鼠标指针 */
+img {
+	
+	cursor: url('./mouse/WitchSpring/移动.cur'), auto !important;
+}
+
+/* 选择链接标签时的鼠标指针 */
+a:hover {
+	cursor: url('./mouse/WitchSpring/链接选择.cur'), auto;
+}
+
+/* 选中输入框时的鼠标指针 */
+input:hover {
+	cursor: url('./mouse/WitchSpring/文本选择.cur'), auto;
+}
+
+/* 悬停按钮时的鼠标指针 */
+button:hover {
+	cursor: url('./mouse/WitchSpring/忙.cur'), auto;
+}
+
+/* 悬停列表标签时的鼠标指针 */
+i:hover {
+	cursor: url('./mouse/WitchSpring/精确选择.cur'), auto;
+}
+
+/* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
+#footer-wrap a:hover {
+	cursor: url('./mouse/WitchSpring/手写.cur'), auto;
+}
+
+/* 悬停页码时的鼠标指针 */
+#pagination .page-number:hover {
+	cursor: url('./mouse/WitchSpring/水平调整大小.cur'), auto;
+}
+
+/* 悬停菜单栏时的鼠标指针 */
+#nav .site-page:hover {
+	cursor: url('./mouse/WitchSpring/精确选择.cur'), auto;
+}
+
+
+/* 最新文章图标 */
+.newPost-left,
+.newPost-right {
+    position: absolute;
+    top: 0;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0 15px;
+    background-color: rgba(73, 177, 245, 0.7);
+    border-radius: 0 0 10px 10px;
+}
+
+.newPost-left {
+    left: 15px;
+}
+
+.newPost-right {
+    right: 15px;
+}
+
+
+/* 文章页H1-H6图标样式效果 */
+/* 控制风车转动速度 4s那里可以自己调节快慢 */
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  -webkit-animation: ccc 4s linear infinite;
+  animation: ccc 4s linear infinite;
+}
+/* 控制风车转动方向 -1turn 为逆时针转动，1turn 为顺时针转动，相同数字部分记得统一修改 */
+@-webkit-keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+@keyframes ccc {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-1turn);
+    transform: rotate(-1turn);
+  }
+}
+/* 设置风车颜色 */
+#content-inner.layout h1::before {
+  color: #ef50a8;
+  margin-left: -1.55rem;
+  font-size: 1.3rem;
+  margin-top: -0.23rem;
+}
+#content-inner.layout h2::before {
+  color: #fb7061;
+  margin-left: -1.35rem;
+  font-size: 1.1rem;
+  margin-top: -0.12rem;
+}
+#content-inner.layout h3::before {
+  color: #ffbf00;
+  margin-left: -1.22rem;
+  font-size: 0.95rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h4::before {
+  color: #a9e000;
+  margin-left: -1.05rem;
+  font-size: 0.8rem;
+  margin-top: -0.09rem;
+}
+#content-inner.layout h5::before {
+  color: #57c850;
+  margin-left: -0.9rem;
+  font-size: 0.7rem;
+  margin-top: 0rem;
+}
+#content-inner.layout h6::before {
+  color: #5ec1e0;
+  margin-left: -0.9rem;
+  font-size: 0.66rem;
+  margin-top: 0rem;
+}
+/* s设置风车hover动效 6s那里可以自己调节快慢*/
+#content-inner.layout h1:hover,
+#content-inner.layout h2:hover,
+#content-inner.layout h3:hover,
+#content-inner.layout h4:hover,
+#content-inner.layout h5:hover,
+#content-inner.layout h6:hover {
+  color: var(--theme-color);
+}
+#content-inner.layout h1:hover::before,
+#content-inner.layout h2:hover::before,
+#content-inner.layout h3:hover::before,
+#content-inner.layout h4:hover::before,
+#content-inner.layout h5:hover::before,
+#content-inner.layout h6:hover::before {
+  color: var(--theme-color);
+  -webkit-animation: ccc 6s linear infinite;
+  animation: ccc 6s linear infinite;
+}
+
+.toast-title {
+	font-weight: bold;
+  }
+  .toast-message {
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+  }
+  .toast-message a,
+  .toast-message label {
+	color: #FFFFFF;
+  }
+  .toast-message a:hover {
+	color: #CCCCCC;
+	text-decoration: none;
+  }
+  .toast-close-button {
+	position: relative;
+	right: -0.3em;
+	top: -0.3em;
+	float: right;
+	font-size: 20px;
+	font-weight: bold;
+	color: #FFFFFF;
+	-webkit-text-shadow: 0 1px 0 #ffffff;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.8;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	filter: alpha(opacity=80);
+	line-height: 1;
+  }
+  .toast-close-button:hover,
+  .toast-close-button:focus {
+	color: #000000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.4;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	filter: alpha(opacity=40);
+  }
+  .rtl .toast-close-button {
+	left: -0.3em;
+	float: left;
+	right: 0.3em;
+  }
+  /*Additional properties for button version
+   iOS requires the button element instead of an anchor tag.
+   If you want the anchor version, it requires `href="#"`.*/
+  button.toast-close-button {
+	padding: 0;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	-webkit-appearance: none;
+  }
+  .toast-top-center {
+	top: 0;
+	right: 0;
+	width: 100%;
+  }
+  .toast-bottom-center {
+	bottom: 0;
+	right: 0;
+	width: 100%;
+  }
+  .toast-top-full-width {
+	top: 0;
+	right: 0;
+	width: 100%;
+  }
+  .toast-bottom-full-width {
+	bottom: 0;
+	right: 0;
+	width: 100%;
+  }
+  .toast-top-left {
+	top: 12px;
+	left: 12px;
+  }
+  .toast-top-right {
+	top: 12px;
+	right: 12px;
+  }
+  .toast-bottom-right {
+	right: 12px;
+	bottom: 12px;
+  }
+  .toast-bottom-left {
+	bottom: 12px;
+	left: 12px;
+  }
+  #toast-container {
+	position: fixed;
+	z-index: 999999;
+	pointer-events: none;
+	/*overrides*/
+  }
+  #toast-container * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  }
+  #toast-container > div {
+	position: relative;
+	pointer-events: auto;
+	overflow: hidden;
+	margin: 0 0 6px;
+	padding: 15px 15px 15px 50px;
+	width: 300px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	background-position: 15px center;
+	background-repeat: no-repeat;
+	color: #0e0808;
+	opacity: 1.0;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	filter: alpha(opacity=80);
+  }
+  #toast-container > div.rtl {
+	direction: rtl;
+	padding: 15px 50px 15px 15px;
+	background-position: right 15px center;
+  }
+  #toast-container > div:hover {
+	-moz-box-shadow: 0 0 12px #000000;
+	-webkit-box-shadow: 0 0 12px #000000;
+	box-shadow: 0 0 12px #000000;
+	opacity: 1;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+	filter: alpha(opacity=100);
+	cursor: pointer;
+  }
+  
+  #toast-container > .toast-success {
+	background-image: url("./success.png") !important;
+  }
+  #toast-container.toast-top-center > div,
+  #toast-container.toast-bottom-center > div {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  #toast-container.toast-top-full-width > div,
+  #toast-container.toast-bottom-full-width > div {
+	width: 96%;
+	margin-left: auto;
+	margin-right: auto;
+  }
+  .toast {
+	background-color: #030303;
+  }
+  .toast-success {
+	background-color: #ffffff;
+  }
+  .toast-progress {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 4px;
+	background-color: #000000;
+	opacity: 0.4;
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+	filter: alpha(opacity=40);
+  }
+  /*Responsive Design*/
+  @media all and (max-width: 240px) {
+	#toast-container > div {
+	  padding: 8px 8px 8px 50px;
+	  width: 11em;
+	}
+	#toast-container > div.rtl {
+	  padding: 8px 50px 8px 8px;
+	}
+	#toast-container .toast-close-button {
+	  right: -0.2em;
+	  top: -0.2em;
+	}
+	#toast-container .rtl .toast-close-button {
+	  left: -0.2em;
+	  right: 0.2em;
+	}
+  }
+  @media all and (min-width: 241px) and (max-width: 480px) {
+	#toast-container > div {
+	  padding: 8px 8px 8px 50px;
+	  width: 18em;
+	}
+	#toast-container > div.rtl {
+	  padding: 8px 50px 8px 8px;
+	}
+	#toast-container .toast-close-button {
+	  right: -0.2em;
+	  top: -0.2em;
+	}
+	#toast-container .rtl .toast-close-button {
+	  left: -0.2em;
+	  right: 0.2em;
+	}
+  }
+  @media all and (min-width: 481px) and (max-width: 768px) {
+	#toast-container > div {
+	  padding: 15px 15px 15px 50px;
+	  width: 25em;
+	}
+	#toast-container > div.rtl {
+	  padding: 15px 50px 15px 15px;
+	}
+  }
+
+
+
+
+  :root {
+	--trans-dark: rgba(25, 25, 25, 0.88);
+	--border-style: 1px solid rgb(169, 169, 169);
+	--backdrop-filter: blur(5px) saturate(150%);
+  }
+  
+  [data-theme="dark"] #page-header.nav-fixed #nav {
+	background: rgba(0, 0, 0, 0.7) !important;
+  }
+  
+  /* 夜间模式遮罩 */
+  [data-theme="dark"] #recent-posts > .recent-post-item,
+  [data-theme="dark"] #aside-content .card-widget,
+  [data-theme="dark"] div#post,
+  [data-theme="dark"] div#archive,
+  [data-theme="dark"] div#page {
+	background: var(--trans-dark);
+  }
+  
+  
+  /* 夜间模式页脚页头遮罩透明 */
+  [data-theme="dark"] #footer::before {
+	background: transparent !important;
+  }
+
+  
+  /* 夜间模式下的阅读模式 */
+  [data-theme="dark"] .read-mode #aside-content .card-widget {
+	background: rgba(25, 25, 25, 0.9) !important;
+	color: #ffffff;
+  }
+  [data-theme="dark"] .read-mode div#post {
+	background: rgba(25, 25, 25, 0.9) !important;
+	color: #ffffff;
+  }
