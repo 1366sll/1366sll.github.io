@@ -3308,6 +3308,9 @@ h1.page-title + .tag-cloud-list {
 .GalMenu .ring a:nth-of-type(6) {
   background-image: url("https://fastly.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/galmenu/comment.png");
 }
+.GalMenu .ring a:nth-of-type(7) {
+  background-image: url("https://fastly.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/galmenu/comment.png");
+}
 .GalMenu .ring a:hover {
   text-shadow: #6cf 1px 0 0, #6cf 0 1px 0, #6cf -1px 0 0, #6cf 0 -1px 0;
   -webkit-text-shadow: #6cf 1px 0 0, #6cf 0 1px 0, #6cf -1px 0 0, #6cf 0 -1px 0;
