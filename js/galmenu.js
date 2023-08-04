@@ -4,6 +4,17 @@ for (var i = 0, l = items.length; i < l; i++) {
   items[i].style.top = (50-35*Math.sin(2*Math.PI*(i+1)/(l+1))^3).toFixed(4) + "%"
 }
 
+var smallitems = document.querySelectorAll('.smallItem');
+for (var i = 0, l = smallitems.length; i < l; i++) {
+  smallitems[i].style.left = (75-39*Math.cos(2*Math.PI*(i)/(l))).toFixed(4) + "%";
+  smallitems[i].style.top = (55.9-44*Math.sin(2*Math.PI*(i)/(l))).toFixed(4) + "%"
+}
+
+var smalleritems = document.querySelectorAll('.smallerItem');
+for (var i = 0, l = smalleritems.length; i < l; i++) {
+  smalleritems[i].style.left = (56.5).toFixed(4) + "%";
+  smalleritems[i].style.top = (52.5).toFixed(4) + "%"
+}
 
 (function($) {
   var GalMenu = {
@@ -77,7 +88,7 @@ for (var i = 0, l = items.length; i < l; i++) {
                 $(this).css('display', 'none')
               }
             });
-            var audio = $("#audio"+Math.floor(5*Math.random()))[0];
+            var audio = $("#audio"+Math.floor(10*Math.random()))[0];
             var add = 150;
             var top = Coords.clientY - add,
               left = ($('body')[0] === e.target) ? Coords.clickX - add : Coords.clientX - add;
@@ -143,3 +154,4 @@ $(document).ready(function() {
     'menu': 'GalDropDown'
   })
 });
+

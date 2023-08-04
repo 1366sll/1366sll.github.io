@@ -20,22 +20,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/css/card-history.css"/>
-      <url>/css/card-history.css</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
-        <content type="html"><![CDATA[.history_slide {  text-align:left;  font-size: 14px;  background: rgba(255, 255, 255, 0);  display: flex;  flex-direction:column;  align-items: flex-start;}#history-baidu > .blog-slider__pagination{  display:none}.history_slide_time{  color: #e9a7a7;  background: rgba(255, 255, 255, 0);  font-weight: lighter;}]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title></title>
+      <link href="/css/card-history.css"/>
+      <url>/css/card-history.css</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[.history_slide {  text-align:left;  font-size: 14px;  background: rgba(255, 255, 255, 0);  display: flex;  flex-direction:column;  align-items: flex-start;}#history-baidu > .blog-slider__pagination{  display:none}.history_slide_time{  color: #e9a7a7;  background: rgba(255, 255, 255, 0);  font-weight: lighter;}]]></content>
       
     </entry>
     
@@ -53,9 +53,9 @@
     
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
         <content type="html"><![CDATA[]]></content>
       
