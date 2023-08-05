@@ -204,14 +204,13 @@
     -o-transition: none!important;
 }
 
-/*导航栏居中*/
 #nav-right{
-	flex:1 1 auto;
-	justify-content: flex-end;
-	margin-left: auto;
-	display: flex;
-	flex-wrap:nowrap;
-  }
+    flex:1 1 auto;
+    justify-content: flex-end;
+    margin-left: auto;
+    display: flex;
+    flex-wrap:nowrap;
+}
 
   /*顶部加载进度条*/
 .pace {
@@ -359,7 +358,7 @@ i:hover {
 
 /* 悬停页脚链接标签（例如页脚徽标）时的鼠标指针 */
 #footer-wrap a:hover {
-	cursor: url('./mouse/WitchSpring/手写.cur'), auto;
+	cursor: url('./mouse/WitchSpring/忙.cur'), auto;
 }
 
 /* 悬停页码时的鼠标指针 */
@@ -740,3 +739,134 @@ h6::before {
 	background: rgba(25, 25, 25, 0.9) !important;
 	color: #ffffff;
   }
+
+/*
+2022.10.4更新：
+根据我发现的没有自适应，间距不合理问题进行调整，如果用了这个的朋友们建议改一改
+*/
+#page-name::before{
+    font-size:18px;
+    position: absolute;
+    width:100%;
+    height:100%;
+    border-radius: 8px;
+    color:white!important;
+    top:0;
+    left:0;
+    content:'回到顶部';
+    background-color: #4b48487b;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    opacity: 0;
+    box-shadow: 0 0 3px #2e2d2d7b;
+    line-height: 45px; /*如果垂直位置不居中可以微调此值，也可以删了*/
+}
+#page-name:hover:before{
+    opacity: 1;
+}
+@media screen and (max-width:90px){
+    #page-name,#menus{
+      display:none!important;
+    }
+}
+
+#name-container{
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+}
+#name-container:hover{
+    scale:1.03
+}
+#page-name{
+    position: relative;
+    padding:10px 100px/*如果文字间隔不合理可以微调修改，第二个是水平方向的padding，第一个是垂直的*/
+}
+#nav{
+    padding: 0 20px;
+}
+
+
+.page #page:not(.home #page){
+    background: transparent!important;
+    border: none!important;
+    box-shadow: none!important;
+    padding-top: 0;
+    backdrop-filter: none!important;
+}
+#page::before{
+    position: fixed;
+    z-index:-114;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    content:'';
+    backdrop-filter: blur(10px);
+    background:var(--lyx-white-acrylic2);
+}
+[data-theme="dark"] #page::before{
+    background-color: var(--lyx-black-acrylic2)!important;
+}
+
+
+@keyframes animX{
+	0% {left: -5px;}
+	100% {left: 5px;}
+}
+@keyframes animY{
+	0% {top: -5px;}
+	100% {top: 5px;}
+}
+
+@keyframes animsize{
+	0% {scale: 0.85;}
+	100% {scale: 1.15;}
+}
+
+
+#cursor {
+    position: fixed;
+    width: 68px;
+    height: 68px;
+    border-radius: 34px;
+    opacity: 1;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
+}
+
+#cursor1 {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    background:
+	  	url(./mouse/WitchSpring/忙.png);
+    border-radius: 24px;
+    opacity: 0.5;
+	animation: animX 4s cubic-bezier(0.36,0,0.64,1) -2s infinite alternate, animY 4s cubic-bezier(0.36,0,0.64,1)  0s infinite alternate, animsize 10s cubic-bezier(0.83,0,0.11,1) infinite alternate;
+    z-index: 10086;
+    pointer-events: none;
+    transition: 0.2s ease-in-out;
+    transition-property: background, opacity, transform;
+}
+
+#cursor.hidden {
+    opacity: 0;
+}
+
+#cursor.hover {
+    opacity: 0.1;
+    transform: scale(2.5);
+}
+
+#cursor.active {
+    opacity: 0.9;
+    transform: scale(0.5);
+}
