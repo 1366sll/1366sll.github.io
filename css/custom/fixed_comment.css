@@ -1,0 +1,82 @@
+div#post-comment.fixedcomment {
+    position: fixed;
+    top: 0;
+    width: 60%;
+    right: 0;
+    padding: 25px 30px 20px 20px;
+    height: 100vh;
+    overflow: scroll;
+    z-index: 9999;
+    background:  linear-gradient(-45deg,
+		rgba(232, 216, 185, 0.5),
+		rgba(236, 206, 197, 0.4),
+		rgba(163, 233, 235, .3),
+		rgba(189, 189, 240, .6),
+		rgba(238, 193, 234, .45)),
+    linear-gradient(90deg,
+    rgb(255, 255, 255,.5),
+    rgb(255, 255, 255,.9) 60%);
+    box-shadow:3px 2px 14px #464340;
+    animation: fixedright 0.5s cubic-bezier(0.36,0,0.64,1);
+}
+div#post-comment.fixed {
+    animation: fixright 0.5s cubic-bezier(0.36,0,0.64,1);
+}
+div#post-comment.fixedcomment::-webkit-scrollbar {
+width: 0;
+}
+div#quit-board{
+  display: none;
+}
+div#quit-board.fixedcomment {
+  position: fixed;
+  display:block!important;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  z-index: 89!important;
+  background: rgba(25,25,25,0);
+  filter: blur(4px) !important;
+  animation: fixedleft 0.5s cubic-bezier(0.36,0,0.64,1);
+}
+div#quit-board.fixed {
+  animation: fixleft 0.5s cubic-bezier(0.36,0,0.64,1);
+}
+/*手机端样式适配*/
+@media screen and (max-width: 768px) {
+  div#post-comment.fixedcomment {
+      width: 90%;
+      right: 0;
+  }
+  div#quit-board.fixedcomment {
+    width: 10%;
+  }
+}
+/*动画效果*/
+@keyframes fixedright {
+  from {right:-50%;}
+  to {right:0;}
+}
+@keyframes fixright {
+  from {right:0;}
+  to {right:-50%;}
+}
+@keyframes fixedleft {
+  from {left:-50%;}
+  to {left:0;}
+}
+@keyframes fixleft {
+  from {left:0;}
+  to {left:-50%;}
+}
+/* 夜间模式匹配 */
+[data-theme="dark"]
+  div#post-comment.fixedcomment {
+      background: rgba(35, 35, 35, 0.95);
+      box-shadow:3px 2px 12px #90a1a4;
+  }
+[data-theme="dark"]
+  div#quit-board.fixedcomment {
+    background: rgba(147, 146, 128, 0.3);
+  }

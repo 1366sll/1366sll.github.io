@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title></title>
+  <title>奇怪的地方</title>
   
-  
+  <subtitle>理智要蒸发了~</subtitle>
   <link href="https://1366sll.github.io/atom.xml" rel="self"/>
   
   <link href="https://1366sll.github.io/"/>
   <updated>2023-07-26T13:38:05.386Z</updated>
   <id>https://1366sll.github.io/</id>
+  
+  <author>
+    <name>怪蜀黍</name>
+    
+  </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   

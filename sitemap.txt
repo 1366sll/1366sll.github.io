@@ -1,5 +1,8 @@
-https://1366sll.github.io/link/index.html
-https://1366sll.github.io/categories/index.html
+https://1366sll.github.io/about/index.html
 https://1366sll.github.io/tags/index.html
+https://1366sll.github.io/music/index.html
+https://1366sll.github.io/link/index.html
+https://1366sll.github.io/fun/index.html
+https://1366sll.github.io/categories/index.html
 https://1366sll.github.io/2023/07/26/hello-world/
 https://1366sll.github.io/
