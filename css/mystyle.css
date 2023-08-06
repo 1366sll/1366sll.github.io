@@ -79,6 +79,9 @@
 	  animation: Gradient2 15s ease infinite !important;
 }
 
+
+
+
 /* 主页所有文章页面背景 */
 #aside_content>.card-widget,
 #recent-posts>.recent-post-item,
@@ -187,22 +190,6 @@
 	background-size: 100% 100%;
 }
 
-
-/*导航栏常驻*/
-.nav-fixed #nav{
-    transform: translateY(58px)!important;
-    -webkit-transform: translateY(58px)!important;
-    -moz-transform: translateY(58px)!important;
-    -ms-transform: translateY(58px)!important;
-    -o-transform: translateY(58px)!important;
-}
-#nav{
-    transition: none!important;
-    -webkit-transition: none!important;
-    -moz-transition: none!important;
-    -ms-transition: none!important;
-    -o-transition: none!important;
-}
 
 #nav-right{
     flex:1 1 auto;
@@ -716,7 +703,13 @@ h6::before {
   }
   
   [data-theme="dark"] #page-header.nav-fixed #nav {
-	background: rgba(0, 0, 0, 0.7) !important;
+	background: linear-gradient(
+		60deg,
+	    rgba(255, 165, 150, 0.5) 5%,
+	    rgba(0, 228, 255, 0.35)
+		),
+		rgba(0, 0, 0, 0.7) !important;
+	backdrop-filter: blur(10px);
   }
   
   /* 夜间模式遮罩 */
@@ -756,6 +749,7 @@ h6::before {
     height:100%;
     border-radius: 8px;
     color:white!important;
+	backdrop-filter: blur(50px);
     top:0;
     left:0;
     content:'回到顶部';

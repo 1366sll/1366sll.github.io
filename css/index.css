@@ -4134,7 +4134,15 @@ h1.page-title + .tag-cloud-list {
   background: 0;
 }
 #page-header.not-top-img #nav {
-  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  background: -webkit-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -moz-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -o-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -ms-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: linear-gradient(60deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
 }
@@ -4147,7 +4155,15 @@ h1.page-title + .tag-cloud-list {
   position: fixed;
   top: -60px;
   z-index: 91;
-  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  background: -webkit-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -moz-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -o-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: -ms-linear-gradient(30deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
+  background: linear-gradient(60deg, rgba(255,165,150,0.5) 5%, rgba(0,228,255,0.35));
   -webkit-box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
   box-shadow: 0 5px 6px -5px rgba(133,133,133,0.6);
   -webkit-transition: -webkit-transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
