@@ -3921,7 +3921,8 @@ h1.page-title + .tag-cloud-list {
 }
 .GalMenu .menuItem {
   border-radius: 50%;
-  color: #eee;
+  color: rgba(210,92,92,0.83);
+  backdrop-filter: blur(10px);
   display: block;
   height: 80px;
   line-height: 80px;
@@ -3945,7 +3946,8 @@ h1.page-title + .tag-cloud-list {
 }
 .GalMenu .smallItem {
   border-radius: 50%;
-  color: #eee;
+  color: rgba(173,222,120,0.948);
+  backdrop-filter: blur(10px);
   display: block;
   height: 40px;
   line-height: 40px;
@@ -3969,7 +3971,8 @@ h1.page-title + .tag-cloud-list {
 }
 .GalMenu .smallerItem {
   border-radius: 50%;
-  color: #eee;
+  color: rgba(105,151,215,0.973);
+  backdrop-filter: blur(10px);
   display: block;
   height: 60px;
   line-height: 60px;
