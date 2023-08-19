@@ -3885,7 +3885,7 @@ h1.page-title + .tag-cloud-list {
   *filter: Glow(#dc965a, 1);
 }
 .GalMenu .ring a:nth-of-type(1) {
-  background-image: url('https://fastly.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/galmenu/random.png');
+  background-image: url("https://fastly.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/galmenu/home.png");
 }
 .GalMenu .ring a:nth-of-type(2) {
   background-image: url("https://fastly.jsdelivr.net/gh/Akilarlxh/Akilarlxh.github.io@v3.3.3_3/galmenu/archive.png");
