@@ -6,7 +6,7 @@
   <link href="https://1366sll.github.io/atom.xml" rel="self"/>
   
   <link href="https://1366sll.github.io/"/>
-  <updated>2023-12-21T13:06:33.217Z</updated>
+  <updated>2023-12-22T06:28:10.915Z</updated>
   <id>https://1366sll.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>源码</title>
+    <link href="https://1366sll.github.io/2023/12/22/yuanma/"/>
+    <id>https://1366sll.github.io/2023/12/22/yuanma/</id>
+    <published>2023-12-22T06:12:00.000Z</published>
+    <updated>2023-12-22T06:28:10.915Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="include"><a href="#include" class="headerlink" title="include"></a>include<LiquidCrystal.h></h1><p>LiquidCrystal lcd(2, 3, 4, 5, 6, 7);</p><p>int timer1;<br>int timer2;</p><p>float Time;</p><p>int flag1 = 0;<br>int flag2 = 0;</p><p>float distance = 5.0;<br>float speed;</p><p>int ir_s1 = A0;<br>int ir_s2 = A1;</p><p>int buzzer = 13;</p><p>void setup(){<br>  pinMode(ir_s1, INPUT);<br>  pinMode(ir_s2, INPUT);<br>  pinMode(buzzer, OUTPUT);</p><p>  lcd.begin(16,2);<br>  lcd.clear();<br>  lcd.setCursor(0,0);<br>  lcd.print(“ WELCOME To  My “);<br>  lcd.setCursor(0,1);<br>  lcd.print(“YouTube  Channel”);<br>  delay(2000);<br>  lcd.clear();<br>}</p><p>void loop() {<br>if(digitalRead (ir_s1) == LOW &amp;&amp; flag1==0){timer1 = millis(); flag1=1;}</p><p>if(digitalRead (ir_s2) == LOW &amp;&amp; flag2==0){timer2 = millis(); flag2=1;}</p><p>if (flag1==1 &amp;&amp; flag2==1){<br>     if(timer1 &gt; timer2){Time = timer1 - timer2;}<br>else if(timer2 &gt; timer1){Time = timer2 - timer1;}<br> Time=Time/1000;//convert millisecond to second<br> speed=(distance/Time);//v=d/t<br> speed=speed*3600;//multiply by seconds per hr<br> speed=speed/1000;//division by meters per Km<br>}</p><p>if(speed==0){<br>lcd.setCursor(0, 1);<br>if(flag1==0 &amp;&amp; flag2==0){lcd.print(“No car  detected”);}<br>                    else{lcd.print(“Searching…    “);}<br>}<br>else{<br>    lcd.clear();<br>    lcd.setCursor(0, 0);<br>    lcd.print(“Speed:”);<br>    lcd.print(speed,1);<br>    lcd.print(“Km/Hr  “);<br>    lcd.setCursor(0, 1);<br>  if(speed &gt; 50){lcd.print(“  Over Speeding  “); digitalWrite(buzzer, HIGH);}<br>            else{lcd.print(“  Normal Speed   “); }<br>    delay(3000);<br>    digitalWrite(buzzer, LOW);<br>    speed = 0;<br>    flag1 = 0;<br>    flag2 = 0;<br> }<br>}</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;include&quot;&gt;&lt;a href=&quot;#include&quot; class=&quot;headerlink&quot; title=&quot;include&quot;&gt;&lt;/a&gt;include&lt;LiquidCrystal.h&gt;&lt;/h1&gt;&lt;p&gt;LiquidCrystal lcd(2, 3, 4, 5, 6, </summary>
+      
+    
+    
+    
+    <category term="arduino" scheme="https://1366sll.github.io/categories/arduino/"/>
+    
+    
+    <category term="hjm" scheme="https://1366sll.github.io/tags/hjm/"/>
+    
+  </entry>
   
   <entry>
     <title></title>

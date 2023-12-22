@@ -1,1 +1,1 @@
-var posts=["2023/08/08/eu_eng/","2023/07/26/hello-world/","2023/12/21/keti/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
+var posts=["2023/08/08/eu_eng/","2023/07/26/hello-world/","2023/12/21/keti/","2023/12/22/yuanma/"];function toRandomPost(){pjax.loadUrl('/'+posts[Math.floor(Math.random() * posts.length)]);};
