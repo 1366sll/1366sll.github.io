@@ -94,7 +94,7 @@
 
   <url>
     <loc>https://1366sll.github.io/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,21 +102,21 @@
   
   <url>
     <loc>https://1366sll.github.io/tags/Europa-Universalis-IV/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1366sll.github.io/tags/Eu4/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1366sll.github.io/tags/hjm/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -125,21 +125,21 @@
   
   <url>
     <loc>https://1366sll.github.io/categories/fun/</loc>
-    <lastmod>2023-12-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://1366sll.github.io/categories/fun/game/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://1366sll.github.io/categories/arduino/</loc>
-    <lastmod>2023-12-22</lastmod>
+    <lastmod>2023-12-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1366sll.github.io/categories/fun/game/</loc>
+    <lastmod>2023-12-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
