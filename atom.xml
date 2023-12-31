@@ -6,7 +6,7 @@
   <link href="https://1366sll.github.io/atom.xml" rel="self"/>
   
   <link href="https://1366sll.github.io/"/>
-  <updated>2023-12-31T17:55:00.140Z</updated>
+  <updated>2023-12-31T18:25:32.856Z</updated>
   <id>https://1366sll.github.io/</id>
   
   <author>
@@ -17,20 +17,18 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>sd webui部署指北</title>
     <link href="https://1366sll.github.io/2024/01/01/webui/"/>
     <id>https://1366sll.github.io/2024/01/01/webui/</id>
-    <published>2023-12-31T17:54:07.634Z</published>
-    <updated>2023-12-31T17:55:00.140Z</updated>
+    <published>2023-12-31T18:12:00.000Z</published>
+    <updated>2023-12-31T18:25:32.856Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title:sd webui部署指北</p><h2 id="date-2024-01-01-02-12-00"><a href="#date-2024-01-01-02-12-00" class="headerlink" title="date:2024-01-01 02:12:00"></a>date:2024-01-01 02:12:00</h2><p>众所周知，novelai在前段时间比较火，下面咱就来讲述一下如何通过部署sd webui来达到本地化的效果<br>首先你需要:<br>    安装一个anaconda<br>    安装好git<br>    安装好对应自己显卡版本的CUDA<br>        在cmd通过如下代码查看是否成功安装CUDA<br>            nvcc —version<br>    检查PATH（环境变量）是否设置好<br>接下来的步骤都要在anaconda中进行哦<br>    安装一个3.10的python环境<br>        conda create —name sdwebui python=3.10.6<br>    激活这个环境<br>        conda activate sdwebui<br>    安装/升级pip，将源换为清华镜像站<br>        python -m pip install —upgrade pip<br>        pip config set global.index-url <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a><br>    下载源码<br>        git clone <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui.git">https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</a><br>    下载模型（须科学上网）<br>        <a href="https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt">https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt</a><br>     在stable-diffusion-webui文件夹下执行安装程序<br>        webui-user.bat<br>    等待，直到出现<a href="http://127.0.0.1:7860，不要关闭anaconda，打开浏览器，进入http://127.0.0.1:7860，便可开始使用">http://127.0.0.1:7860，不要关闭anaconda，打开浏览器，进入http://127.0.0.1:7860，便可开始使用</a><br>        如果卡住，则尝试科学上网，或自行修改luanch.py，将其中下载源换成国内镜像源<br>    后续启动只需激活环境后执行webui-user.bat即可</p>]]></content>
+    <content type="html"><![CDATA[<p>众所周知，novelai在前段时间比较火，下面咱就来讲述一下如何通过部署sd webui来达到本地化的效果<br>首先你需要:<br>    安装一个anaconda<br>    安装好git<br>    安装好对应自己显卡版本的CUDA<br>        在cmd通过如下代码查看是否成功安装CUDA<br>            nvcc —version<br>    检查PATH（环境变量）是否设置好<br>接下来的步骤都要在anaconda中进行哦<br>    安装一个3.10的python环境<br>        conda create —name sdwebui python=3.10.6<br>    激活这个环境<br>        conda activate sdwebui<br>    安装/升级pip，将源换为清华镜像站<br>        python -m pip install —upgrade pip<br>        pip config set global.index-url <a href="https://mirrors.aliyun.com/pypi/simple/">https://mirrors.aliyun.com/pypi/simple/</a><br>    下载源码<br>        git clone <a href="https://github.com/AUTOMATIC1111/stable-diffusion-webui.git">https://github.com/AUTOMATIC1111/stable-diffusion-webui.git</a><br>    下载模型（须科学上网）<br>        <a href="https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt">https://huggingface.co/stabilityai/stable-diffusion-2-1/blob/main/v2-1_768-ema-pruned.ckpt</a><br>     在stable-diffusion-webui文件夹下执行安装程序<br>        webui-user.bat<br>    等待，直到出现<a href="http://127.0.0.1:7860，不要关闭anaconda，打开浏览器，进入http://127.0.0.1:7860，便可开始使用">http://127.0.0.1:7860，不要关闭anaconda，打开浏览器，进入http://127.0.0.1:7860，便可开始使用</a><br>        如果卡住，则尝试科学上网，或自行修改luanch.py，将其中下载源换成国内镜像源<br>    后续启动只需激活环境后执行webui-user.bat即可</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title:sd webui部署指北&lt;/p&gt;
-&lt;h2 id=&quot;date-2024-01-01-02-12-00&quot;&gt;&lt;a href=&quot;#date-2024-01-01-02-12-00&quot; class=&quot;headerlink&quot; title=&quot;date:2024-01-</summary>
+    <summary type="html">&lt;p&gt;众所周知，novelai在前段时间比较火，下面咱就来讲述一下如何通过部署sd webui来达到本地化的效果&lt;br&gt;首先你需要:&lt;br&gt;    安装一个anaconda&lt;br&gt;    安装好git&lt;br&gt;    安装好对应自己显卡版本的CUDA&lt;br&gt;        在cmd</summary>
       
     
     
@@ -43,14 +41,16 @@
     <link href="https://1366sll.github.io/2023/12/22/yuanma/"/>
     <id>https://1366sll.github.io/2023/12/22/yuanma/</id>
     <published>2023-12-22T06:12:00.000Z</published>
-    <updated>2023-12-31T17:25:28.138Z</updated>
+    <updated>2023-12-31T18:26:18.121Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="include"><a href="#include" class="headerlink" title="include"></a>include<LiquidCrystal.h></h1><p>LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）</p><p>int timer1;<br>int timer2;</p><p>float Time;    //计算模块的参数</p><p>int flag1 = 0;<br>int flag2 = 0;    //检测是否有车经过</p><p>float distance = 5.0;<br>float speed;    //计算速度模块（可以在这里改距离）</p><p>int ir_s1 = A0;<br>int ir_s2 = A1;    //绑红外传感器的输入口</p><p>int buzzer = 13;    //震动模块的输出端（然而我们也不需要）</p><p>void setup(){<br>  pinMode(ir_s1, INPUT);<br>  pinMode(ir_s2, INPUT);<br>  pinMode(buzzer, OUTPUT);    //红外传感器与震动模块初始化</p><p>  lcd.begin(16,2);<br>  lcd.clear();<br>  lcd.setCursor(0,0);<br>  lcd.print(“ WELCOME To  My “);<br>  lcd.setCursor(0,1);<br>  lcd.print(“YouTube  Channel”);<br>  delay(2000);<br>  lcd.clear();    //显示器初始化（会不断显示作者的广告？）<br>}</p><p>void loop() {<br>if(digitalRead (ir_s1) == LOW &amp;&amp; flag1==0){timer1 = millis(); flag1=1;}    //检测s1是否有车经过，并计算时间</p><p>if(digitalRead (ir_s2) == LOW &amp;&amp; flag2==0){timer2 = millis(); flag2=1;}    //检测s2是否有车经过，并计算时间</p><p>if (flag1==1 &amp;&amp; flag2==1){<br>     if(timer1 &gt; timer2){Time = timer1 - timer2;}<br>else if(timer2 &gt; timer1){Time = timer2 - timer1;}    //计算经过时间<br> Time=Time/1000;//convert millisecond to second<br> speed=(distance/Time);    //v=d/t<br> speed=speed*3600;    //multiply by seconds per hr<br> speed=speed/1000;    //division by meters per Km<br>}    //计算速度</p><p>if(speed==0){<br>lcd.setCursor(0, 1);<br>if(flag1==0 &amp;&amp; flag2==0){lcd.print(“No car  detected”);}<br>                    else{lcd.print(“Searching…    “);}<br>}    //没有车经过（等待）（这一块只有显示部分）<br>else{<br>    lcd.clear();<br>    lcd.setCursor(0, 0);<br>    lcd.print(“Speed:”);<br>    lcd.print(speed,1);<br>    lcd.print(“Km/Hr  “);<br>    lcd.setCursor(0, 1);     //有车经过（这一块也只有显示部分）<br>  if(speed &gt; 50){lcd.print(“  Over Speeding  “); digitalWrite(buzzer, HIGH);}<br>            else{lcd.print(“  Normal Speed   “); }<br>    delay(3000);<br>    digitalWrite(buzzer, LOW);    //车超速（有显示与震动模块）<br>    speed = 0;<br>    flag1 = 0;<br>    flag2 = 0;    //初始化参数<br> }<br>}</p>]]></content>
+    <content type="html"><![CDATA[<p>#include<LiquidCrystal.h><br>LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）</p><p>int timer1;<br>int timer2;</p><p>float Time;    //计算模块的参数</p><p>int flag1 = 0;<br>int flag2 = 0;    //检测是否有车经过</p><p>float distance = 5.0;<br>float speed;    //计算速度模块（可以在这里改距离）</p><p>int ir_s1 = A0;<br>int ir_s2 = A1;    //绑红外传感器的输入口</p><p>int buzzer = 13;    //震动模块的输出端（然而我们也不需要）</p><p>void setup(){<br>  pinMode(ir_s1, INPUT);<br>  pinMode(ir_s2, INPUT);<br>  pinMode(buzzer, OUTPUT);    //红外传感器与震动模块初始化</p><p>  lcd.begin(16,2);<br>  lcd.clear();<br>  lcd.setCursor(0,0);<br>  lcd.print(“ WELCOME To  My “);<br>  lcd.setCursor(0,1);<br>  lcd.print(“YouTube  Channel”);<br>  delay(2000);<br>  lcd.clear();    //显示器初始化（会不断显示作者的广告？）<br>}</p><p>void loop() {<br>if(digitalRead (ir_s1) == LOW &amp;&amp; flag1==0){timer1 = millis(); flag1=1;}    //检测s1是否有车经过，并计算时间</p><p>if(digitalRead (ir_s2) == LOW &amp;&amp; flag2==0){timer2 = millis(); flag2=1;}    //检测s2是否有车经过，并计算时间</p><p>if (flag1==1 &amp;&amp; flag2==1){<br>     if(timer1 &gt; timer2){Time = timer1 - timer2;}<br>else if(timer2 &gt; timer1){Time = timer2 - timer1;}    //计算经过时间<br> Time=Time/1000;//convert millisecond to second<br> speed=(distance/Time);    //v=d/t<br> speed=speed*3600;    //multiply by seconds per hr<br> speed=speed/1000;    //division by meters per Km<br>}    //计算速度</p><p>if(speed==0){<br>lcd.setCursor(0, 1);<br>if(flag1==0 &amp;&amp; flag2==0){lcd.print(“No car  detected”);}<br>                    else{lcd.print(“Searching…    “);}<br>}    //没有车经过（等待）（这一块只有显示部分）<br>else{<br>    lcd.clear();<br>    lcd.setCursor(0, 0);<br>    lcd.print(“Speed:”);<br>    lcd.print(speed,1);<br>    lcd.print(“Km/Hr  “);<br>    lcd.setCursor(0, 1);     //有车经过（这一块也只有显示部分）<br>  if(speed &gt; 50){lcd.print(“  Over Speeding  “); digitalWrite(buzzer, HIGH);}<br>            else{lcd.print(“  Normal Speed   “); }<br>    delay(3000);<br>    digitalWrite(buzzer, LOW);    //车超速（有显示与震动模块）<br>    speed = 0;<br>    flag1 = 0;<br>    flag2 = 0;    //初始化参数<br> }<br>}</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;include&quot;&gt;&lt;a href=&quot;#include&quot; class=&quot;headerlink&quot; title=&quot;include&quot;&gt;&lt;/a&gt;include&lt;LiquidCrystal.h&gt;&lt;/h1&gt;&lt;p&gt;LiquidCrystal lcd(2, 3, 4, 5, 6, </summary>
+    <summary type="html">&lt;p&gt;#include&lt;LiquidCrystal.h&gt;&lt;br&gt;LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）&lt;/p&gt;
+&lt;p&gt;int timer1;&lt;br&gt;int timer2;&lt;/p&gt;
+&lt;p&gt;float T</summary>
       
     
     
@@ -63,20 +63,18 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>胡嘉珉看这里，这里有你要的东西</title>
     <link href="https://1366sll.github.io/2023/12/21/keti/"/>
     <id>https://1366sll.github.io/2023/12/21/keti/</id>
-    <published>2023-12-21T13:04:25.231Z</published>
-    <updated>2023-12-21T13:06:33.217Z</updated>
+    <published>2023-12-20T18:12:00.000Z</published>
+    <updated>2023-12-31T18:26:50.841Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title:胡嘉珉看这里，这里有你要的东西</p><h2 id="date-2023-12-21-02-12-00"><a href="#date-2023-12-21-02-12-00" class="headerlink" title="date:2023-12-21 02:12:00"></a>date:2023-12-21 02:12:00</h2><p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
+    <content type="html"><![CDATA[<p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title:胡嘉珉看这里，这里有你要的东西&lt;/p&gt;
-&lt;h2 id=&quot;date-2023-12-21-02-12-00&quot;&gt;&lt;a href=&quot;#date-2023-12-21-02-12-00&quot; class=&quot;headerlink&quot; title=&quot;date:2023-</summary>
+    <summary type="html">&lt;p&gt;测速代码样例：&lt;a href=&quot;https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881&quot;&gt;https://www.aliyundrive.com/s/</summary>
       
     
     
