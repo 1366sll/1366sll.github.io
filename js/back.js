@@ -36,3 +36,10 @@ function changeBg(s, flag) {
   } else bg.style.backgroundImage = s
   if (!flag) { saveData('blogbg', s) }
 }
+
+const btn= document.getElementById("btn");
+
+btn.addEventListener('click', function(){
+  var name = document.getElementById("color1").value;
+  alert("Name: "+ name);
+});
