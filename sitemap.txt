@@ -1,3 +1,4 @@
+https://1366sll.github.io/bookmark/index.html
 https://1366sll.github.io/music/12/index.html
 https://1366sll.github.io/music/17/index.html
 https://1366sll.github.io/music/16/index.html
@@ -8,8 +9,6 @@ https://1366sll.github.io/music/11/index.html
 https://1366sll.github.io/music/10/index.html
 https://1366sll.github.io/music/9/index.html
 https://1366sll.github.io/music/8/index.html
-https://1366sll.github.io/2023/12/21/keti/
-https://1366sll.github.io/2023/12/22/yuanma/
 https://1366sll.github.io/2024/01/01/webui/
 https://1366sll.github.io/music/7/index.html
 https://1366sll.github.io/music/6/index.html
@@ -32,7 +31,5 @@ https://1366sll.github.io/2023/07/26/hello-world/
 https://1366sll.github.io/
 https://1366sll.github.io/tags/Europa-Universalis-IV/
 https://1366sll.github.io/tags/Eu4/
-https://1366sll.github.io/tags/hjm/
 https://1366sll.github.io/categories/fun/
-https://1366sll.github.io/categories/arduino/
 https://1366sll.github.io/categories/fun/game/

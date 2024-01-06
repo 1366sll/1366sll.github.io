@@ -17,44 +17,6 @@
     
     
     <entry>
-      <title>源码</title>
-      <link href="/2023/12/22/yuanma/"/>
-      <url>/2023/12/22/yuanma/</url>
-      
-        <content type="html"><![CDATA[<p>#include<LiquidCrystal.h><br>LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）</p><p>int timer1;<br>int timer2;</p><p>float Time;    //计算模块的参数</p><p>int flag1 = 0;<br>int flag2 = 0;    //检测是否有车经过</p><p>float distance = 5.0;<br>float speed;    //计算速度模块（可以在这里改距离）</p><p>int ir_s1 = A0;<br>int ir_s2 = A1;    //绑红外传感器的输入口</p><p>int buzzer = 13;    //震动模块的输出端（然而我们也不需要）</p><p>void setup(){<br>  pinMode(ir_s1, INPUT);<br>  pinMode(ir_s2, INPUT);<br>  pinMode(buzzer, OUTPUT);    //红外传感器与震动模块初始化</p><p>  lcd.begin(16,2);<br>  lcd.clear();<br>  lcd.setCursor(0,0);<br>  lcd.print(“ WELCOME To  My “);<br>  lcd.setCursor(0,1);<br>  lcd.print(“YouTube  Channel”);<br>  delay(2000);<br>  lcd.clear();    //显示器初始化（会不断显示作者的广告？）<br>}</p><p>void loop() {<br>if(digitalRead (ir_s1) == LOW &amp;&amp; flag1==0){timer1 = millis(); flag1=1;}    //检测s1是否有车经过，并计算时间</p><p>if(digitalRead (ir_s2) == LOW &amp;&amp; flag2==0){timer2 = millis(); flag2=1;}    //检测s2是否有车经过，并计算时间</p><p>if (flag1==1 &amp;&amp; flag2==1){<br>     if(timer1 &gt; timer2){Time = timer1 - timer2;}<br>else if(timer2 &gt; timer1){Time = timer2 - timer1;}    //计算经过时间<br> Time=Time/1000;//convert millisecond to second<br> speed=(distance/Time);    //v=d/t<br> speed=speed*3600;    //multiply by seconds per hr<br> speed=speed/1000;    //division by meters per Km<br>}    //计算速度</p><p>if(speed==0){<br>lcd.setCursor(0, 1);<br>if(flag1==0 &amp;&amp; flag2==0){lcd.print(“No car  detected”);}<br>                    else{lcd.print(“Searching…    “);}<br>}    //没有车经过（等待）（这一块只有显示部分）<br>else{<br>    lcd.clear();<br>    lcd.setCursor(0, 0);<br>    lcd.print(“Speed:”);<br>    lcd.print(speed,1);<br>    lcd.print(“Km/Hr  “);<br>    lcd.setCursor(0, 1);     //有车经过（这一块也只有显示部分）<br>  if(speed &gt; 50){lcd.print(“  Over Speeding  “); digitalWrite(buzzer, HIGH);}<br>            else{lcd.print(“  Normal Speed   “); }<br>    delay(3000);<br>    digitalWrite(buzzer, LOW);    //车超速（有显示与震动模块）<br>    speed = 0;<br>    flag1 = 0;<br>    flag2 = 0;    //初始化参数<br> }<br>}</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> arduino </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> hjm </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>胡嘉珉看这里，这里有你要的东西</title>
-      <link href="/2023/12/21/keti/"/>
-      <url>/2023/12/21/keti/</url>
-      
-        <content type="html"><![CDATA[<p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Eu4英格兰战报</title>
       <link href="/2023/08/08/eu_eng/"/>
       <url>/2023/08/08/eu_eng/</url>
@@ -100,6 +62,17 @@
     
     
     <entry>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>目录</title>
       <link href="/categories/index.html"/>
       <url>/categories/index.html</url>
@@ -111,11 +84,22 @@
     
     
     <entry>
-      <title>整活</title>
-      <link href="/fun/index.html"/>
-      <url>/fun/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/1/">社团内的一些东西</a></h1><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/2/">校内部分</a></h1><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/3/">杂项</a></h1>]]></content>
+        <content type="html"><![CDATA[]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>收藏夹</title>
+      <link href="/bookmark/index.html"/>
+      <url>/bookmark/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="mikutap"><a href="#mikutap" class="headerlink" title="mikutap"></a><a href="https://mikutap.mikuforever.com/">mikutap</a></h2><h2 id="人设生成器"><a href="#人设生成器" class="headerlink" title="人设生成器"></a><a href="https://eromanga.gitee.io/draw/">人设生成器</a></h2><h2 id="阿虚的储物间"><a href="#阿虚的储物间" class="headerlink" title="阿虚的储物间"></a><a href="https://axutongxue.com/">阿虚的储物间</a></h2><h2 id="申论生成器"><a href="#申论生成器" class="headerlink" title="申论生成器"></a><a href="https://sojo.im/slscq/">申论生成器</a></h2><h2 id="狗姐的欧陆资源站"><a href="#狗姐的欧陆资源站" class="headerlink" title="狗姐的欧陆资源站"></a><a href="https://sharelikes.com.cn/ContectOne/Paradox%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">狗姐的欧陆资源站</a></h2><h2 id="bilibili视频下载"><a href="#bilibili视频下载" class="headerlink" title="bilibili视频下载"></a><a href="https://xbeibeix.com/api/bilibili/">bilibili视频下载</a></h2><h2 id="元素法典"><a href="#元素法典" class="headerlink" title="元素法典"></a><a href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素法典</a></h2><h2 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a><a href="https://waifu2x.udp.jp/index.zh-CN.html">waifu2x</a></h2><h2 id="像素人像"><a href="#像素人像" class="headerlink" title="像素人像"></a><a href="https://pixel-me.tokyo/en/">像素人像</a></h2><h2 id="指针效果"><a href="#指针效果" class="headerlink" title="指针效果"></a><a href="https://cursoreffects.com/">指针效果</a></h2><h2 id="文字绘画"><a href="#文字绘画" class="headerlink" title="文字绘画"></a><a href="https://paint.toys/calligram/">文字绘画</a></h2><h2 id="一些东西"><a href="#一些东西" class="headerlink" title="一些东西"></a><a href="https://neave.com/">一些东西</a></h2><h2 id="archieve"><a href="#archieve" class="headerlink" title="archieve"></a><a href="https://archive.org/">archieve</a></h2><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a><a href="https://www.freeimg.cn/">图床</a></h2><h2 id="地力练习"><a href="#地力练习" class="headerlink" title="地力练习"></a><a href="https://eatcat.yisous.xyz/">地力练习</a></h2><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a><a href="https://zhuanlan.zhihu.com/p/129298318">生成器</a></h2><h2 id="图像视频化"><a href="#图像视频化" class="headerlink" title="图像视频化"></a><a href="https://sketch.metademolab.com/">图像视频化</a></h2><h2 id="图像素材"><a href="#图像素材" class="headerlink" title="图像素材"></a><a href="https://www.irasutoya.com/">图像素材</a></h2><h2 id="机场"><a href="#机场" class="headerlink" title="机场"></a><a href="https://front.spaport.cc/">机场</a></h2><h2 id="音乐分离"><a href="#音乐分离" class="headerlink" title="音乐分离"></a><a href="https://vocalremover.org/zh/key-bpm-finder">音乐分离</a></h2><h2 id="midi搜索"><a href="#midi搜索" class="headerlink" title="midi搜索"></a><a href="https://musescore.com/sheetmusic">midi搜索</a></h2><p><a href="https://github.com/LibreScore/dl-librescore">记得安装下载插件</a></p>]]></content>
       
     </entry>
     
@@ -133,11 +117,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>整活</title>
+      <link href="/fun/index.html"/>
+      <url>/fun/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/1/">社团内的一些东西</a></h1><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/2/">校内部分</a></h1><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/3/">杂项</a></h1>]]></content>
       
     </entry>
     
@@ -149,17 +133,6 @@
       <url>/music/index.html</url>
       
         <content type="html"><![CDATA[<h1 id="稍微写一下个人比较喜欢的一些曲师与作品"><a href="#稍微写一下个人比较喜欢的一些曲师与作品" class="headerlink" title="稍微写一下个人比较喜欢的一些曲师与作品"></a>稍微写一下个人比较喜欢的一些曲师与作品</h1><h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/1">a_hisa</a></h2><h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/2">Halv</a></h2><h2 id="street"><a href="#street" class="headerlink" title="street"></a><a href="/music/3">street</a></h2><h2 id="lime"><a href="#lime" class="headerlink" title="lime"></a><a href="/music/4">lime</a></h2><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/5">qfeileadh</a></h2><h2 id="nego-tiato"><a href="#nego-tiato" class="headerlink" title="nego_tiato"></a><a href="/music/6">nego_tiato</a></h2><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/7">orangentle</a></h2><h2 id="黄泉路テヂーモ"><a href="#黄泉路テヂーモ" class="headerlink" title="黄泉路テヂーモ"></a><a href="/music/8">黄泉路テヂーモ</a></h2><h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/9">ARForest</a></h2><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/10">ginkiha</a></h2><h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/11">daisan</a></h2><h2 id="litmus"><a href="#litmus" class="headerlink" title="litmus*"></a><a href="/music/12">litmus*</a></h2><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/13">大前司</a></h2><h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/14">SoundSouler</a></h2><h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/15">M2U</a></h2><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/16">Esti</a></h2><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/17">Xeon</a></h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -199,17 +172,6 @@
     
     
     <entry>
-      <title>整活</title>
-      <link href="/fun/3/index.html"/>
-      <url>/fun/3/index.html</url>
-      
-        <content type="html"><![CDATA[<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>a_hisa</title>
       <link href="/music/1/index.html"/>
       <url>/music/1/index.html</url>
@@ -221,11 +183,22 @@
     
     
     <entry>
-      <title>ginkiha</title>
-      <link href="/music/10/index.html"/>
-      <url>/music/10/index.html</url>
+      <title>整活</title>
+      <link href="/fun/3/index.html"/>
+      <url>/fun/3/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>daisan</title>
+      <link href="/music/11/index.html"/>
+      <url>/music/11/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/">daisan</a></h2><p>非常喜欢的一位曲师，似乎2015年后就不再活动了？</p><h3 id=""><a href="#" class="headerlink" title="+-"></a>+-</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2064545699&auto=0&height=66"></iframe><br>bof2013位7，神中神的曲子</p><h3 id="irregulyze"><a href="#irregulyze" class="headerlink" title="irregulyze"></a>irregulyze</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2069311833&auto=0&height=66"></iframe><br>bof2013参赛曲，同样是神中神</p><h3 id="ハイ色乞語リ"><a href="#ハイ色乞語リ" class="headerlink" title="ハイ色乞語リ"></a>ハイ色乞語リ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=41658578&auto=0&height=66"></iframe><br>bofu2015位38，民族风强烈的曲子</p><h3 id="Departure-Road"><a href="#Departure-Road" class="headerlink" title="Departure Road"></a>Departure Road</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2081565851&auto=0&height=66"></iframe><br>同样民族风的曲子</p>]]></content>
       
     </entry>
     
@@ -254,22 +227,44 @@
     
     
     <entry>
-      <title>daisan</title>
-      <link href="/music/11/index.html"/>
-      <url>/music/11/index.html</url>
+      <title>ginkiha</title>
+      <link href="/music/10/index.html"/>
+      <url>/music/10/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/">daisan</a></h2><p>非常喜欢的一位曲师，似乎2015年后就不再活动了？</p><h3 id=""><a href="#" class="headerlink" title="+-"></a>+-</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2064545699&auto=0&height=66"></iframe><br>bof2013位7，神中神的曲子</p><h3 id="irregulyze"><a href="#irregulyze" class="headerlink" title="irregulyze"></a>irregulyze</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2069311833&auto=0&height=66"></iframe><br>bof2013参赛曲，同样是神中神</p><h3 id="ハイ色乞語リ"><a href="#ハイ色乞語リ" class="headerlink" title="ハイ色乞語リ"></a>ハイ色乞語リ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=41658578&auto=0&height=66"></iframe><br>bofu2015位38，民族风强烈的曲子</p><h3 id="Departure-Road"><a href="#Departure-Road" class="headerlink" title="Departure Road"></a>Departure Road</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2081565851&auto=0&height=66"></iframe><br>同样民族风的曲子</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Esti</title>
-      <link href="/music/16/index.html"/>
-      <url>/music/16/index.html</url>
+      <title>SoundSouler</title>
+      <link href="/music/14/index.html"/>
+      <url>/music/14/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>M2U</title>
+      <link href="/music/15/index.html"/>
+      <url>/music/15/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Halv</title>
+      <link href="/music/2/index.html"/>
+      <url>/music/2/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/">Halv</a></h2><p>神中神，一流artcore</p><h3 id="月夜见"><a href="#月夜见" class="headerlink" title="月夜见"></a>月夜见</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1907845923&auto=0&height=66"></iframe><br>因为这个认识halv的，这首曲我可以吹一百年</p><h3 id="天照らす律動"><a href="#天照らす律動" class="headerlink" title="天照らす律動"></a>天照らす律動</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1968388822&auto=0&height=66"></iframe><br>挺好的和风曲，可惜落选了</p><h3 id="Khronostasis-Katharsis"><a href="#Khronostasis-Katharsis" class="headerlink" title="Khronostasis Katharsis"></a>Khronostasis Katharsis</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1456728399&auto=0&height=66"></iframe><br>神</p>]]></content>
       
     </entry>
     
@@ -287,11 +282,22 @@
     
     
     <entry>
-      <title>Halv</title>
-      <link href="/music/2/index.html"/>
-      <url>/music/2/index.html</url>
+      <title>Esti</title>
+      <link href="/music/16/index.html"/>
+      <url>/music/16/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/">Halv</a></h2><p>神中神，一流artcore</p><h3 id="月夜见"><a href="#月夜见" class="headerlink" title="月夜见"></a>月夜见</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1907845923&auto=0&height=66"></iframe><br>因为这个认识halv的，这首曲我可以吹一百年</p><h3 id="天照らす律動"><a href="#天照らす律動" class="headerlink" title="天照らす律動"></a>天照らす律動</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1968388822&auto=0&height=66"></iframe><br>挺好的和风曲，可惜落选了</p><h3 id="Khronostasis-Katharsis"><a href="#Khronostasis-Katharsis" class="headerlink" title="Khronostasis Katharsis"></a>Khronostasis Katharsis</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1456728399&auto=0&height=66"></iframe><br>神</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>street</title>
+      <link href="/music/3/index.html"/>
+      <url>/music/3/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="street"><a href="#street" class="headerlink" title="street"></a>street</h2><p>这位更是重量级爷爷，和风大神</p><h3 id="Sakura-Fubuki"><a href="#Sakura-Fubuki" class="headerlink" title="Sakura Fubuki"></a>Sakura Fubuki</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1346411737&auto=0&height=66"></iframe><br>bofu2015亚军的含金量，不必多说，吉他出来的时候我直接跪了</p><h3 id="雲雀"><a href="#雲雀" class="headerlink" title="雲雀"></a>雲雀</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1438597962&auto=0&height=66"></iframe><br>华丽的和风，有种遛鸟大爷的感觉？因这个曲子认识的street</p><h3 id="Φ"><a href="#Φ" class="headerlink" title="Φ"></a>Φ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1419316016&auto=0&height=66"></iframe><br>非常好听磁通量，使我的耳朵旋转</p><h3 id="nέο-κόsmo"><a href="#nέο-κόsmo" class="headerlink" title="nέο κόsmo"></a>nέο κόsmo</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1996903043&auto=0&height=66"></iframe><br>听力了</p>]]></content>
       
     </entry>
     
@@ -320,22 +326,11 @@
     
     
     <entry>
-      <title>street</title>
-      <link href="/music/3/index.html"/>
-      <url>/music/3/index.html</url>
+      <title>orangentle</title>
+      <link href="/music/7/index.html"/>
+      <url>/music/7/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="street"><a href="#street" class="headerlink" title="street"></a>street</h2><p>这位更是重量级爷爷，和风大神</p><h3 id="Sakura-Fubuki"><a href="#Sakura-Fubuki" class="headerlink" title="Sakura Fubuki"></a>Sakura Fubuki</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1346411737&auto=0&height=66"></iframe><br>bofu2015亚军的含金量，不必多说，吉他出来的时候我直接跪了</p><h3 id="雲雀"><a href="#雲雀" class="headerlink" title="雲雀"></a>雲雀</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1438597962&auto=0&height=66"></iframe><br>华丽的和风，有种遛鸟大爷的感觉？因这个曲子认识的street</p><h3 id="Φ"><a href="#Φ" class="headerlink" title="Φ"></a>Φ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1419316016&auto=0&height=66"></iframe><br>非常好听磁通量，使我的耳朵旋转</p><h3 id="nέο-κόsmo"><a href="#nέο-κόsmo" class="headerlink" title="nέο κόsmo"></a>nέο κόsmo</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1996903043&auto=0&height=66"></iframe><br>听力了</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>SoundSouler</title>
-      <link href="/music/14/index.html"/>
-      <url>/music/14/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
       
     </entry>
     
@@ -353,28 +348,6 @@
     
     
     <entry>
-      <title>ARForest</title>
-      <link href="/music/9/index.html"/>
-      <url>/music/9/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/">ARForest</a></h2><p>韩国艺术家，Artcore令人温暖、感动、心醉</p><h3 id="The-Last-Page"><a href="#The-Last-Page" class="headerlink" title="The Last Page"></a>The Last Page</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825200&auto=0&height=66"></iframe><br>bofxv位3，小时候听这首被感动哭了</p><h3 id="Inverted-World"><a href="#Inverted-World" class="headerlink" title="Inverted World"></a>Inverted World</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2099631232&auto=0&height=66"></iframe><br>Rotaeno独占，听哭了</p><h3 id="It’s-alright"><a href="#It’s-alright" class="headerlink" title="It’s alright"></a>It’s alright</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402824446&auto=0&height=66"></iframe><br>绮丽</p><h3 id="Travel-Begins"><a href="#Travel-Begins" class="headerlink" title="Travel Begins"></a>Travel Begins</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825201&auto=0&height=66"></iframe><br>绮丽</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>M2U</title>
-      <link href="/music/15/index.html"/>
-      <url>/music/15/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>黄泉路テヂーモ</title>
       <link href="/music/8/index.html"/>
       <url>/music/8/index.html</url>
@@ -386,11 +359,11 @@
     
     
     <entry>
-      <title>orangentle</title>
-      <link href="/music/7/index.html"/>
-      <url>/music/7/index.html</url>
+      <title>ARForest</title>
+      <link href="/music/9/index.html"/>
+      <url>/music/9/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/">ARForest</a></h2><p>韩国艺术家，Artcore令人温暖、感动、心醉</p><h3 id="The-Last-Page"><a href="#The-Last-Page" class="headerlink" title="The Last Page"></a>The Last Page</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825200&auto=0&height=66"></iframe><br>bofxv位3，小时候听这首被感动哭了</p><h3 id="Inverted-World"><a href="#Inverted-World" class="headerlink" title="Inverted World"></a>Inverted World</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2099631232&auto=0&height=66"></iframe><br>Rotaeno独占，听哭了</p><h3 id="It’s-alright"><a href="#It’s-alright" class="headerlink" title="It’s alright"></a>It’s alright</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402824446&auto=0&height=66"></iframe><br>绮丽</p><h3 id="Travel-Begins"><a href="#Travel-Begins" class="headerlink" title="Travel Begins"></a>Travel Begins</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825201&auto=0&height=66"></iframe><br>绮丽</p>]]></content>
       
     </entry>
     

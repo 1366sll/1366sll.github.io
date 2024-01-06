@@ -10,7 +10,7 @@
   <id>https://1366sll.github.io/</id>
   
   <author>
-    <name>怪蜀黍</name>
+    <name>aaaastolfo</name>
     
   </author>
   
@@ -29,52 +29,6 @@
       
       
     <summary type="html">&lt;p&gt;众所周知，novelai在前段时间比较火，下面咱就来讲述一下如何通过部署sd webui来达到本地化的效果&lt;br&gt;首先你需要:&lt;br&gt;    安装一个anaconda&lt;br&gt;    安装好git&lt;br&gt;    安装好对应自己显卡版本的CUDA&lt;br&gt;        在cmd</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>源码</title>
-    <link href="https://1366sll.github.io/2023/12/22/yuanma/"/>
-    <id>https://1366sll.github.io/2023/12/22/yuanma/</id>
-    <published>2023-12-22T06:12:00.000Z</published>
-    <updated>2023-12-31T18:26:18.121Z</updated>
-    
-    <content type="html"><![CDATA[<p>#include<LiquidCrystal.h><br>LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）</p><p>int timer1;<br>int timer2;</p><p>float Time;    //计算模块的参数</p><p>int flag1 = 0;<br>int flag2 = 0;    //检测是否有车经过</p><p>float distance = 5.0;<br>float speed;    //计算速度模块（可以在这里改距离）</p><p>int ir_s1 = A0;<br>int ir_s2 = A1;    //绑红外传感器的输入口</p><p>int buzzer = 13;    //震动模块的输出端（然而我们也不需要）</p><p>void setup(){<br>  pinMode(ir_s1, INPUT);<br>  pinMode(ir_s2, INPUT);<br>  pinMode(buzzer, OUTPUT);    //红外传感器与震动模块初始化</p><p>  lcd.begin(16,2);<br>  lcd.clear();<br>  lcd.setCursor(0,0);<br>  lcd.print(“ WELCOME To  My “);<br>  lcd.setCursor(0,1);<br>  lcd.print(“YouTube  Channel”);<br>  delay(2000);<br>  lcd.clear();    //显示器初始化（会不断显示作者的广告？）<br>}</p><p>void loop() {<br>if(digitalRead (ir_s1) == LOW &amp;&amp; flag1==0){timer1 = millis(); flag1=1;}    //检测s1是否有车经过，并计算时间</p><p>if(digitalRead (ir_s2) == LOW &amp;&amp; flag2==0){timer2 = millis(); flag2=1;}    //检测s2是否有车经过，并计算时间</p><p>if (flag1==1 &amp;&amp; flag2==1){<br>     if(timer1 &gt; timer2){Time = timer1 - timer2;}<br>else if(timer2 &gt; timer1){Time = timer2 - timer1;}    //计算经过时间<br> Time=Time/1000;//convert millisecond to second<br> speed=(distance/Time);    //v=d/t<br> speed=speed*3600;    //multiply by seconds per hr<br> speed=speed/1000;    //division by meters per Km<br>}    //计算速度</p><p>if(speed==0){<br>lcd.setCursor(0, 1);<br>if(flag1==0 &amp;&amp; flag2==0){lcd.print(“No car  detected”);}<br>                    else{lcd.print(“Searching…    “);}<br>}    //没有车经过（等待）（这一块只有显示部分）<br>else{<br>    lcd.clear();<br>    lcd.setCursor(0, 0);<br>    lcd.print(“Speed:”);<br>    lcd.print(speed,1);<br>    lcd.print(“Km/Hr  “);<br>    lcd.setCursor(0, 1);     //有车经过（这一块也只有显示部分）<br>  if(speed &gt; 50){lcd.print(“  Over Speeding  “); digitalWrite(buzzer, HIGH);}<br>            else{lcd.print(“  Normal Speed   “); }<br>    delay(3000);<br>    digitalWrite(buzzer, LOW);    //车超速（有显示与震动模块）<br>    speed = 0;<br>    flag1 = 0;<br>    flag2 = 0;    //初始化参数<br> }<br>}</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;#include&lt;LiquidCrystal.h&gt;&lt;br&gt;LiquidCrystal lcd(2, 3, 4, 5, 6, 7);    //显示器绑定（然而我们不需要显示器）&lt;/p&gt;
-&lt;p&gt;int timer1;&lt;br&gt;int timer2;&lt;/p&gt;
-&lt;p&gt;float T</summary>
-      
-    
-    
-    
-    <category term="arduino" scheme="https://1366sll.github.io/categories/arduino/"/>
-    
-    
-    <category term="hjm" scheme="https://1366sll.github.io/tags/hjm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>胡嘉珉看这里，这里有你要的东西</title>
-    <link href="https://1366sll.github.io/2023/12/21/keti/"/>
-    <id>https://1366sll.github.io/2023/12/21/keti/</id>
-    <published>2023-12-20T18:12:00.000Z</published>
-    <updated>2023-12-31T18:26:50.841Z</updated>
-    
-    <content type="html"><![CDATA[<p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;测速代码样例：&lt;a href=&quot;https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881&quot;&gt;https://www.aliyundrive.com/s/</summary>
       
     
     
