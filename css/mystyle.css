@@ -782,6 +782,19 @@ h6::before {
     }
 }
 
+[data-theme='light'] h1 {/*这里可以改成自己喜欢的渐变色*/
+	background: linear-gradient(to right, #365262 0%, #1c6a54 50%, #254050 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+  [data-theme='dark'] h1 {/*这里可以改成自己喜欢的渐变色*/
+	background: linear-gradient(to right, #ffa9c4 0%, #7fe6e1 50%, #e68daa 100%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+
 /*侧边滑动颜色*/
 :root {
     --btn-bg: linear-gradient(0deg,
