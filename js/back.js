@@ -40,6 +40,9 @@ function changeBg(s, flag) {
 const btn= document.getElementById("btn");
 
 btn.addEventListener('click', function(){
-  var name = document.getElementById("color1").value;
-  alert("Name: "+ name);
+  var color1 = document.getElementById("color1").value;
+  var color2 = document.getElementById("color2").value;
+  var color3 = document.getElementById("color3").value;
+  var degree = document.getElementById("degree").value;
+  changeBg('linear-gradient('+degree+'deg,'+color1+','+color2+','+color3+')');
 });
