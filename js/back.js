@@ -46,3 +46,14 @@ btn.addEventListener('click', function(){
   var degree = document.getElementById("degree").value;
   changeBg('linear-gradient('+degree+'deg,'+color1+','+color2+','+color3+')');
 });
+
+
+btn2.addEventListener('click', function(){
+  var color1 = document.getElementById("color12").value;
+  var color2 = document.getElementById("color22").value;
+  var color3 = document.getElementById("color32").value;
+  var degree = document.getElementById("degree2").value;
+  let bg = document.getElementById('web_bg')
+  let back = bg.style.backgroundImage
+  changeBg('linear-gradient('+degree+'deg,'+color1+','+color2+','+color3+'),'+bg.style.backgroundImage);
+});
