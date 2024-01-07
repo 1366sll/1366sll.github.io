@@ -2207,14 +2207,14 @@ figure.highlight pre .javascript .function {
   transform: translateZ(0);
 }
 :root {
-  --recent-post-bgcolor: radial-gradient(transparent, #fff 75%);
+  --recent-post-bgcolor: radial-gradient(transparent, rgba(255,255,255,0.6));
   --article-content-bgcolor: linear-gradient(-45deg, rgba(232,216,185,0.9), #bdbdf0, rgba(238,193,234,0.85));
   --recent-post-arrow: #fff;
   --recent-post-cover-shadow: #fff;
   --recent-post-transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
 }
 [data-theme="dark"] {
-  --recent-post-bgcolor: radial-gradient(transparent, #232323 75%);
+  --recent-post-bgcolor: radial-gradient(transparent, rgba(35,35,35,0.5));
   --article-content-bgcolor: #99999a;
   --recent-post-arrow: #37e2dd;
   --recent-post-cover-shadow: #232323;
@@ -2540,11 +2540,11 @@ figure.highlight pre .javascript .function {
   }
   .recent-posts .recent-post-item .recent-post-content.both,
   .recent-posts .recent-post-item .recent-post-content.right {
-    background: -webkit-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -moz-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -o-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -ms-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: linear-gradient(to left, var(--recent-post-cover-shadow), transparent);
+    background: -webkit-linear-gradient(left, var(--recent-post-cover-shadow), transparent 75%);
+    background: -moz-linear-gradient(left, var(--recent-post-cover-shadow), transparent 75%);
+    background: -o-linear-gradient(left, var(--recent-post-cover-shadow), transparent 75%);
+    background: -ms-linear-gradient(left, var(--recent-post-cover-shadow), transparent 75%);
+    background: linear-gradient(to right, var(--recent-post-cover-shadow), transparent 75%);
   }
   .recent-posts .recent-post-item .recent-post-content.both .recent-post-cover-shadow,
   .recent-posts .recent-post-item .recent-post-content.right .recent-post-cover-shadow {
@@ -2604,11 +2604,11 @@ figure.highlight pre .javascript .function {
     left: calc(100% - 40px);
   }
   .recent-posts .recent-post-item .recent-post-content.left {
-    background: -webkit-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -moz-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -o-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -ms-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: linear-gradient(to left, var(--recent-post-cover-shadow), transparent);
+    background: -webkit-linear-gradient(right, var(--recent-post-cover-shadow), transparent 75%);
+    background: -moz-linear-gradient(right, var(--recent-post-cover-shadow), transparent 75%);
+    background: -o-linear-gradient(right, var(--recent-post-cover-shadow), transparent 75%);
+    background: -ms-linear-gradient(right, var(--recent-post-cover-shadow), transparent 75%);
+    background: linear-gradient(to left, var(--recent-post-cover-shadow), transparent 75%);
   }
   .recent-posts .recent-post-item .recent-post-content.left .recent-post-cover-shadow {
     right: 0;
