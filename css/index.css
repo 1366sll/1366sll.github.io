@@ -2208,9 +2208,9 @@ figure.highlight pre .javascript .function {
 }
 :root {
   --recent-post-bgcolor: linear-gradient(to left, rgba(255,255,255,0.9) 0, transparent 15%, transparent 85%, rgba(255,255,255,0.9) 100%);
-  --article-content-bgcolor: #49b1f5;
+  --article-content-bgcolor: linear-gradient(-45deg, rgba(232,216,185,0.9), #bdbdf0, rgba(238,193,234,0.85));
   --recent-post-arrow: #fff;
-  --recent-post-cover-shadow: linear-gradient(-45deg, rgba(232,216,185,0.9), #bdbdf0, rgba(238,193,234,0.85));
+  --recent-post-cover-shadow: #fff;
   --recent-post-transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
 }
 [data-theme="dark"] {
