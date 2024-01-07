@@ -463,6 +463,20 @@ h6::before {
   font-size: 0.66rem;
   margin-top: 0rem;
 }
+
+
+.history_slide {
+    text-align: left;
+    font-size: 14px;
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0) !important;
+    box-shadow: 0px 0px 10px 5px rgb(104, 104, 104);
+    align-items: flex-start;
+}
+
+
 /* s设置风车hover动效 6s那里可以自己调节快慢*/
 #content-inner.layout h1:hover,
 #content-inner.layout h2:hover,
@@ -797,7 +811,7 @@ h6::before {
 
 /*侧边滑动颜色*/
 :root {
-    --btn-bg: linear-gradient(0deg,
+    --btn-bg: linear-gradient(90deg,
 	rgba(224, 185, 232, 0.233),
 	rgba(227, 151, 244, 0.5),
 	rgba(198, 163, 235, 0.8),
