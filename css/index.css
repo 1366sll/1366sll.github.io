@@ -2207,14 +2207,14 @@ figure.highlight pre .javascript .function {
   transform: translateZ(0);
 }
 :root {
-  --recent-post-bgcolor: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  --recent-post-bgcolor: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
   --article-content-bgcolor: linear-gradient(-45deg, rgba(232,216,185,0.9), #bdbdf0, rgba(238,193,234,0.85));
   --recent-post-arrow: #fff;
   --recent-post-cover-shadow: #fff;
   --recent-post-transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
 }
 [data-theme="dark"] {
-  --recent-post-bgcolor: linear-gradient(to left, rgba(35,35,35,0.5), transparent, transparent, rgba(35,35,35,0.5));
+  --recent-post-bgcolor: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
   --article-content-bgcolor: #99999a;
   --recent-post-arrow: #37e2dd;
   --recent-post-cover-shadow: #232323;
@@ -2226,11 +2226,7 @@ figure.highlight pre .javascript .function {
 .recent-posts .recent-post-item {
   margin-bottom: 15px;
   width: 100%;
-  background: -webkit-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -moz-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -o-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -ms-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: var(--recent-post-bgcolor);
   overflow: hidden;
   border-radius: 15px;
 }
@@ -2241,11 +2237,7 @@ figure.highlight pre .javascript .function {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  background: -webkit-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -moz-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -o-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: -ms-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
-  background: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: var(--recent-post-bgcolor);
   position: relative;
 }
 .recent-posts .recent-post-item .recent-post-content .recent-post-cover {
