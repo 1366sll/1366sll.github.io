@@ -2541,11 +2541,11 @@ figure.highlight pre .javascript .function {
   .recent-posts .recent-post-item .recent-post-content.both .recent-post-cover-shadow,
   .recent-posts .recent-post-item .recent-post-content.right .recent-post-cover-shadow {
     left: 0;
-    background: -webkit-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -moz-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -o-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: -ms-linear-gradient(right, var(--recent-post-cover-shadow), transparent);
-    background: linear-gradient(to left, var(--recent-post-cover-shadow), transparent);
+    background: -webkit-linear-gradient(right, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -moz-linear-gradient(right, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -o-linear-gradient(right, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -ms-linear-gradient(right, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: linear-gradient(to left, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
   }
   .recent-posts .recent-post-item .recent-post-content.both .recent-post-cover,
   .recent-posts .recent-post-item .recent-post-content.right .recent-post-cover {
@@ -2597,11 +2597,11 @@ figure.highlight pre .javascript .function {
   }
   .recent-posts .recent-post-item .recent-post-content.left .recent-post-cover-shadow {
     right: 0;
-    background: -webkit-linear-gradient(left, var(--recent-post-cover-shadow), transparent);
-    background: -moz-linear-gradient(left, var(--recent-post-cover-shadow), transparent);
-    background: -o-linear-gradient(left, var(--recent-post-cover-shadow), transparent);
-    background: -ms-linear-gradient(left, var(--recent-post-cover-shadow), transparent);
-    background: linear-gradient(to right, var(--recent-post-cover-shadow), transparent);
+    background: -webkit-linear-gradient(left, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -moz-linear-gradient(left, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -o-linear-gradient(left, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: -ms-linear-gradient(left, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
+    background: linear-gradient(to right, rgba(247,149,51,0) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%);
   }
   .recent-posts .recent-post-item .recent-post-content.left .recent-post-cover {
     -webkit-box-ordinal-group: 4;
