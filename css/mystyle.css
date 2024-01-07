@@ -805,6 +805,10 @@ h6::before {
 	rgba(238, 193, 234, 0.201));
 }
 
+.swiper-button-next:after, .swiper-button-prev:after{
+    color:#66ccff!important; /*自己改*/
+}
+
 #name-container{
     transition: all .3s;
     -webkit-transition: all .3s;
