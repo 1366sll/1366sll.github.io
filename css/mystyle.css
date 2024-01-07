@@ -835,7 +835,7 @@ h6::before {
   #bber-talk ul,li{
 	list-style:none;
 	display:block;
-	margin: 10px;
+	margin: 0;
 	padding: 0;
   }
   
@@ -853,7 +853,7 @@ h6::before {
 		rgba(255, 255, 255, 0.8);
 	box-shadow: 0 0 5px rgb(66, 68, 68);	
 	color: var(--font-color);
-	margin-top: 1rem;
+	margin: 1rem;
 	padding: 0.6rem 1rem 0.5rem 1rem;
 	border-radius: 12px;
 	cursor: pointer;
