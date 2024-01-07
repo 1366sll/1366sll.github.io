@@ -2226,7 +2226,11 @@ figure.highlight pre .javascript .function {
 .recent-posts .recent-post-item {
   margin-bottom: 15px;
   width: 100%;
-  background: var(--recent-post-bgcolor);
+  background: -webkit-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -moz-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -o-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -ms-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
   overflow: hidden;
   border-radius: 15px;
 }
@@ -2237,7 +2241,11 @@ figure.highlight pre .javascript .function {
   display: -ms-flexbox;
   display: box;
   display: flex;
-  background: var(--recent-post-bgcolor);
+  background: -webkit-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -moz-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -o-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: -ms-linear-gradient(right, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
+  background: linear-gradient(to left, rgba(255,255,255,0.9), transparent, transparent, rgba(255,255,255,0.9));
   position: relative;
 }
 .recent-posts .recent-post-item .recent-post-content .recent-post-cover {
