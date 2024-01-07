@@ -809,6 +809,63 @@ h6::before {
 	-webkit-text-fill-color: transparent;
   }
 
+
+/* 主页哔哔bb */
+#bber-talk {
+	width: 100%;
+	height: 35px;
+	line-height: 25px;
+  }
+  
+  #bber-talk .li-style {
+	width: 100%;
+	height: 25px;
+	text-align: center;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transition: 0.3s;
+  }
+  
+  #bber-talk .li-style:hover{
+	color: #d7acfada;
+  }
+  
+  #bber-talk ul,li{
+	list-style:none;
+	display:block;
+	margin: 0;
+	padding: 0;
+  }
+  
+  #bbTimeList{
+	background: linear-gradient(
+		90deg,
+		rgba(247, 149, 51, 0.2) 0,
+		rgba(243, 112, 85, 0.2) 15%,
+		rgba(239, 78, 123, 0.2) 30%,
+		rgba(161, 102, 171, 0.2) 44%,
+		rgba(80, 115, 184, 0.2) 58%,
+		rgba(16, 152, 173, 0.2) 72%,
+		rgba(7, 179, 155, 0.2) 86%,
+		rgba(109, 186, 130, 0.2) 100%),
+		rgba(255, 255, 255, 0.8);
+	color: var(--font-color);
+	margin-top: 1rem;
+	padding: 0.6rem 1rem 0.5rem 1rem;
+	border-radius: 12px;
+	cursor: pointer;
+	display: flex;
+  }
+  
+  #bbtalk{
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+  }
+
+
 /*侧边滑动颜色*/
 :root {
     --btn-bg: linear-gradient(90deg,
@@ -820,7 +877,7 @@ h6::before {
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
-    color:#66ccff!important; /*自己改*/
+    color:#c273ff9c!important; /*自己改*/
 }
 #name-container{
     transition: all .3s;
