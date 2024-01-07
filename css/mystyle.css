@@ -806,7 +806,7 @@ h6::before {
 }
 
 .swiper-button-next:after, .swiper-button-prev:after{
-    color:#ffffff00!important; /*自己改*/
+    color:rgba(203, 92, 92, 0.771)!important; /*自己改*/
 }
 
 #name-container{
