@@ -62,22 +62,22 @@
     
     
     <entry>
-      <title></title>
-      <link href="/back/index.html"/>
-      <url>/back/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title></title>
+      <link href="/back/index.html"/>
+      <url>/back/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
       
     </entry>
     
@@ -139,22 +139,22 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>音乐</title>
+      <link href="/music/index.html"/>
+      <url>/music/index.html</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h1 id="稍微写一下个人比较喜欢的一些曲师与作品"><a href="#稍微写一下个人比较喜欢的一些曲师与作品" class="headerlink" title="稍微写一下个人比较喜欢的一些曲师与作品"></a>稍微写一下个人比较喜欢的一些曲师与作品</h1><h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/1">a_hisa</a></h2><h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/2">Halv</a></h2><h2 id="street"><a href="#street" class="headerlink" title="street"></a><a href="/music/3">street</a></h2><h2 id="lime"><a href="#lime" class="headerlink" title="lime"></a><a href="/music/4">lime</a></h2><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/5">qfeileadh</a></h2><h2 id="nego-tiato"><a href="#nego-tiato" class="headerlink" title="nego_tiato"></a><a href="/music/6">nego_tiato</a></h2><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/7">orangentle</a></h2><h2 id="黄泉路テヂーモ"><a href="#黄泉路テヂーモ" class="headerlink" title="黄泉路テヂーモ"></a><a href="/music/8">黄泉路テヂーモ</a></h2><h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/9">ARForest</a></h2><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/10">ginkiha</a></h2><h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/11">daisan</a></h2><h2 id="litmus"><a href="#litmus" class="headerlink" title="litmus*"></a><a href="/music/12">litmus*</a></h2><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/13">大前司</a></h2><h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/14">SoundSouler</a></h2><h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/15">M2U</a></h2><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/16">Esti</a></h2><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/17">Xeon</a></h2>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>音乐</title>
-      <link href="/music/index.html"/>
-      <url>/music/index.html</url>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="稍微写一下个人比较喜欢的一些曲师与作品"><a href="#稍微写一下个人比较喜欢的一些曲师与作品" class="headerlink" title="稍微写一下个人比较喜欢的一些曲师与作品"></a>稍微写一下个人比较喜欢的一些曲师与作品</h1><h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/1">a_hisa</a></h2><h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/2">Halv</a></h2><h2 id="street"><a href="#street" class="headerlink" title="street"></a><a href="/music/3">street</a></h2><h2 id="lime"><a href="#lime" class="headerlink" title="lime"></a><a href="/music/4">lime</a></h2><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/5">qfeileadh</a></h2><h2 id="nego-tiato"><a href="#nego-tiato" class="headerlink" title="nego_tiato"></a><a href="/music/6">nego_tiato</a></h2><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/7">orangentle</a></h2><h2 id="黄泉路テヂーモ"><a href="#黄泉路テヂーモ" class="headerlink" title="黄泉路テヂーモ"></a><a href="/music/8">黄泉路テヂーモ</a></h2><h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/9">ARForest</a></h2><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/10">ginkiha</a></h2><h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/11">daisan</a></h2><h2 id="litmus"><a href="#litmus" class="headerlink" title="litmus*"></a><a href="/music/12">litmus*</a></h2><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/13">大前司</a></h2><h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/14">SoundSouler</a></h2><h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/15">M2U</a></h2><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/16">Esti</a></h2><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/17">Xeon</a></h2>]]></content>
+        <content type="html"><![CDATA[]]></content>
       
     </entry>
     
@@ -183,22 +183,33 @@
     
     
     <entry>
-      <title>ginkiha</title>
-      <link href="/music/10/index.html"/>
-      <url>/music/10/index.html</url>
+      <title>整活</title>
+      <link href="/fun/3/index.html"/>
+      <url>/fun/3/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>整活</title>
-      <link href="/fun/3/index.html"/>
-      <url>/fun/3/index.html</url>
+      <title>a_hisa</title>
+      <link href="/music/1/index.html"/>
+      <url>/music/1/index.html</url>
       
-        <content type="html"><![CDATA[<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
+        <content type="html"><![CDATA[<h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/">a_hisa</a></h2><p>这位应该是我最早接触到的曲师了。一开始打喵的时候就一直被阿尔梅里亚的牢笼的曲风所吸引，然后发现不少神曲都是他写的，于是狠狠地迷上了</p><h3 id="アルメリアの鳥籠"><a href="#アルメリアの鳥籠" class="headerlink" title="アルメリアの鳥籠"></a>アルメリアの鳥籠</h3><p>非常好听小提琴，爱来自瓷器（就是一开始听的时候以为是东方曲</p><h3 id="Dysthymia"><a href="#Dysthymia" class="headerlink" title="Dysthymia"></a>Dysthymia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1987415288&auto=0&height=66"></iframe><br>动听的artcore</p><h3 id="凛"><a href="#凛" class="headerlink" title="凛"></a>凛</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1809127634&auto=0&height=66"></iframe><br>一直以为和Rin是同一首曲子……</p><h3 id="Rin"><a href="#Rin" class="headerlink" title="Rin"></a>Rin</h3><p>同上</p><h3 id="Anhedonia"><a href="#Anhedonia" class="headerlink" title="Anhedonia"></a>Anhedonia</h3><p>空灵</p><h3 id="clockroom-amp-spirital-world"><a href="#clockroom-amp-spirital-world" class="headerlink" title="clockroom &amp; spirital world"></a>clockroom &amp; spirital world</h3><p>神作中的神作</p><h3 id="月明かりの宴"><a href="#月明かりの宴" class="headerlink" title="月明かりの宴"></a>月明かりの宴</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2057575871&auto=0&height=66"></iframe><br>同上</p><h3 id="prejudice"><a href="#prejudice" class="headerlink" title="prejudice"></a>prejudice</h3><p>钢琴与鼓组的结合，神作</p><h3 id="amnesia"><a href="#amnesia" class="headerlink" title="amnesia"></a>amnesia</h3><p>小时候听这首被感动哭了，神作中的神作</p><h3 id="leave-it-alone"><a href="#leave-it-alone" class="headerlink" title="leave it alone"></a>leave it alone</h3><p>欢快</p><h3 id="stargazer"><a href="#stargazer" class="headerlink" title="stargazer"></a>stargazer</h3><p>同样十分欢快</p><h3 id="天理鹤情"><a href="#天理鹤情" class="headerlink" title="天理鹤情"></a>天理鹤情</h3><p>劲爆的和风曲，小时候用这首曲子练三纵练哭了（不是</p><h3 id="Cheshire’s-dance"><a href="#Cheshire’s-dance" class="headerlink" title="Cheshire’s dance"></a>Cheshire’s dance</h3><p>感觉不太像hisa写的曲子？非常欢快的一首曲子</p><h3 id="sand-maze"><a href="#sand-maze" class="headerlink" title="sand maze"></a>sand maze</h3><p>性感法老，在线打碟</p><h3 id="gullinkambi"><a href="#gullinkambi" class="headerlink" title="gullinkambi"></a>gullinkambi</h3><p>凯尔特风的新曲子</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ginkiha</title>
+      <link href="/music/10/index.html"/>
+      <url>/music/10/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
       
     </entry>
     
@@ -227,11 +238,11 @@
     
     
     <entry>
-      <title>SoundSouler</title>
-      <link href="/music/14/index.html"/>
-      <url>/music/14/index.html</url>
+      <title>大前司</title>
+      <link href="/music/13/index.html"/>
+      <url>/music/13/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
       
     </entry>
     
@@ -249,22 +260,11 @@
     
     
     <entry>
-      <title>大前司</title>
-      <link href="/music/13/index.html"/>
-      <url>/music/13/index.html</url>
+      <title>Xeon</title>
+      <link href="/music/17/index.html"/>
+      <url>/music/17/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>M2U</title>
-      <link href="/music/15/index.html"/>
-      <url>/music/15/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
       
     </entry>
     
@@ -282,22 +282,11 @@
     
     
     <entry>
-      <title>Xeon</title>
-      <link href="/music/17/index.html"/>
-      <url>/music/17/index.html</url>
+      <title>SoundSouler</title>
+      <link href="/music/14/index.html"/>
+      <url>/music/14/index.html</url>
       
-        <content type="html"><![CDATA[<h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>a_hisa</title>
-      <link href="/music/1/index.html"/>
-      <url>/music/1/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/">a_hisa</a></h2><p>这位应该是我最早接触到的曲师了。一开始打喵的时候就一直被阿尔梅里亚的牢笼的曲风所吸引，然后发现不少神曲都是他写的，于是狠狠地迷上了</p><h3 id="アルメリアの鳥籠"><a href="#アルメリアの鳥籠" class="headerlink" title="アルメリアの鳥籠"></a>アルメリアの鳥籠</h3><p>非常好听小提琴，爱来自瓷器（就是一开始听的时候以为是东方曲</p><h3 id="Dysthymia"><a href="#Dysthymia" class="headerlink" title="Dysthymia"></a>Dysthymia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1987415288&auto=0&height=66"></iframe><br>动听的artcore</p><h3 id="凛"><a href="#凛" class="headerlink" title="凛"></a>凛</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1809127634&auto=0&height=66"></iframe><br>一直以为和Rin是同一首曲子……</p><h3 id="Rin"><a href="#Rin" class="headerlink" title="Rin"></a>Rin</h3><p>同上</p><h3 id="Anhedonia"><a href="#Anhedonia" class="headerlink" title="Anhedonia"></a>Anhedonia</h3><p>空灵</p><h3 id="clockroom-amp-spirital-world"><a href="#clockroom-amp-spirital-world" class="headerlink" title="clockroom &amp; spirital world"></a>clockroom &amp; spirital world</h3><p>神作中的神作</p><h3 id="月明かりの宴"><a href="#月明かりの宴" class="headerlink" title="月明かりの宴"></a>月明かりの宴</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2057575871&auto=0&height=66"></iframe><br>同上</p><h3 id="prejudice"><a href="#prejudice" class="headerlink" title="prejudice"></a>prejudice</h3><p>钢琴与鼓组的结合，神作</p><h3 id="amnesia"><a href="#amnesia" class="headerlink" title="amnesia"></a>amnesia</h3><p>小时候听这首被感动哭了，神作中的神作</p><h3 id="leave-it-alone"><a href="#leave-it-alone" class="headerlink" title="leave it alone"></a>leave it alone</h3><p>欢快</p><h3 id="stargazer"><a href="#stargazer" class="headerlink" title="stargazer"></a>stargazer</h3><p>同样十分欢快</p><h3 id="天理鹤情"><a href="#天理鹤情" class="headerlink" title="天理鹤情"></a>天理鹤情</h3><p>劲爆的和风曲，小时候用这首曲子练三纵练哭了（不是</p><h3 id="Cheshire’s-dance"><a href="#Cheshire’s-dance" class="headerlink" title="Cheshire’s dance"></a>Cheshire’s dance</h3><p>感觉不太像hisa写的曲子？非常欢快的一首曲子</p><h3 id="sand-maze"><a href="#sand-maze" class="headerlink" title="sand maze"></a>sand maze</h3><p>性感法老，在线打碟</p><h3 id="gullinkambi"><a href="#gullinkambi" class="headerlink" title="gullinkambi"></a>gullinkambi</h3><p>凯尔特风的新曲子</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
       
     </entry>
     
@@ -326,6 +315,39 @@
     
     
     <entry>
+      <title>M2U</title>
+      <link href="/music/15/index.html"/>
+      <url>/music/15/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>qfeileadh</title>
+      <link href="/music/5/index.html"/>
+      <url>/music/5/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>orangentle</title>
+      <link href="/music/7/index.html"/>
+      <url>/music/7/index.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nego_tiator</title>
       <link href="/music/6/index.html"/>
       <url>/music/6/index.html</url>
@@ -348,33 +370,11 @@
     
     
     <entry>
-      <title>orangentle</title>
-      <link href="/music/7/index.html"/>
-      <url>/music/7/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>ARForest</title>
       <link href="/music/9/index.html"/>
       <url>/music/9/index.html</url>
       
         <content type="html"><![CDATA[<h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/">ARForest</a></h2><p>韩国艺术家，Artcore令人温暖、感动、心醉</p><h3 id="The-Last-Page"><a href="#The-Last-Page" class="headerlink" title="The Last Page"></a>The Last Page</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825200&auto=0&height=66"></iframe><br>bofxv位3，小时候听这首被感动哭了</p><h3 id="Inverted-World"><a href="#Inverted-World" class="headerlink" title="Inverted World"></a>Inverted World</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2099631232&auto=0&height=66"></iframe><br>Rotaeno独占，听哭了</p><h3 id="It’s-alright"><a href="#It’s-alright" class="headerlink" title="It’s alright"></a>It’s alright</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402824446&auto=0&height=66"></iframe><br>绮丽</p><h3 id="Travel-Begins"><a href="#Travel-Begins" class="headerlink" title="Travel Begins"></a>Travel Begins</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825201&auto=0&height=66"></iframe><br>绮丽</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>qfeileadh</title>
-      <link href="/music/5/index.html"/>
-      <url>/music/5/index.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
       
     </entry>
     
