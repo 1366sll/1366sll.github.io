@@ -101,15 +101,15 @@
 .read-mode .layout_post>#post {
 	background: linear-gradient(
 		90deg,
-		rgba(247, 149, 51, 0.2) 0,
-		rgba(243, 112, 85, 0.2) 15%,
-		rgba(239, 78, 123, 0.2) 30%,
-		rgba(161, 102, 171, 0.2) 44%,
-		rgba(80, 115, 184, 0.2) 58%,
-		rgba(16, 152, 173, 0.2) 72%,
-		rgba(7, 179, 155, 0.2) 86%,
-		rgba(109, 186, 130, 0.2) 100%),
-		rgba(255, 255, 255, 0.8);
+		#f7953333 0,
+		#f3705533 15%,
+		#ef4e7b33 30%,
+		#a166ab33 44%,
+		#5073b833 58%,
+		#1098ad33 72%,
+		#07b39b33 86%,
+		#6dba8233 100%),
+		#ffffffcc;
 	box-shadow: 0 0 5px rgb(66, 68, 68);
 	position: relative;
 	background-size: 100% 100%;
