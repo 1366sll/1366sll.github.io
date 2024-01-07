@@ -2207,10 +2207,10 @@ figure.highlight pre .javascript .function {
   transform: translateZ(0);
 }
 :root {
-  --recent-post-bgcolor: rgba(255,255,255,0.9);
+  --recent-post-bgcolor: linear-gradient(90deg, rgba(247,149,51,0.2) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%), rgba(255,255,255,0.8);
   --article-content-bgcolor: #49b1f5;
   --recent-post-arrow: #fff;
-  --recent-post-cover-shadow: #fff;
+  --recent-post-cover-shadow: linear-gradient(90deg, rgba(247,149,51,0.2) 0, rgba(243,112,85,0.2) 15%, rgba(239,78,123,0.2) 30%, rgba(161,102,171,0.2) 44%, rgba(80,115,184,0.2) 58%, rgba(16,152,173,0.2) 72%, rgba(7,179,155,0.2) 86%, rgba(109,186,130,0.2) 100%), rgba(255,255,255,0.8);
   --recent-post-transition: all 0.5s cubic-bezier(0.59, 0.01, 0.48, 1.17);
 }
 [data-theme="dark"] {
