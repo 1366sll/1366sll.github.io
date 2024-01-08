@@ -4984,9 +4984,11 @@ h1.page-title + .tag-cloud-list {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
+  -webkit-transform: translate(-100%, 0);
+  -moz-transform: translate(-100%, 0);
+  -o-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
 }
 #loading-box.loaded .loading-right-bg {
   -webkit-transition: all 0.5s;
@@ -4999,9 +5001,6 @@ h1.page-title + .tag-cloud-list {
   -o-transform: translate(100%, 0);
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0);
-  opacity: 0;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  filter: alpha(opacity=0);
 }
 #loading-box.loaded .spinner-box {
   display: none;
