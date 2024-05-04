@@ -49,7 +49,7 @@
     margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    text-align: center;
   }
   #bber p {
     margin: 0px;
@@ -233,8 +233,7 @@
   
   /* 顶部样式 */
   .author-content.author-content-item.essayPage {
-    height: 19rem;
-    background: url(https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg) left 28% / cover no-repeat;
+    height: 1rem;
     color: var(--sll-white);
     overflow: hidden;
     margin-top: 0px;
