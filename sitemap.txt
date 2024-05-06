@@ -1,3 +1,4 @@
+https://1366sll.github.io/about/index.html
 https://1366sll.github.io/epic/index.html
 https://1366sll.github.io/epic/3/index.html
 https://1366sll.github.io/epic/2/index.html
@@ -33,7 +34,6 @@ https://1366sll.github.io/fun/2/index.html
 https://1366sll.github.io/fun/index.html
 https://1366sll.github.io/tags/index.html
 https://1366sll.github.io/categories/index.html
-https://1366sll.github.io/about/index.html
 https://1366sll.github.io/link/index.html
 https://1366sll.github.io/2023/07/26/hello-world/
 https://1366sll.github.io/
