@@ -2,45 +2,13 @@
 var gacha_dist = gacha_dist_normal;
 var pickup_weapon = 
 [
-    get_object_idx('5th 성유물'), 
-    get_object_idx('아이작 뉴턴 (상)'),
-    get_object_idx('아이작 뉴턴 (중)'),
-    get_object_idx('아이작 뉴턴 (하)'),
-    //
-    get_object_idx('토르의 망치'),
-    get_object_idx('와호장룡'),
-    get_object_idx('영도 사쿠라 후부키'),
-    get_object_idx('티르의 잘린 팔'),
-    get_object_idx('중장 토끼 19C'),
-    get_object_idx('7th 성유물'),
-    get_object_idx('희헌원 (상)'),
-    get_object_idx('희헌원 (중)'),
-    get_object_idx('희헌원 (하)'),
-    get_object_idx('슈뢰딩거 (상)'),
-    get_object_idx('슈뢰딩거 (중)'),
-    get_object_idx('슈뢰딩거 (하)'),
-    get_object_idx('카렌 서약 (상)'),
-    get_object_idx('카렌 서약 (중)'),
-    get_object_idx('카렌 서약 (하)'),
-    get_object_idx('복희 (상)'),
-    get_object_idx('복희 (중)'),
-    get_object_idx('복희 (하)'),
+    get_object_idx('群青风暴'), 
+
 ];
 var pickup_extended = 
 [
-    get_object_idx('이능 흑핵 침식'), 
-    get_object_idx('이능 흑핵 침식 조각'),
-    //
-    get_object_idx('은랑의 여명'), 
-    get_object_idx('은랑의 여명 조각'),
-    get_object_idx('은랑의 여명'), 
-    get_object_idx('은랑의 여명 조각'),
-    get_object_idx('그림자의 춤'), 
-    get_object_idx('그림자의 춤 조각'),
-    get_object_idx('발키리 스트라이크'), 
-    get_object_idx('발키리 스트라이크 조각'),
-    get_object_idx('기동 장갑 황매화'), 
-    get_object_idx('기동 장갑 황매화 조각'),
+    get_object_idx('蓝莓特攻'), 
+
 ];
 
 
@@ -271,7 +239,7 @@ $(function() {
         }
         if (type == 'disabled')
         {
-            $(this).append('<option value="0">(선택불가)</option>');
+            $(this).append('<option value="0">(不可选择)</option>');
         }
     });
     // set default gacha index

@@ -1,14 +1,15 @@
 <html>
     <head>
-        <title>Honkai 3rd Gacha Simulator</title>
+        <title>崩坏3rd插卡模拟</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/jquery-ui.css">
     </head>
     <body>
         <div id="container">
+            <a href="../../index.html">返回首页</a>
             <div class="row">
-                <div class="title"><h3>붕괴3 가챠 시뮬레이터</h3></div>
-            </div>
+                <div class="title"><h3>崩坏3抽卡模拟</h3></div>
+                            </div>
             <div class="row">
                 <div id="scenecontainer">
                     <div class="skip"><button id="skip" class="btn btn-normal">SKIP</button></div>
@@ -33,38 +34,38 @@
             </div>
             <div class="row content">
                 <div class="left">
-                    <h3>뽑기 선택 <button id="selectpickup">픽업 선택</button> <button id="clear">초기화</button></h3>
+                    <h3>池子选择 <button id="selectpickup">池子选择</button> <button id="clear">初始化</button></h3>
                     <div class="choose">
-                        <button class="btn btn-normal" id="gacha-1">단차</button>
-                        <button class="btn btn-special" id="gacha-10">10연차</button>
+                        <button class="btn btn-normal" id="gacha-1">单抽</button>
+                        <button class="btn btn-special" id="gacha-10">十连</button>
                     </div>
                 </div>
                 <div class="right">
-                    <h3>결과표</h3>
+                    <h3>背包</h3>
                     <table>
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>5성</th>
-                                <th>4성</th>
-                                <th>3성</th>
+                                <th>5星</th>
+                                <th>4星</th>
+                                <th>3星</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>성흔</td>
+                                <td>圣痕</td>
                                 <td><span id="stig5">0</span></td>
                                 <td><span id="stig4">0</span></td>
                                 <td><span id="stig3">0</span></td>
                             </tr>
                             <tr>
-                                <td>무기</td>
+                                <td>武器</td>
                                 <td><span id="wea5">0</span></td>
                                 <td><span id="wea4">0</span></td>
                                 <td><span id="wea3">0</span></td>
                             </tr>
                             <tr>
-                                <td>발키리</td>
+                                <td>角色</td>
                                 <td><span id="val5">0</span></td>
                                 <td><span id="val4">0</span></td>
                                 <td><span id="val3">0</span></td>
@@ -82,12 +83,12 @@
                     <div style="margin-top:15px;">
                         <img src="img/jewel.png" width=20>
                         <span class="detail detail1" id="jewel">0</span>
-                        <span class="detail detail2">(가챠 횟수 <span id="count">0</span>번)</span>
+                        <span class="detail detail2">(抽数 <span id="count">0</span>发)</span>
                     </div>
                 </div>
             </div>
             <div class="row content">
-                <h3>획득한 아이템</h3>
+                <h3>奖品</h3>
                 <div id="items">
                 </div>
             </div>
@@ -99,31 +100,31 @@
 
 
         <div id="settingdialog" title="Select Pickup Type">
-            <p>현재 픽업: <span id='pickup-name'>표준 뽑기</span></p>
+            <p>当前up: <span id='pickup-name'>标准</span></p>
             <div class="accordion">
-                <h3>표준 뽑기</h3>
+                <h3>标准</h3>
                 <div style='height:400px;'>
-                    <p>STANDARD GACHA</p>
+                    <p>标准补给</p>
                     <p><img src='img/gacha_standard.png?rev=20180210' width=100%></p>
-                    <button class="btn btn-submit dialog_save" data-type='normal' data-form='normal-form' data-pickup-name='표준 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='normal' data-form='normal-form' data-pickup-name='标准'>选择</button>
                 </div>
-                <h3>정밀 뽑기</h3>
+                <h3>精准</h3>
                 <div style='height:750px;'>
                     <p><img src='img/gacha_weapon.png?rev=20180210' width=100%></p>
                     <div id='weapon-form'>
-                        <h4>픽업 목록 (무기 / 성흔)</h4>
+                        <h4>up池 (武器/圣痕)</h4>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
-                        <h4>탈로테 목록 (무기)</h4>
+                        <h4>up列表 (武器)</h4>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
                         <select class='gacha_list' data-type='weapon' data-rare=5></select>
-                        <h4>탈로테 목록 (성흔)</h4>
+                        <h4>up列表 (圣痕)</h4>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
@@ -137,21 +138,21 @@
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                         <select class='gacha_list' data-type='stigmata' data-rare=5></select>
                     </div>
-                    <button class="btn btn-submit dialog_save" data-type='weapon' data-form='weapon-form' data-pickup-name='정밀 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='weapon' data-form='weapon-form' data-pickup-name='精准'>选择</button>
                 </div>
-                <h3>확장 뽑기</h3>
+                <h3>扩充</h3>
                 <div style='height:650px;'>
                     <p><img src='img/gacha_extended.png?rev=20180309' width=100%></p>
                     <div id='extended-form'>
-                        <h4>S 발키리</h4>
+                        <h4>S级女武神 </h4>
                         <select class='gacha_list' data-type='valkyrie' data-rare=5></select>
                         <select class='gacha_list' data-type='valkyrie_piece' data-rare=5></select>
-                        <h4>A 발키리 (픽업)</h4>
+                        <h4>A级女武神 (up) </h4>
                         <select class='gacha_list' data-type='valkyrie' data-rare=4></select>
                         <select class='gacha_list' data-type='valkyrie_piece' data-rare=4></select>
                         <select class='gacha_list' data-type='valkyrie' data-rare=4></select>
                         <select class='gacha_list' data-type='valkyrie_piece' data-rare=4></select>
-                        <h4>A 발키리</h4>
+                        <h4>A女武神 </h4>
                         <select class='gacha_list' data-type='valkyrie'></select>
                         <select class='gacha_list' data-type='valkyrie_piece'></select>
                         <select class='gacha_list' data-type='valkyrie'></select>
@@ -159,10 +160,10 @@
                         <select class='gacha_list' data-type='valkyrie'></select>
                         <select class='gacha_list' data-type='valkyrie_piece'></select>
                     </div>
-                    <button class="btn btn-submit dialog_save" data-type='extended' data-form='extended-form' data-pickup-name='확장 뽑기'>선택</button>
+                    <button class="btn btn-submit dialog_save" data-type='extended' data-form='extended-form' data-pickup-name='扩充'>选择</button>
                 </div>
             </div>
-            <label><input type="checkbox" id="allblue">JAP server probability (올블루 허용)</label>
+            <label><input type="checkbox" id="allblue">JAP server probability (保底)</label>
         </div>
 
 

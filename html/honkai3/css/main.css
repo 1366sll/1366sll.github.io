@@ -1,8 +1,9 @@
-body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-repeat #120c00; background-size: 100%;
+body { margin: 0; padding: 0; background: url('https://api.dreamofice.cn/hoyorandom/img') center top no-repeat #120c00; height: 100%;
     font-size: 9pt; color: #fff; }
 #container { width:780px; margin: 0 auto; }
 #container .title h3 { display: none; }
 #container .title { background: url('../img/title.png') 0 0 no-repeat; width: 100%; height: 100px; margin-top: 30px; }
+
 
 .row { margin-bottom: 30px; clear:both; overflow:hidden;  }
 .row.content { background-color: rgba(0,60,120,0.5); padding: 20px; }
@@ -20,7 +21,7 @@ body { margin: 0; padding: 0; background: url('../img/bg.jpg') center top no-rep
 
 .choose { width: 100%; clear:both; text-align: center; margin-top:60px; }
 .choose button { width: 100px; margin-right: 10px; }
-.detail2 { color:#ccc; float:right; } /* (가챠 횟수: x번) */
+.detail2 { color:#ccc; float:right; } /* (扭蛋次数：x次) */
 
 #scenecontainer {
     position: relative;
