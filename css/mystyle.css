@@ -267,6 +267,9 @@
 	flex-wrap: nowrap;
 }
 
+#canvas {
+	z-index: 100;
+}
 
 /*home动画?*/
 #site-name::before{
