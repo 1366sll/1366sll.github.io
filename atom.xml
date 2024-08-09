@@ -6,7 +6,7 @@
   <link href="https://1366sll.top/atom.xml" rel="self"/>
   
   <link href="https://1366sll.top/"/>
-  <updated>2024-01-08T03:58:27.441Z</updated>
+  <updated>2024-08-09T19:32:03.907Z</updated>
   <id>https://1366sll.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客托管配置实录</title>
+    <link href="https://1366sll.top/2024/08/09/cdn/"/>
+    <id>https://1366sll.top/2024/08/09/cdn/</id>
+    <published>2024-08-09T15:02:17.000Z</published>
+    <updated>2024-08-09T19:32:03.907Z</updated>
+    
+    
+    <summary type="html">刚好弄完CloudFlare的CDN服务，最近一段时间应该是不打算再动这方面了，因此稍微回顾一下以前的历程</summary>
+    
+    
+    
+    
+    <category term="博客搭建" scheme="https://1366sll.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>sd webui部署指北</title>

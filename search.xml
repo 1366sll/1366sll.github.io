@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>博客托管配置实录</title>
+      <link href="/2024/08/09/cdn/"/>
+      <url>/2024/08/09/cdn/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>[TOC]</p><h2 id="Github-Page"><a href="#Github-Page" class="headerlink" title="Github Page"></a>Github Page</h2><p>一开始搭博客时没想太多，所以就直接在网上找了相关资料，最终选择了可白嫖的最方便的方法，即github 提供的托管服务（实际上第一次了解到个人博客也是在看到别人域名github.io结尾的网页后），实现十分简单，在GitHub上建好项目后利用hexo 本身的deploy功能便可以将整个网页文件打包上传到giuthub，但是需要自己设置好ssh密钥之类的，不过这些在官方的技术文档里都有记载（应该吧……）看看应该能看懂</p><p>然后到settings下的page目录启用github page托管服务即可</p><p>但是这种方式虽然简单，但有其巨大的缺陷，即：<strong>慢</strong></p><h2 id="Vercel"><a href="#Vercel" class="headerlink" title="Vercel"></a>Vercel</h2><p>于是我放弃了github page 因为这东西慢也就罢了，有的时候因为墙的原因还上不去……</p><p>最终我在众多服务中选择了vercel（之前在哪里看到一张图，好像在几家服务商里推荐vercel和zeabur，我一开始用的其实是zeabur，但后来发现这东西好像会删服务，所以换了vercel，不过这两家使用流程和效果都差不多，所以没有分开来讲的必要……）</p><p>vercel的使用需要用到之前github里创建的仓库（所以之前的努力其实某种意义上没白费……？）注册好vercel账号 点击ADD NEW SITE 后就可以绑github仓库了，然后就大功告成了</p><p>vercel自己会提供一个域名，不过会比较丑陋，而且在国内仍可能被墙，所以思来想去还是自己弄了一个域名</p><h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>域名其实有办法免费拿，不过大多需要国外手机，比较麻烦也不安全，所以最终还是花钱买了个域名。需要注意的是，国内购买域名需要实名认证（后续还要备案？我不清楚……）所以最终选择了国外购买域名。观察下来国外域名最便宜的应该是NameSilo了，找找的话还能拿一刀的优惠码（不过域名管理页面可能有些……复古？）在里面售卖的域名里面最便宜的当属.top域名，于是二话不说拿下，域名名字狠狠致敬一波一位令我印象深刻的老师（）</p><p>随后就回到了vercel，在项目的设置里可以找到Domain settings，通过Add Domain Alias可以添加自定义域名，随后点击Check DNS configuration获取需要的解析记录，在域名注册商那里修改DNS，把 CName记录 和 A记录修改为vercel提供的解析记录就可以了</p><h2 id="腾讯云"><a href="#腾讯云" class="headerlink" title="腾讯云"></a>腾讯云</h2><p>这样折腾完了之后过了一段时间，我还是不太满意，因为还是慢，正好手里有些闲钱，于是最终还是决定投奔腾讯云</p><p>通过腾讯云的COS对象存储服务，创建一个Bucket，然后配置管理的域名管理里面选自定义域名，输入自己的域名后便可以看到自己的Bucket所对应的一串CName，和vercel一样，在域名注册商那里修改DNS，vercel提供的解析记录删掉，添加腾讯云的CName就可以了</p><p>进一步的话也可以把域名挂在腾讯云下面，通过在域名注册商那里把NameServer换成腾讯云提供的NameServer，这样可以在腾讯云里直接更改DNS解析记录</p><p>还可以开启CDN加速服务进行加速，通过在内容分发网络下的域名管理里添加域名，在新界面里将加速类型设置为CDN小文件，把源站类型设置为cos源，源站地址选之前那个桶的地址，在设置好后去修改DNS，把原来桶的CName改成CDN加速给的CName就可以了</p><p>但是如果不幸遭遇攻击，免费的CDN额度可能会用完，多的部分按量计费可能比较贵，所以建议提前买个十几块钱的包以防不测……</p><p>不过因为没有备案（懒……）所以上述服务都部署在境外，所以其实并没有非常快……</p><p>还有比较重要一点就是由于网站文件存在腾讯云的桶里而不是Hexo默认的github上，所以要把现有网站文件复制到桶里，然后通过hexo-deployer-cos插件等方式使得以后的deploy会同步到腾讯云那里</p><h2 id="CloudFlare"><a href="#CloudFlare" class="headerlink" title="CloudFlare"></a>CloudFlare</h2><p>这位更是赛博活佛，cloudflare为所有人提供遍布全球的免费的cdn服务，以及ddos防御防御还有一堆乱七八糟的服务</p><p>至于我之前为什么没有用cloudflare的原因——其实我也不知道。这东西我试下来好像也没有很慢，稳定性我用下来至少比fastly.jsdelivr.net要稳定……可能就是之前没有注意到吧……</p><p>然后换他主要是因为他真的全免费，而且还帮忙抗攻击（他真的，我哭死……），如果用腾讯云的话，如果被攻击可能就直接欠费了……</p><p>我是用腾讯云的桶+cloudflare的cdn，所以其实和配置腾讯云cdn没什么区别</p><p>在cloudflare里添加自己的域名，他会给你NameServer，把注册商那里的NameServer换成他给的，接下来如果cloudflare没有自动导入腾讯云的桶的解析记录的话可以自己手动导入，如果已经自动导入了就大功告成了，右侧可以一键打开所有免费功能，也可以自己设置缓存规则</p><p>其实也可以国内设置腾讯云的CDN，国外则使用CloudFlare的CDN，这样国内外都有极快的加载速度，但这样就不能白嫖CloudFlare的抗攻击能力了，同时现在的速度我还可以接受，因此就没有继续折腾了</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 博客搭建 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>sd webui部署指北</title>
       <link href="/2024/01/01/webui/"/>
       <url>/2024/01/01/webui/</url>
@@ -50,7 +69,7 @@
       <link href="/2023/07/26/hello-world/"/>
       <url>/2023/07/26/hello-world/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin2031"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin2031 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin2031"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin2031.autoRotate = true;                    skinViewermcskin2031.animation = new skinview3d.WalkingAnimation();                }, 500);            </script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin5338"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin5338 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin5338"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin5338.autoRotate = true;                    skinViewermcskin5338.animation = new skinview3d.WalkingAnimation();                }, 500);            </script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       
@@ -62,44 +81,11 @@
     
     
     <entry>
-      <title>关于</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>收藏夹</title>
+      <link href="/bookmark/index.html"/>
+      <url>/bookmark/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin4493"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin4493 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin4493"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin4493.autoRotate = true;                    skinViewermcskin4493.animation = new skinview3d.WalkingAnimation();                }, 500);            </script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/css/card-history.css"/>
-      <url>/css/card-history.css</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">.history_slide {  text-align:left;  font-size: 14px;  background: rgba(255, 255, 255, 0);  display: flex;  flex-direction:column;  align-items: flex-start;}#history-baidu > .blog-slider__pagination{  display:none}.history_slide_time{  color: #e9a7a7;  background: rgba(255, 255, 255, 0);  font-weight: lighter;}]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/back/index.html"/>
-      <url>/back/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>静态说说</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="mikutap"><a href="#mikutap" class="headerlink" title="mikutap"></a><a href="https://mikutap.mikuforever.com/">mikutap</a></h2><h2 id="人设生成器"><a href="#人设生成器" class="headerlink" title="人设生成器"></a><a href="https://eromanga.gitee.io/draw/">人设生成器</a></h2><h2 id="阿虚的储物间"><a href="#阿虚的储物间" class="headerlink" title="阿虚的储物间"></a><a href="https://axutongxue.com/">阿虚的储物间</a></h2><h2 id="申论生成器"><a href="#申论生成器" class="headerlink" title="申论生成器"></a><a href="https://sojo.im/slscq/">申论生成器</a></h2><h2 id="狗姐的欧陆资源站"><a href="#狗姐的欧陆资源站" class="headerlink" title="狗姐的欧陆资源站"></a><a href="https://sharelikes.com.cn/ContectOne/Paradox%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">狗姐的欧陆资源站</a></h2><h2 id="bilibili视频下载"><a href="#bilibili视频下载" class="headerlink" title="bilibili视频下载"></a><a href="https://xbeibeix.com/api/bilibili/">bilibili视频下载</a></h2><h2 id="元素法典"><a href="#元素法典" class="headerlink" title="元素法典"></a><a href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素法典</a></h2><h2 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a><a href="https://waifu2x.udp.jp/index.zh-CN.html">waifu2x</a></h2><h2 id="像素人像"><a href="#像素人像" class="headerlink" title="像素人像"></a><a href="https://pixel-me.tokyo/en/">像素人像</a></h2><h2 id="指针效果"><a href="#指针效果" class="headerlink" title="指针效果"></a><a href="https://cursoreffects.com/">指针效果</a></h2><h2 id="文字绘画"><a href="#文字绘画" class="headerlink" title="文字绘画"></a><a href="https://paint.toys/calligram/">文字绘画</a></h2><h2 id="一些东西"><a href="#一些东西" class="headerlink" title="一些东西"></a><a href="https://neave.com/">一些东西</a></h2><h2 id="archieve"><a href="#archieve" class="headerlink" title="archieve"></a><a href="https://archive.org/">archieve</a></h2><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a><a href="https://www.freeimg.cn/">图床</a></h2><h2 id="地力练习"><a href="#地力练习" class="headerlink" title="地力练习"></a><a href="https://eatcat.yisous.xyz/">地力练习</a></h2><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a><a href="https://zhuanlan.zhihu.com/p/129298318">生成器</a></h2><h2 id="图像视频化"><a href="#图像视频化" class="headerlink" title="图像视频化"></a><a href="https://sketch.metademolab.com/">图像视频化</a></h2><h2 id="图像素材"><a href="#图像素材" class="headerlink" title="图像素材"></a><a href="https://www.irasutoya.com/">图像素材</a></h2><h2 id="机场"><a href="#机场" class="headerlink" title="机场"></a><a href="https://front.spaport.cc/">机场</a></h2><h2 id="音乐分离"><a href="#音乐分离" class="headerlink" title="音乐分离"></a><a href="https://vocalremover.org/zh/key-bpm-finder">音乐分离</a></h2><h2 id="midi搜索"><a href="#midi搜索" class="headerlink" title="midi搜索"></a><a href="https://musescore.com/sheetmusic">midi搜索</a></h2><p><a href="https://github.com/LibreScore/dl-librescore">记得安装下载插件</a></p>]]></content>
       
     </entry>
     
@@ -117,6 +103,28 @@
     
     
     <entry>
+      <title>静态说说</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/css/card-history.css"/>
+      <url>/css/card-history.css</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">.history_slide {  text-align:left;  font-size: 14px;  background: rgba(255, 255, 255, 0);  display: flex;  flex-direction:column;  align-items: flex-start;}#history-baidu > .blog-slider__pagination{  display:none}.history_slide_time{  color: #e9a7a7;  background: rgba(255, 255, 255, 0);  font-weight: lighter;}]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>史诗</title>
       <link href="/epic/index.html"/>
       <url>/epic/index.html</url>
@@ -128,11 +136,11 @@
     
     
     <entry>
-      <title>收藏夹</title>
-      <link href="/bookmark/index.html"/>
-      <url>/bookmark/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="mikutap"><a href="#mikutap" class="headerlink" title="mikutap"></a><a href="https://mikutap.mikuforever.com/">mikutap</a></h2><h2 id="人设生成器"><a href="#人设生成器" class="headerlink" title="人设生成器"></a><a href="https://eromanga.gitee.io/draw/">人设生成器</a></h2><h2 id="阿虚的储物间"><a href="#阿虚的储物间" class="headerlink" title="阿虚的储物间"></a><a href="https://axutongxue.com/">阿虚的储物间</a></h2><h2 id="申论生成器"><a href="#申论生成器" class="headerlink" title="申论生成器"></a><a href="https://sojo.im/slscq/">申论生成器</a></h2><h2 id="狗姐的欧陆资源站"><a href="#狗姐的欧陆资源站" class="headerlink" title="狗姐的欧陆资源站"></a><a href="https://sharelikes.com.cn/ContectOne/Paradox%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">狗姐的欧陆资源站</a></h2><h2 id="bilibili视频下载"><a href="#bilibili视频下载" class="headerlink" title="bilibili视频下载"></a><a href="https://xbeibeix.com/api/bilibili/">bilibili视频下载</a></h2><h2 id="元素法典"><a href="#元素法典" class="headerlink" title="元素法典"></a><a href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素法典</a></h2><h2 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a><a href="https://waifu2x.udp.jp/index.zh-CN.html">waifu2x</a></h2><h2 id="像素人像"><a href="#像素人像" class="headerlink" title="像素人像"></a><a href="https://pixel-me.tokyo/en/">像素人像</a></h2><h2 id="指针效果"><a href="#指针效果" class="headerlink" title="指针效果"></a><a href="https://cursoreffects.com/">指针效果</a></h2><h2 id="文字绘画"><a href="#文字绘画" class="headerlink" title="文字绘画"></a><a href="https://paint.toys/calligram/">文字绘画</a></h2><h2 id="一些东西"><a href="#一些东西" class="headerlink" title="一些东西"></a><a href="https://neave.com/">一些东西</a></h2><h2 id="archieve"><a href="#archieve" class="headerlink" title="archieve"></a><a href="https://archive.org/">archieve</a></h2><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a><a href="https://www.freeimg.cn/">图床</a></h2><h2 id="地力练习"><a href="#地力练习" class="headerlink" title="地力练习"></a><a href="https://eatcat.yisous.xyz/">地力练习</a></h2><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a><a href="https://zhuanlan.zhihu.com/p/129298318">生成器</a></h2><h2 id="图像视频化"><a href="#图像视频化" class="headerlink" title="图像视频化"></a><a href="https://sketch.metademolab.com/">图像视频化</a></h2><h2 id="图像素材"><a href="#图像素材" class="headerlink" title="图像素材"></a><a href="https://www.irasutoya.com/">图像素材</a></h2><h2 id="机场"><a href="#机场" class="headerlink" title="机场"></a><a href="https://front.spaport.cc/">机场</a></h2><h2 id="音乐分离"><a href="#音乐分离" class="headerlink" title="音乐分离"></a><a href="https://vocalremover.org/zh/key-bpm-finder">音乐分离</a></h2><h2 id="midi搜索"><a href="#midi搜索" class="headerlink" title="midi搜索"></a><a href="https://musescore.com/sheetmusic">midi搜索</a></h2><p><a href="https://github.com/LibreScore/dl-librescore">记得安装下载插件</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
       
     </entry>
     
@@ -150,22 +158,11 @@
     
     
     <entry>
-      <title>整活</title>
-      <link href="/fun/index.html"/>
-      <url>/fun/index.html</url>
+      <title>关于</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/1/">社团内的一些东西</a></h1><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/2/">校内部分</a></h1><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/3/">杂项</a></h1>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin7674"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin7674 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin7674"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin7674.autoRotate = true;                    skinViewermcskin7674.animation = new skinview3d.WalkingAnimation();                }, 500);            </script>]]></content>
       
     </entry>
     
@@ -184,10 +181,10 @@
     
     <entry>
       <title>整活</title>
-      <link href="/fun/1.html"/>
-      <url>/fun/1.html</url>
+      <link href="/fun/index.html"/>
+      <url>/fun/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a>社团内的一些东西</h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/1/">社团内的一些东西</a></h1><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/2/">校内部分</a></h1><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/3/">杂项</a></h1>]]></content>
       
     </entry>
     
@@ -195,10 +192,10 @@
     
     <entry>
       <title>整活</title>
-      <link href="/fun/1/index.html"/>
-      <url>/fun/1/index.html</url>
+      <link href="/fun/1.html"/>
+      <url>/fun/1.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/">社团内的一些东西</a></h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a>社团内的一些东西</h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
       
     </entry>
     
@@ -217,17 +214,6 @@
     
     <entry>
       <title>史诗</title>
-      <link href="/epic/1/index.html"/>
-      <url>/epic/1/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="石泽玉传说"><a href="#石泽玉传说" class="headerlink" title="石泽玉传说"></a>石泽玉传说</h1><p>（人物均为虚拟，与现实角色无关）<br>一天，石泽宇如往常一样前往丈夫食堂用膳（他是不是抖m啊怎么不去文莱）而由于秦老师的辛勤教学，石泽宇不出所料地发现食堂有非常多的人。因此石泽宇非常生气，他的第二人格（）在不知不觉中觉醒了！已经黑化的他在极度愤怒的情况下找了一个人最少的队伍排了下来。由于在前面已经被浦江的学生薅过一次，等排到他的时候，窗口里贩卖的咱喵淀粉肠已经所剩无几（qb是咱喵cafe实锤）在石泽宇前面的一位集美直接帮自己的好闺蜜把剩下的十根淀粉肠全部炫完了，因此到石泽宇的时候刚好什么都没有了。石泽宇一怒之下跑到旁边免费加饭的地方狠狠地加了两勺饭，跑向了食堂三楼。</p><p>对着满满两勺白饭，石泽宇犯了难，他觉得这白饭太没味了，不够辣（他最好是）因此灵机一动的他激（基）情满满地打在了白饭上，然后尝了一下（为什么不省去中间步骤呢）发现真是绝绝子好吃到翘jiojio（）因此他把第一次全部交给了米饭（mhy你罪大恶极）然后愉快地继续用餐。</p><p>吃着吃着，石泽宇发现米饭在不断的蠕动，不一会儿，一个浑身沾满米饭的裸体女性从碗里爬了出来（怎么装得下的啊喂）石泽宇一下就意识到了是自己刚才轻率的举动导致自己和米饭结合，生下了小石泽宇（不要就这么理所当然的接受了啊）他非常震惊，于是就和小石泽宇过上了没羞没躁的生活，据一位胸怀大志的王新喵记载，他们后来在美国西部开有一家农场喵，每天最喜欢的事是让五匹母马怀孕喵啊～。</p><p>但是石泽宇在临走之前还是秉持着科学的精神跑去问秦老师这个东西可不可以做课题（你自己觉得呢）还把自己的皇室战争和荒野乱斗账号托付给了王新喵。这不问还好，秦老师一听到这种违反科学的事情便进行了质疑，他认为他说的话，有破绽！因此他决定自己做实验看看真假（最求真的一集）但在亲眼看到小秦海钻出来后，他被震碎了三观晕了过去，倒在了小秦海的身上（羡慕秦海）。</p><p>再说石泽宇这边，他为了有更多的小石泽宇和他左爱，选择了制作一个用他的dna24小时全天生产小石泽宇的机器（有没有考虑过转发原神动态）。而这个机器是依靠神威的英语默写作为基础频率的，也就是神威布置一次默写就会生产若干个小石泽宇（什么奇怪的设定啊喂），但是不久，由于HyuN又一次地在英语默写中创造词汇（典），神威在一天中为他布置了一百次（）默写，而这时石泽宇正好导晕过去了一整天（这个营养还是不太行啊）因此机器开始源源不断地工作，这样的牛马工作频率让机器出现了问题，它所生产的小石泽宇开始具有传染性，会将其他人也转变成和他一样的米饭人（然后成为石泽宇的玩物）</p><p>这样的米饭人危机开始迅速扩散，最终只剩下qb中学还幸存着，在这里五个人（包括苏醒了的秦海和小秦海）与一条猫（最好不是咱喵）在这个被称为“学园孤岛”的地方开始了末日生存。但是寡不敌众，除了秦海以外的所有人都不幸感染，秦海殊死一搏，按照一份说明书（为什么会有这种东西啊）的指示跑到了地下室拿到了唯一的解药，却在最后被米饭化了的石泽宇抓伤，他在最后把唯一的解药注射到了小秦海的体内（小秦海：感觉身体好轻，已经没有什么好怕的了）</p><p>在弥留之际，秦海的身体逐渐米饭化<br>小秦海：为什么 为什么要给我<br>秦海：因为我想拜托你能做一件我做不到 但你能做到的事 你能回到过去对吧 你说过 为了不让这种结局发生 能够改变历史对吧（哭腔） 你能去救救还没被石泽宇欺骗的那个笨蛋的我吗<br>小秦海：我答应你 一定会救你的 无论重复多少次 我一定会保护好你<br>秦海：太好了……呃～呃啊啊（身体的米饭化越来越严重）<br>秦海：再多拜托你一件事可以吗 我不想变成米饭人 就算有悲伤的事和讨厌的事 但我想守护的东西 这个世界上还有很多 ……<br>小秦海：呜……呜呜呜（哭腔）噗叽啪<br>秦海 被 小秦海 击穿了！<br>于是小秦海踏上了无尽的轮回的拯救秦海的道路。四月新番《魔法米饭小秦》堂堂连载！<br>关注《魔法米饭小秦》谢谢喵（tcg）</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>史诗</title>
       <link href="/epic/3/index.html"/>
       <url>/epic/3/index.html</url>
       
@@ -238,55 +224,22 @@
     
     
     <entry>
+      <title>史诗</title>
+      <link href="/epic/1/index.html"/>
+      <url>/epic/1/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="石泽玉传说"><a href="#石泽玉传说" class="headerlink" title="石泽玉传说"></a>石泽玉传说</h1><p>（人物均为虚拟，与现实角色无关）<br>一天，石泽宇如往常一样前往丈夫食堂用膳（他是不是抖m啊怎么不去文莱）而由于秦老师的辛勤教学，石泽宇不出所料地发现食堂有非常多的人。因此石泽宇非常生气，他的第二人格（）在不知不觉中觉醒了！已经黑化的他在极度愤怒的情况下找了一个人最少的队伍排了下来。由于在前面已经被浦江的学生薅过一次，等排到他的时候，窗口里贩卖的咱喵淀粉肠已经所剩无几（qb是咱喵cafe实锤）在石泽宇前面的一位集美直接帮自己的好闺蜜把剩下的十根淀粉肠全部炫完了，因此到石泽宇的时候刚好什么都没有了。石泽宇一怒之下跑到旁边免费加饭的地方狠狠地加了两勺饭，跑向了食堂三楼。</p><p>对着满满两勺白饭，石泽宇犯了难，他觉得这白饭太没味了，不够辣（他最好是）因此灵机一动的他激（基）情满满地打在了白饭上，然后尝了一下（为什么不省去中间步骤呢）发现真是绝绝子好吃到翘jiojio（）因此他把第一次全部交给了米饭（mhy你罪大恶极）然后愉快地继续用餐。</p><p>吃着吃着，石泽宇发现米饭在不断的蠕动，不一会儿，一个浑身沾满米饭的裸体女性从碗里爬了出来（怎么装得下的啊喂）石泽宇一下就意识到了是自己刚才轻率的举动导致自己和米饭结合，生下了小石泽宇（不要就这么理所当然的接受了啊）他非常震惊，于是就和小石泽宇过上了没羞没躁的生活，据一位胸怀大志的王新喵记载，他们后来在美国西部开有一家农场喵，每天最喜欢的事是让五匹母马怀孕喵啊～。</p><p>但是石泽宇在临走之前还是秉持着科学的精神跑去问秦老师这个东西可不可以做课题（你自己觉得呢）还把自己的皇室战争和荒野乱斗账号托付给了王新喵。这不问还好，秦老师一听到这种违反科学的事情便进行了质疑，他认为他说的话，有破绽！因此他决定自己做实验看看真假（最求真的一集）但在亲眼看到小秦海钻出来后，他被震碎了三观晕了过去，倒在了小秦海的身上（羡慕秦海）。</p><p>再说石泽宇这边，他为了有更多的小石泽宇和他左爱，选择了制作一个用他的dna24小时全天生产小石泽宇的机器（有没有考虑过转发原神动态）。而这个机器是依靠神威的英语默写作为基础频率的，也就是神威布置一次默写就会生产若干个小石泽宇（什么奇怪的设定啊喂），但是不久，由于HyuN又一次地在英语默写中创造词汇（典），神威在一天中为他布置了一百次（）默写，而这时石泽宇正好导晕过去了一整天（这个营养还是不太行啊）因此机器开始源源不断地工作，这样的牛马工作频率让机器出现了问题，它所生产的小石泽宇开始具有传染性，会将其他人也转变成和他一样的米饭人（然后成为石泽宇的玩物）</p><p>这样的米饭人危机开始迅速扩散，最终只剩下qb中学还幸存着，在这里五个人（包括苏醒了的秦海和小秦海）与一条猫（最好不是咱喵）在这个被称为“学园孤岛”的地方开始了末日生存。但是寡不敌众，除了秦海以外的所有人都不幸感染，秦海殊死一搏，按照一份说明书（为什么会有这种东西啊）的指示跑到了地下室拿到了唯一的解药，却在最后被米饭化了的石泽宇抓伤，他在最后把唯一的解药注射到了小秦海的体内（小秦海：感觉身体好轻，已经没有什么好怕的了）</p><p>在弥留之际，秦海的身体逐渐米饭化<br>小秦海：为什么 为什么要给我<br>秦海：因为我想拜托你能做一件我做不到 但你能做到的事 你能回到过去对吧 你说过 为了不让这种结局发生 能够改变历史对吧（哭腔） 你能去救救还没被石泽宇欺骗的那个笨蛋的我吗<br>小秦海：我答应你 一定会救你的 无论重复多少次 我一定会保护好你<br>秦海：太好了……呃～呃啊啊（身体的米饭化越来越严重）<br>秦海：再多拜托你一件事可以吗 我不想变成米饭人 就算有悲伤的事和讨厌的事 但我想守护的东西 这个世界上还有很多 ……<br>小秦海：呜……呜呜呜（哭腔）噗叽啪<br>秦海 被 小秦海 击穿了！<br>于是小秦海踏上了无尽的轮回的拯救秦海的道路。四月新番《魔法米饭小秦》堂堂连载！<br>关注《魔法米饭小秦》谢谢喵（tcg）</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>整活</title>
-      <link href="/fun/3/index.html"/>
-      <url>/fun/3/index.html</url>
+      <link href="/fun/1/index.html"/>
+      <url>/fun/1/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>整活</title>
-      <link href="/fun/2/index.html"/>
-      <url>/fun/2/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/">校内部分</a></h1><h2 id="gec美妙的演奏"><a href="#gec美妙的演奏" class="headerlink" title="gec美妙的演奏"></a>gec美妙的演奏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1dk4y1V7Nr&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="萍语"><a href="#萍语" class="headerlink" title="萍语"></a>萍语</h2><iframe src="/pdf/web/viewer.html?file=/pdf/萍语.pdf" style='width:100%;height:800px'></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ginkiha</title>
-      <link href="/music/10/index.html"/>
-      <url>/music/10/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="/music/1/keti.html"/>
-      <url>/music/1/keti.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><hr><p>title:胡嘉珉看这里，这里有你要的东西</p><h2 id="date-2023-12-21-02-12-00"><a href="#date-2023-12-21-02-12-00" class="headerlink" title="date:2023-12-21 02:12:00"></a>date:2023-12-21 02:12:00</h2><p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>大前司</title>
-      <link href="/music/13/index.html"/>
-      <url>/music/13/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/">社团内的一些东西</a></h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
       
     </entry>
     
@@ -304,6 +257,28 @@
     
     
     <entry>
+      <title>ginkiha</title>
+      <link href="/music/10/index.html"/>
+      <url>/music/10/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>整活</title>
+      <link href="/fun/3/index.html"/>
+      <url>/fun/3/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a><a href="/fun/">杂项</a></h1><h2 id="pvz背景音乐研究"><a href="#pvz背景音乐研究" class="headerlink" title="pvz背景音乐研究"></a>pvz背景音乐研究</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1o44y127cp&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="pvz改版制作"><a href="#pvz改版制作" class="headerlink" title="pvz改版制作"></a>pvz改版制作</h2><h4 id="存在严重bug，而且不打算继续制作"><a href="#存在严重bug，而且不打算继续制作" class="headerlink" title="存在严重bug，而且不打算继续制作"></a>存在严重bug，而且不打算继续制作</h4><h2 id="流口水黄豆l2d"><a href="#流口水黄豆l2d" class="headerlink" title="流口水黄豆l2d"></a>流口水黄豆l2d</h2><h4 id="模型我再找找"><a href="#模型我再找找" class="headerlink" title="模型我再找找"></a>模型我再找找</h4><iframe src="//player.bilibili.com/player.html?bvid=BV1Wq4y137c2&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>litmus*</title>
       <link href="/music/12/index.html"/>
       <url>/music/12/index.html</url>
@@ -315,22 +290,22 @@
     
     
     <entry>
-      <title>M2U</title>
-      <link href="/music/15/index.html"/>
-      <url>/music/15/index.html</url>
+      <title>大前司</title>
+      <link href="/music/13/index.html"/>
+      <url>/music/13/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Xeon</title>
-      <link href="/music/17/index.html"/>
-      <url>/music/17/index.html</url>
+      <title>SoundSouler</title>
+      <link href="/music/14/index.html"/>
+      <url>/music/14/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
       
     </entry>
     
@@ -348,11 +323,33 @@
     
     
     <entry>
-      <title>SoundSouler</title>
-      <link href="/music/14/index.html"/>
-      <url>/music/14/index.html</url>
+      <title>M2U</title>
+      <link href="/music/15/index.html"/>
+      <url>/music/15/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="SoundSouler"><a href="#SoundSouler" class="headerlink" title="SoundSouler"></a><a href="/music/">SoundSouler</a></h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="M2U"><a href="#M2U" class="headerlink" title="M2U"></a><a href="/music/">M2U</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Esti</title>
+      <link href="/music/16/index.html"/>
+      <url>/music/16/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Xeon</title>
+      <link href="/music/17/index.html"/>
+      <url>/music/17/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
       
     </entry>
     
@@ -381,17 +378,6 @@
     
     
     <entry>
-      <title>Esti</title>
-      <link href="/music/16/index.html"/>
-      <url>/music/16/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>nego_tiator</title>
       <link href="/music/6/index.html"/>
       <url>/music/6/index.html</url>
@@ -403,22 +389,33 @@
     
     
     <entry>
-      <title>orangentle</title>
-      <link href="/music/7/index.html"/>
-      <url>/music/7/index.html</url>
+      <title></title>
+      <link href="/music/1/keti.html"/>
+      <url>/music/1/keti.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><hr><p>title:胡嘉珉看这里，这里有你要的东西</p><h2 id="date-2023-12-21-02-12-00"><a href="#date-2023-12-21-02-12-00" class="headerlink" title="date:2023-12-21 02:12:00"></a>date:2023-12-21 02:12:00</h2><p>测速代码样例：<a href="https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881">https://www.aliyundrive.com/s/tCjpXWAh51a/folder/61a17298969f426107ed4bb198629774d5751881</a></p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>lime</title>
-      <link href="/music/4/index.html"/>
-      <url>/music/4/index.html</url>
+      <title>整活</title>
+      <link href="/fun/2/index.html"/>
+      <url>/fun/2/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="lime"><a href="#lime" class="headerlink" title="lime"></a><a href="/music/">lime</a></h2><p>别名Kankitsu，有很多马甲，如长沼浩太(パパ頑張りました)等，经常参加bof，曲子有一种小清新的美</p><h3 id="Chronomia"><a href="#Chronomia" class="headerlink" title="Chronomia"></a>Chronomia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1356295672&auto=0&height=66"></iframe><br>bofu2016位10，曲子质量非常高，bga也挺好看的，排名不高据说是因为谱子比较抽象……</p><h3 id="Final-Step"><a href="#Final-Step" class="headerlink" title="Final Step!"></a>Final Step!</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1884121988&auto=0&height=66"></iframe><br>虽然是喵斯独占曲，但每次联动都常常有它的身影，有望成为新一代公交车</p><h3 id="Luminaria"><a href="#Luminaria" class="headerlink" title="Luminaria"></a>Luminaria</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1914569509&auto=0&height=66"></iframe><br>bof2020位二，曲子质量高且投的早，位二原因是爷爷看到random后摆烂懒得做bga</p><h3 id="Elixir"><a href="#Elixir" class="headerlink" title="Elixir"></a>Elixir</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2018445973&auto=0&height=66"></iframe><br>bofET位42，好听，但投的太晚了</p><h3 id="8bit-Adventurer"><a href="#8bit-Adventurer" class="headerlink" title="8bit Adventurer"></a>8bit Adventurer</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1356295551&auto=0&height=66"></iframe><br>bof2017位不知道多少，8bit曲风</p><h3 id="8bit-Voyager"><a href="#8bit-Voyager" class="headerlink" title="8bit Voyager"></a>8bit Voyager</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444718677&auto=0&height=66"></iframe><br>上者的精神续作</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/">校内部分</a></h1><h2 id="gec美妙的演奏"><a href="#gec美妙的演奏" class="headerlink" title="gec美妙的演奏"></a>gec美妙的演奏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1dk4y1V7Nr&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="萍语"><a href="#萍语" class="headerlink" title="萍语"></a>萍语</h2><iframe src="/pdf/web/viewer.html?file=/pdf/萍语.pdf" style='width:100%;height:800px'></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>qfeileadh</title>
+      <link href="/music/5/index.html"/>
+      <url>/music/5/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
       
     </entry>
     
@@ -436,6 +433,17 @@
     
     
     <entry>
+      <title>orangentle</title>
+      <link href="/music/7/index.html"/>
+      <url>/music/7/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>黄泉路テヂーモ</title>
       <link href="/music/8/index.html"/>
       <url>/music/8/index.html</url>
@@ -447,11 +455,22 @@
     
     
     <entry>
-      <title>qfeileadh</title>
-      <link href="/music/5/index.html"/>
-      <url>/music/5/index.html</url>
+      <title>lime</title>
+      <link href="/music/4/index.html"/>
+      <url>/music/4/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="lime"><a href="#lime" class="headerlink" title="lime"></a><a href="/music/">lime</a></h2><p>别名Kankitsu，有很多马甲，如长沼浩太(パパ頑張りました)等，经常参加bof，曲子有一种小清新的美</p><h3 id="Chronomia"><a href="#Chronomia" class="headerlink" title="Chronomia"></a>Chronomia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1356295672&auto=0&height=66"></iframe><br>bofu2016位10，曲子质量非常高，bga也挺好看的，排名不高据说是因为谱子比较抽象……</p><h3 id="Final-Step"><a href="#Final-Step" class="headerlink" title="Final Step!"></a>Final Step!</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1884121988&auto=0&height=66"></iframe><br>虽然是喵斯独占曲，但每次联动都常常有它的身影，有望成为新一代公交车</p><h3 id="Luminaria"><a href="#Luminaria" class="headerlink" title="Luminaria"></a>Luminaria</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1914569509&auto=0&height=66"></iframe><br>bof2020位二，曲子质量高且投的早，位二原因是爷爷看到random后摆烂懒得做bga</p><h3 id="Elixir"><a href="#Elixir" class="headerlink" title="Elixir"></a>Elixir</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2018445973&auto=0&height=66"></iframe><br>bofET位42，好听，但投的太晚了</p><h3 id="8bit-Adventurer"><a href="#8bit-Adventurer" class="headerlink" title="8bit Adventurer"></a>8bit Adventurer</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1356295551&auto=0&height=66"></iframe><br>bof2017位不知道多少，8bit曲风</p><h3 id="8bit-Voyager"><a href="#8bit-Voyager" class="headerlink" title="8bit Voyager"></a>8bit Voyager</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444718677&auto=0&height=66"></iframe><br>上者的精神续作</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/back/index.html"/>
+      <url>/back/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
       
     </entry>
     
