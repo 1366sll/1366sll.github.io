@@ -50,7 +50,7 @@
       <link href="/2023/07/26/hello-world/"/>
       <url>/2023/07/26/hello-world/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin9982"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin9982 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin9982"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin9982.autoRotate = true;                    skinViewermcskin9982.animation = new skinview3d.WalkingAnimation();                }, 500);            </script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin2031"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin2031 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin2031"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin2031.autoRotate = true;                    skinViewermcskin2031.animation = new skinview3d.WalkingAnimation();                }, 500);            </script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       
@@ -59,28 +59,6 @@
     
   
   
-    
-    
-    <entry>
-      <title></title>
-      <link href="/back/index.html"/>
-      <url>/back/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>目录</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
-      
-    </entry>
-    
     
     
     <entry>
@@ -88,18 +66,7 @@
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin2054"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin2054 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin2054"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin2054.autoRotate = true;                    skinViewermcskin2054.animation = new skinview3d.WalkingAnimation();                }, 500);            </script>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>静态说说</title>
-      <link href="/essay/index.html"/>
-      <url>/essay/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><div style="margin:0 auto; width: 100px">                <canvas id="mcskin4493"></canvas>                </div>            <script type='text/javascript' src="https://unpkg.com/skinview3d@3.0.0-alpha.1/bundles/skinview3d.bundle.js"></script>            <script>                setTimeout(() => {                    let skinViewermcskin4493 = new skinview3d.SkinViewer({                        canvas: document.getElementById("mcskin4493"),                        width: 100,                        height: 200,                        skin: "https://mineskin.eu/skin/2609338961"                    });                    skinViewermcskin4493.autoRotate = true;                    skinViewermcskin4493.animation = new skinview3d.WalkingAnimation();                }, 500);            </script>]]></content>
       
     </entry>
     
@@ -117,20 +84,20 @@
     
     
     <entry>
-      <title>收藏夹</title>
-      <link href="/bookmark/index.html"/>
-      <url>/bookmark/index.html</url>
+      <title></title>
+      <link href="/back/index.html"/>
+      <url>/back/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="mikutap"><a href="#mikutap" class="headerlink" title="mikutap"></a><a href="https://mikutap.mikuforever.com/">mikutap</a></h2><h2 id="人设生成器"><a href="#人设生成器" class="headerlink" title="人设生成器"></a><a href="https://eromanga.gitee.io/draw/">人设生成器</a></h2><h2 id="阿虚的储物间"><a href="#阿虚的储物间" class="headerlink" title="阿虚的储物间"></a><a href="https://axutongxue.com/">阿虚的储物间</a></h2><h2 id="申论生成器"><a href="#申论生成器" class="headerlink" title="申论生成器"></a><a href="https://sojo.im/slscq/">申论生成器</a></h2><h2 id="狗姐的欧陆资源站"><a href="#狗姐的欧陆资源站" class="headerlink" title="狗姐的欧陆资源站"></a><a href="https://sharelikes.com.cn/ContectOne/Paradox%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">狗姐的欧陆资源站</a></h2><h2 id="bilibili视频下载"><a href="#bilibili视频下载" class="headerlink" title="bilibili视频下载"></a><a href="https://xbeibeix.com/api/bilibili/">bilibili视频下载</a></h2><h2 id="元素法典"><a href="#元素法典" class="headerlink" title="元素法典"></a><a href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素法典</a></h2><h2 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a><a href="https://waifu2x.udp.jp/index.zh-CN.html">waifu2x</a></h2><h2 id="像素人像"><a href="#像素人像" class="headerlink" title="像素人像"></a><a href="https://pixel-me.tokyo/en/">像素人像</a></h2><h2 id="指针效果"><a href="#指针效果" class="headerlink" title="指针效果"></a><a href="https://cursoreffects.com/">指针效果</a></h2><h2 id="文字绘画"><a href="#文字绘画" class="headerlink" title="文字绘画"></a><a href="https://paint.toys/calligram/">文字绘画</a></h2><h2 id="一些东西"><a href="#一些东西" class="headerlink" title="一些东西"></a><a href="https://neave.com/">一些东西</a></h2><h2 id="archieve"><a href="#archieve" class="headerlink" title="archieve"></a><a href="https://archive.org/">archieve</a></h2><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a><a href="https://www.freeimg.cn/">图床</a></h2><h2 id="地力练习"><a href="#地力练习" class="headerlink" title="地力练习"></a><a href="https://eatcat.yisous.xyz/">地力练习</a></h2><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a><a href="https://zhuanlan.zhihu.com/p/129298318">生成器</a></h2><h2 id="图像视频化"><a href="#图像视频化" class="headerlink" title="图像视频化"></a><a href="https://sketch.metademolab.com/">图像视频化</a></h2><h2 id="图像素材"><a href="#图像素材" class="headerlink" title="图像素材"></a><a href="https://www.irasutoya.com/">图像素材</a></h2><h2 id="机场"><a href="#机场" class="headerlink" title="机场"></a><a href="https://front.spaport.cc/">机场</a></h2><h2 id="音乐分离"><a href="#音乐分离" class="headerlink" title="音乐分离"></a><a href="https://vocalremover.org/zh/key-bpm-finder">音乐分离</a></h2><h2 id="midi搜索"><a href="#midi搜索" class="headerlink" title="midi搜索"></a><a href="https://musescore.com/sheetmusic">midi搜索</a></h2><p><a href="https://github.com/LibreScore/dl-librescore">记得安装下载插件</a></p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><!-- 恢复默认背景按钮 --><button onclick="localStorage.removeItem('blogbg');location.reload();" style="background:#5fcdff55;display:block;width:100%;padding: 15px 0;border-radius:6px;color:white;"><i class="fa-solid fa-arrows-rotate"></i> 点我恢复默认背景</button><p><p> 图片（手机） </p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d07d9e3a1.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)" class="pimgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d0c2b7e57.png)')"></a></div><p><p> 图片（电脑）</p></p><div class="bgbox"><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cf708dd52.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599cfe28ea2a.png)')"></a><a href="javascript:;" style="background-image:url(https://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)" class="imgbox" onclick="changeBg('url(https\://www.freeimg.cn/i/2024/01/07/6599d19fd9adc.png)')"></a></div><p><p> 在图片上增加渐变 </p></p><div class="bgbox"><input type="text" id="color12" placeholder="#00000000"><input type="text" id="color22" placeholder="#00000000"><input type="text" id="color32" placeholder="#00000000"><input type="text" id="degree2" placeholder="0"></div><button id="btn2">Save</button><p> 渐变色 </p><div class="bgbox"><a href="javascript:;" class="box" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364)" onclick="changeBg('linear-gradient(to right, #0f2027, #203a43, #2c5364)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #11998e, #38ef7d)" onclick="changeBg('linear-gradient(to right, #11998e, #38ef7d)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #642b73, #c6426e)" onclick="changeBg('linear-gradient(to right, #642b73, #c6426e)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #6190e8, #a7bfe8)" onclick="changeBg('linear-gradient(to right, #6190e8, #a7bfe8)')"></a><a href="javascript:;" class="box" style="background: linear-gradient(to right, #ef32d9, #89fffd)" onclick="changeBg('linear-gradient(to right, #ef32d9, #89fffd)')"></a></div><p><p> 自制渐变 </p></p><div class="bgbox"><input type="text" id="color1" placeholder="#00000000"><input type="text" id="color2" placeholder="#00000000"><input type="text" id="color3" placeholder="#00000000"><input type="text" id="degree" placeholder="0"></div><button id="btn">Save</button><p> 纯色 </p><div class="bgbox"><!-- 拾色器，可自定义颜色 --><input type="color" id="color"><a href="javascript:;" class="box" style="background: #7D9D9C25" onclick="changeBg('#7D9D9C25')"></a><a href="javascript:;" class="box" style="background: #12345678" onclick="changeBg('#12345678')"></a></div><!-- 监听拾色器 --><script>document.getElementById('color').addEventListener('change', (e) => { changeBg(e.path[0].value); })</script>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>友链</title>
-      <link href="/link/index.html"/>
-      <url>/link/index.html</url>
+      <title>静态说说</title>
+      <link href="/essay/index.html"/>
+      <url>/essay/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
       
@@ -139,9 +106,9 @@
     
     
     <entry>
-      <title>标签</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>目录</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
       
@@ -161,11 +128,22 @@
     
     
     <entry>
-      <title>整活</title>
-      <link href="/fun/1.html"/>
-      <url>/fun/1.html</url>
+      <title>收藏夹</title>
+      <link href="/bookmark/index.html"/>
+      <url>/bookmark/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a>社团内的一些东西</h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="mikutap"><a href="#mikutap" class="headerlink" title="mikutap"></a><a href="https://mikutap.mikuforever.com/">mikutap</a></h2><h2 id="人设生成器"><a href="#人设生成器" class="headerlink" title="人设生成器"></a><a href="https://eromanga.gitee.io/draw/">人设生成器</a></h2><h2 id="阿虚的储物间"><a href="#阿虚的储物间" class="headerlink" title="阿虚的储物间"></a><a href="https://axutongxue.com/">阿虚的储物间</a></h2><h2 id="申论生成器"><a href="#申论生成器" class="headerlink" title="申论生成器"></a><a href="https://sojo.im/slscq/">申论生成器</a></h2><h2 id="狗姐的欧陆资源站"><a href="#狗姐的欧陆资源站" class="headerlink" title="狗姐的欧陆资源站"></a><a href="https://sharelikes.com.cn/ContectOne/Paradox%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">狗姐的欧陆资源站</a></h2><h2 id="bilibili视频下载"><a href="#bilibili视频下载" class="headerlink" title="bilibili视频下载"></a><a href="https://xbeibeix.com/api/bilibili/">bilibili视频下载</a></h2><h2 id="元素法典"><a href="#元素法典" class="headerlink" title="元素法典"></a><a href="https://docs.qq.com/doc/DWFdSTHJtQWRzYk9k">元素法典</a></h2><h2 id="waifu2x"><a href="#waifu2x" class="headerlink" title="waifu2x"></a><a href="https://waifu2x.udp.jp/index.zh-CN.html">waifu2x</a></h2><h2 id="像素人像"><a href="#像素人像" class="headerlink" title="像素人像"></a><a href="https://pixel-me.tokyo/en/">像素人像</a></h2><h2 id="指针效果"><a href="#指针效果" class="headerlink" title="指针效果"></a><a href="https://cursoreffects.com/">指针效果</a></h2><h2 id="文字绘画"><a href="#文字绘画" class="headerlink" title="文字绘画"></a><a href="https://paint.toys/calligram/">文字绘画</a></h2><h2 id="一些东西"><a href="#一些东西" class="headerlink" title="一些东西"></a><a href="https://neave.com/">一些东西</a></h2><h2 id="archieve"><a href="#archieve" class="headerlink" title="archieve"></a><a href="https://archive.org/">archieve</a></h2><h2 id="图床"><a href="#图床" class="headerlink" title="图床"></a><a href="https://www.freeimg.cn/">图床</a></h2><h2 id="地力练习"><a href="#地力练习" class="headerlink" title="地力练习"></a><a href="https://eatcat.yisous.xyz/">地力练习</a></h2><h2 id="生成器"><a href="#生成器" class="headerlink" title="生成器"></a><a href="https://zhuanlan.zhihu.com/p/129298318">生成器</a></h2><h2 id="图像视频化"><a href="#图像视频化" class="headerlink" title="图像视频化"></a><a href="https://sketch.metademolab.com/">图像视频化</a></h2><h2 id="图像素材"><a href="#图像素材" class="headerlink" title="图像素材"></a><a href="https://www.irasutoya.com/">图像素材</a></h2><h2 id="机场"><a href="#机场" class="headerlink" title="机场"></a><a href="https://front.spaport.cc/">机场</a></h2><h2 id="音乐分离"><a href="#音乐分离" class="headerlink" title="音乐分离"></a><a href="https://vocalremover.org/zh/key-bpm-finder">音乐分离</a></h2><h2 id="midi搜索"><a href="#midi搜索" class="headerlink" title="midi搜索"></a><a href="https://musescore.com/sheetmusic">midi搜索</a></h2><p><a href="https://github.com/LibreScore/dl-librescore">记得安装下载插件</a></p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>标签</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
       
     </entry>
     
@@ -183,11 +161,11 @@
     
     
     <entry>
-      <title>史诗</title>
-      <link href="/epic/2/index.html"/>
-      <url>/epic/2/index.html</url>
+      <title>友链</title>
+      <link href="/link/index.html"/>
+      <url>/link/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="青菜传说"><a href="#青菜传说" class="headerlink" title="青菜传说"></a>青菜传说</h1><p>by石玉<br>（人物均为虚拟，与现实角色无关）<br>这是七宝中学的早晨，张稳结一如既往地赖在七宝中学男生宿舍的并不温暖柔软的床上。随着仍未睡醒的zyc把该死的窗帘拉开后，张稳结依旧摆出一副吃了大量菠萝炒饭以至于有点恼火的模样，“又是糟糕的一天，”他心想。他从床上挣扎的爬起来，穿上5个小时从未穿上的第一件衣服时（zwj最好是裸睡的），他感受到了一丝晕眩，这绝对不是来自于七宝中学宿舍楼自东向西的冰冷的穿堂风，它来自于昨天的一场梦境。“算了吧，”他喃喃自语道。<br>可这时，他突然看见了一片青菜，她正俯于张稳结本就不大的书桌上，旁边还似乎有一滩油渍。他被吓了一跳，但理智告诉他这绝对是一场仿真的梦境，当他洗完脸再回到此处时，青菜的的确确消失了，什么也没留下。<br>这使他突然想起昨天晚上的那场梦境，他发现周围的所有事物都变成了青菜，用菜叶做的纸，巨大菜梗做成的讲台和凳子…“我不爱青菜”，这是他在梦里最先想到的，道理如同同学们在gjq的课上呼呼大睡一般。可这些青菜会动，它们甚至张了一双眼睛正恶狠狠地盯着他！他们张牙舞爪地扭曲地向张稳结爬去，张稳结感到一阵难以抵挡的燥热，在扭曲的青菜和这种燥热感的双重作用下，他醒了。这燥热并不是梦境，而是他被自己的被子缠住了根本无法挣脱“还早着呢，他想，又倒头睡去。<br>他又梦见了那些青菜！令他惊奇的是，不同于以往做梦时逆来顺受看见什么便是什么，他在梦境里产生了自我意识，他发现自己的意识并没有沉睡而是被一同代入了这个奇妙的地方。他迅速望向四周，这里不是什么人间地狱，也不是青菜乐园，而是七宝中学的食堂！透过碧绿的叶片他看到窗台外的几名学生正在排队，等待着那份美味的菠萝炒饭。“这个年头了还有谁吃食啊，”他想到。无暇嘲讽，眼前的困境仍未解决，直到这些人说出“多加点青菜”的时候，这些狰狞的眼睛先转变为惊讶，随即又变得更加狰狞，恐怖——食堂大妈抓起了一大把青菜，多到好像七宝中学盛产青菜一样，张稳结才得以脱离危机。而这时，梦也醒了。</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css">]]></content>
       
     </entry>
     
@@ -206,10 +184,43 @@
     
     <entry>
       <title>整活</title>
+      <link href="/fun/1.html"/>
+      <url>/fun/1.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a>社团内的一些东西</h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>整活</title>
       <link href="/fun/1/index.html"/>
       <url>/fun/1/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="社团内的一些东西"><a href="#社团内的一些东西" class="headerlink" title="社团内的一些东西"></a><a href="/fun/">社团内的一些东西</a></h1><h2 id="物理学家刻板印象大赏"><a href="#物理学家刻板印象大赏" class="headerlink" title="物理学家刻板印象大赏"></a>物理学家刻板印象大赏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1ci4y1r7fH&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="牛顿vs胡克"><a href="#牛顿vs胡克" class="headerlink" title="牛顿vs胡克"></a>牛顿vs胡克</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1fw411G7jD&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="一眼丁真"><a href="#一眼丁真" class="headerlink" title="一眼丁真"></a>一眼丁真</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911b6277341.png" alt="鉴定为：纯纯的轨物"></p><h2 id="普朗克幻影坦克"><a href="#普朗克幻影坦克" class="headerlink" title="普朗克幻影坦克"></a>普朗克幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c605996d.png" alt="不知道看不看出来"></p><h2 id="普朗克幻影坦克2"><a href="#普朗克幻影坦克2" class="headerlink" title="普朗克幻影坦克2"></a>普朗克幻影坦克2</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911c7e41d7b.png" alt="不知道看不看出来"></p><h2 id="薛定谔幻影坦克"><a href="#薛定谔幻影坦克" class="headerlink" title="薛定谔幻影坦克"></a>薛定谔幻影坦克</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65911cbcbc0d7.png" alt="不知道看不看出来"></p><h2 id="牛顿-amp-胡克小动画"><a href="#牛顿-amp-胡克小动画" class="headerlink" title="牛顿&amp;胡克小动画"></a><a href="https://pan.baidu.com/s/1Rbqw6wyNeFkg4f5uzGsXlw?pwd=1145">牛顿&amp;胡克小动画</a></h2><h2 id="re-随意的一些整理"><a href="#re-随意的一些整理" class="headerlink" title="re:随意的一些整理"></a>re:随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/基本信息2-已融合_removed.pdf" style='width:100%;height:800px'></iframe><h2 id="随便的一道题目"><a href="#随便的一道题目" class="headerlink" title="随便的一道题目"></a>随便的一道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动.pdf" style='width:100%;height:400px'></iframe><h2 id="随便的一道题目sp"><a href="#随便的一道题目sp" class="headerlink" title="随便的一道题目sp"></a>随便的一道题目sp</h2><iframe src="/pdf/web/viewer.html?file=/pdf/匀加速直线运动（播放）_20231231174321.pdf" style='width:100%;height:400px'></iframe><h2 id="狂欢节海报-ver-coloured"><a href="#狂欢节海报-ver-coloured" class="headerlink" title="狂欢节海报 ver.coloured"></a>狂欢节海报 ver.coloured</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/659127c552a98.jpg" alt="帮社长夹带私货"></p><h2 id="狂欢节海报-ver-black"><a href="#狂欢节海报-ver-black" class="headerlink" title="狂欢节海报 ver.black"></a>狂欢节海报 ver.black</h2><p><img src="https://www.freeimg.cn/i/2023/12/31/65912808d2b69.png" alt="夹带私货"></p><h2 id="随便的两道题目"><a href="#随便的两道题目" class="headerlink" title="随便的两道题目"></a>随便的两道题目</h2><iframe src="/pdf/web/viewer.html?file=/pdf/社团_20231231174410.pdf" style='width:100%;height:400px'></iframe><h2 id="随意的一些整理"><a href="#随意的一些整理" class="headerlink" title="随意的一些整理"></a>随意的一些整理</h2><iframe src="/pdf/web/viewer.html?file=/pdf/成果展示5.pdf" style='width:100%;height:800px'></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>史诗</title>
+      <link href="/epic/2/index.html"/>
+      <url>/epic/2/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="青菜传说"><a href="#青菜传说" class="headerlink" title="青菜传说"></a>青菜传说</h1><p>by石玉<br>（人物均为虚拟，与现实角色无关）<br>这是七宝中学的早晨，张稳结一如既往地赖在七宝中学男生宿舍的并不温暖柔软的床上。随着仍未睡醒的zyc把该死的窗帘拉开后，张稳结依旧摆出一副吃了大量菠萝炒饭以至于有点恼火的模样，“又是糟糕的一天，”他心想。他从床上挣扎的爬起来，穿上5个小时从未穿上的第一件衣服时（zwj最好是裸睡的），他感受到了一丝晕眩，这绝对不是来自于七宝中学宿舍楼自东向西的冰冷的穿堂风，它来自于昨天的一场梦境。“算了吧，”他喃喃自语道。<br>可这时，他突然看见了一片青菜，她正俯于张稳结本就不大的书桌上，旁边还似乎有一滩油渍。他被吓了一跳，但理智告诉他这绝对是一场仿真的梦境，当他洗完脸再回到此处时，青菜的的确确消失了，什么也没留下。<br>这使他突然想起昨天晚上的那场梦境，他发现周围的所有事物都变成了青菜，用菜叶做的纸，巨大菜梗做成的讲台和凳子…“我不爱青菜”，这是他在梦里最先想到的，道理如同同学们在gjq的课上呼呼大睡一般。可这些青菜会动，它们甚至张了一双眼睛正恶狠狠地盯着他！他们张牙舞爪地扭曲地向张稳结爬去，张稳结感到一阵难以抵挡的燥热，在扭曲的青菜和这种燥热感的双重作用下，他醒了。这燥热并不是梦境，而是他被自己的被子缠住了根本无法挣脱“还早着呢，他想，又倒头睡去。<br>他又梦见了那些青菜！令他惊奇的是，不同于以往做梦时逆来顺受看见什么便是什么，他在梦境里产生了自我意识，他发现自己的意识并没有沉睡而是被一同代入了这个奇妙的地方。他迅速望向四周，这里不是什么人间地狱，也不是青菜乐园，而是七宝中学的食堂！透过碧绿的叶片他看到窗台外的几名学生正在排队，等待着那份美味的菠萝炒饭。“这个年头了还有谁吃食啊，”他想到。无暇嘲讽，眼前的困境仍未解决，直到这些人说出“多加点青菜”的时候，这些狰狞的眼睛先转变为惊讶，随即又变得更加狰狞，恐怖——食堂大妈抓起了一大把青菜，多到好像七宝中学盛产青菜一样，张稳结才得以脱离危机。而这时，梦也醒了。</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>史诗</title>
+      <link href="/epic/1/index.html"/>
+      <url>/epic/1/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="石泽玉传说"><a href="#石泽玉传说" class="headerlink" title="石泽玉传说"></a>石泽玉传说</h1><p>（人物均为虚拟，与现实角色无关）<br>一天，石泽宇如往常一样前往丈夫食堂用膳（他是不是抖m啊怎么不去文莱）而由于秦老师的辛勤教学，石泽宇不出所料地发现食堂有非常多的人。因此石泽宇非常生气，他的第二人格（）在不知不觉中觉醒了！已经黑化的他在极度愤怒的情况下找了一个人最少的队伍排了下来。由于在前面已经被浦江的学生薅过一次，等排到他的时候，窗口里贩卖的咱喵淀粉肠已经所剩无几（qb是咱喵cafe实锤）在石泽宇前面的一位集美直接帮自己的好闺蜜把剩下的十根淀粉肠全部炫完了，因此到石泽宇的时候刚好什么都没有了。石泽宇一怒之下跑到旁边免费加饭的地方狠狠地加了两勺饭，跑向了食堂三楼。</p><p>对着满满两勺白饭，石泽宇犯了难，他觉得这白饭太没味了，不够辣（他最好是）因此灵机一动的他激（基）情满满地打在了白饭上，然后尝了一下（为什么不省去中间步骤呢）发现真是绝绝子好吃到翘jiojio（）因此他把第一次全部交给了米饭（mhy你罪大恶极）然后愉快地继续用餐。</p><p>吃着吃着，石泽宇发现米饭在不断的蠕动，不一会儿，一个浑身沾满米饭的裸体女性从碗里爬了出来（怎么装得下的啊喂）石泽宇一下就意识到了是自己刚才轻率的举动导致自己和米饭结合，生下了小石泽宇（不要就这么理所当然的接受了啊）他非常震惊，于是就和小石泽宇过上了没羞没躁的生活，据一位胸怀大志的王新喵记载，他们后来在美国西部开有一家农场喵，每天最喜欢的事是让五匹母马怀孕喵啊～。</p><p>但是石泽宇在临走之前还是秉持着科学的精神跑去问秦老师这个东西可不可以做课题（你自己觉得呢）还把自己的皇室战争和荒野乱斗账号托付给了王新喵。这不问还好，秦老师一听到这种违反科学的事情便进行了质疑，他认为他说的话，有破绽！因此他决定自己做实验看看真假（最求真的一集）但在亲眼看到小秦海钻出来后，他被震碎了三观晕了过去，倒在了小秦海的身上（羡慕秦海）。</p><p>再说石泽宇这边，他为了有更多的小石泽宇和他左爱，选择了制作一个用他的dna24小时全天生产小石泽宇的机器（有没有考虑过转发原神动态）。而这个机器是依靠神威的英语默写作为基础频率的，也就是神威布置一次默写就会生产若干个小石泽宇（什么奇怪的设定啊喂），但是不久，由于HyuN又一次地在英语默写中创造词汇（典），神威在一天中为他布置了一百次（）默写，而这时石泽宇正好导晕过去了一整天（这个营养还是不太行啊）因此机器开始源源不断地工作，这样的牛马工作频率让机器出现了问题，它所生产的小石泽宇开始具有传染性，会将其他人也转变成和他一样的米饭人（然后成为石泽宇的玩物）</p><p>这样的米饭人危机开始迅速扩散，最终只剩下qb中学还幸存着，在这里五个人（包括苏醒了的秦海和小秦海）与一条猫（最好不是咱喵）在这个被称为“学园孤岛”的地方开始了末日生存。但是寡不敌众，除了秦海以外的所有人都不幸感染，秦海殊死一搏，按照一份说明书（为什么会有这种东西啊）的指示跑到了地下室拿到了唯一的解药，却在最后被米饭化了的石泽宇抓伤，他在最后把唯一的解药注射到了小秦海的体内（小秦海：感觉身体好轻，已经没有什么好怕的了）</p><p>在弥留之际，秦海的身体逐渐米饭化<br>小秦海：为什么 为什么要给我<br>秦海：因为我想拜托你能做一件我做不到 但你能做到的事 你能回到过去对吧 你说过 为了不让这种结局发生 能够改变历史对吧（哭腔） 你能去救救还没被石泽宇欺骗的那个笨蛋的我吗<br>小秦海：我答应你 一定会救你的 无论重复多少次 我一定会保护好你<br>秦海：太好了……呃～呃啊啊（身体的米饭化越来越严重）<br>秦海：再多拜托你一件事可以吗 我不想变成米饭人 就算有悲伤的事和讨厌的事 但我想守护的东西 这个世界上还有很多 ……<br>小秦海：呜……呜呜呜（哭腔）噗叽啪<br>秦海 被 小秦海 击穿了！<br>于是小秦海踏上了无尽的轮回的拯救秦海的道路。四月新番《魔法米饭小秦》堂堂连载！<br>关注《魔法米饭小秦》谢谢喵（tcg）</p>]]></content>
       
     </entry>
     
@@ -228,28 +239,6 @@
     
     <entry>
       <title>整活</title>
-      <link href="/fun/2/index.html"/>
-      <url>/fun/2/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/">校内部分</a></h1><h2 id="gec美妙的演奏"><a href="#gec美妙的演奏" class="headerlink" title="gec美妙的演奏"></a>gec美妙的演奏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1dk4y1V7Nr&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="萍语"><a href="#萍语" class="headerlink" title="萍语"></a>萍语</h2><iframe src="/pdf/web/viewer.html?file=/pdf/萍语.pdf" style='width:100%;height:800px'></iframe>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>史诗</title>
-      <link href="/epic/1/index.html"/>
-      <url>/epic/1/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="石泽玉传说"><a href="#石泽玉传说" class="headerlink" title="石泽玉传说"></a>石泽玉传说</h1><p>（人物均为虚拟，与现实角色无关）<br>一天，石泽宇如往常一样前往丈夫食堂用膳（他是不是抖m啊怎么不去文莱）而由于秦老师的辛勤教学，石泽宇不出所料地发现食堂有非常多的人。因此石泽宇非常生气，他的第二人格（）在不知不觉中觉醒了！已经黑化的他在极度愤怒的情况下找了一个人最少的队伍排了下来。由于在前面已经被浦江的学生薅过一次，等排到他的时候，窗口里贩卖的咱喵淀粉肠已经所剩无几（qb是咱喵cafe实锤）在石泽宇前面的一位集美直接帮自己的好闺蜜把剩下的十根淀粉肠全部炫完了，因此到石泽宇的时候刚好什么都没有了。石泽宇一怒之下跑到旁边免费加饭的地方狠狠地加了两勺饭，跑向了食堂三楼。</p><p>对着满满两勺白饭，石泽宇犯了难，他觉得这白饭太没味了，不够辣（他最好是）因此灵机一动的他激（基）情满满地打在了白饭上，然后尝了一下（为什么不省去中间步骤呢）发现真是绝绝子好吃到翘jiojio（）因此他把第一次全部交给了米饭（mhy你罪大恶极）然后愉快地继续用餐。</p><p>吃着吃着，石泽宇发现米饭在不断的蠕动，不一会儿，一个浑身沾满米饭的裸体女性从碗里爬了出来（怎么装得下的啊喂）石泽宇一下就意识到了是自己刚才轻率的举动导致自己和米饭结合，生下了小石泽宇（不要就这么理所当然的接受了啊）他非常震惊，于是就和小石泽宇过上了没羞没躁的生活，据一位胸怀大志的王新喵记载，他们后来在美国西部开有一家农场喵，每天最喜欢的事是让五匹母马怀孕喵啊～。</p><p>但是石泽宇在临走之前还是秉持着科学的精神跑去问秦老师这个东西可不可以做课题（你自己觉得呢）还把自己的皇室战争和荒野乱斗账号托付给了王新喵。这不问还好，秦老师一听到这种违反科学的事情便进行了质疑，他认为他说的话，有破绽！因此他决定自己做实验看看真假（最求真的一集）但在亲眼看到小秦海钻出来后，他被震碎了三观晕了过去，倒在了小秦海的身上（羡慕秦海）。</p><p>再说石泽宇这边，他为了有更多的小石泽宇和他左爱，选择了制作一个用他的dna24小时全天生产小石泽宇的机器（有没有考虑过转发原神动态）。而这个机器是依靠神威的英语默写作为基础频率的，也就是神威布置一次默写就会生产若干个小石泽宇（什么奇怪的设定啊喂），但是不久，由于HyuN又一次地在英语默写中创造词汇（典），神威在一天中为他布置了一百次（）默写，而这时石泽宇正好导晕过去了一整天（这个营养还是不太行啊）因此机器开始源源不断地工作，这样的牛马工作频率让机器出现了问题，它所生产的小石泽宇开始具有传染性，会将其他人也转变成和他一样的米饭人（然后成为石泽宇的玩物）</p><p>这样的米饭人危机开始迅速扩散，最终只剩下qb中学还幸存着，在这里五个人（包括苏醒了的秦海和小秦海）与一条猫（最好不是咱喵）在这个被称为“学园孤岛”的地方开始了末日生存。但是寡不敌众，除了秦海以外的所有人都不幸感染，秦海殊死一搏，按照一份说明书（为什么会有这种东西啊）的指示跑到了地下室拿到了唯一的解药，却在最后被米饭化了的石泽宇抓伤，他在最后把唯一的解药注射到了小秦海的体内（小秦海：感觉身体好轻，已经没有什么好怕的了）</p><p>在弥留之际，秦海的身体逐渐米饭化<br>小秦海：为什么 为什么要给我<br>秦海：因为我想拜托你能做一件我做不到 但你能做到的事 你能回到过去对吧 你说过 为了不让这种结局发生 能够改变历史对吧（哭腔） 你能去救救还没被石泽宇欺骗的那个笨蛋的我吗<br>小秦海：我答应你 一定会救你的 无论重复多少次 我一定会保护好你<br>秦海：太好了……呃～呃啊啊（身体的米饭化越来越严重）<br>秦海：再多拜托你一件事可以吗 我不想变成米饭人 就算有悲伤的事和讨厌的事 但我想守护的东西 这个世界上还有很多 ……<br>小秦海：呜……呜呜呜（哭腔）噗叽啪<br>秦海 被 小秦海 击穿了！<br>于是小秦海踏上了无尽的轮回的拯救秦海的道路。四月新番《魔法米饭小秦》堂堂连载！<br>关注《魔法米饭小秦》谢谢喵（tcg）</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>整活</title>
       <link href="/fun/3/index.html"/>
       <url>/fun/3/index.html</url>
       
@@ -260,11 +249,22 @@
     
     
     <entry>
-      <title>a_hisa</title>
-      <link href="/music/1/index.html"/>
-      <url>/music/1/index.html</url>
+      <title>整活</title>
+      <link href="/fun/2/index.html"/>
+      <url>/fun/2/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/">a_hisa</a></h2><p>这位应该是我最早接触到的曲师了。一开始打喵的时候就一直被阿尔梅里亚的牢笼的曲风所吸引，然后发现不少神曲都是他写的，于是狠狠地迷上了</p><h3 id="アルメリアの鳥籠"><a href="#アルメリアの鳥籠" class="headerlink" title="アルメリアの鳥籠"></a>アルメリアの鳥籠</h3><p>非常好听小提琴，爱来自瓷器（就是一开始听的时候以为是东方曲</p><h3 id="Dysthymia"><a href="#Dysthymia" class="headerlink" title="Dysthymia"></a>Dysthymia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1987415288&auto=0&height=66"></iframe><br>动听的artcore</p><h3 id="凛"><a href="#凛" class="headerlink" title="凛"></a>凛</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1809127634&auto=0&height=66"></iframe><br>一直以为和Rin是同一首曲子……</p><h3 id="Rin"><a href="#Rin" class="headerlink" title="Rin"></a>Rin</h3><p>同上</p><h3 id="Anhedonia"><a href="#Anhedonia" class="headerlink" title="Anhedonia"></a>Anhedonia</h3><p>空灵</p><h3 id="clockroom-amp-spirital-world"><a href="#clockroom-amp-spirital-world" class="headerlink" title="clockroom &amp; spirital world"></a>clockroom &amp; spirital world</h3><p>神作中的神作</p><h3 id="月明かりの宴"><a href="#月明かりの宴" class="headerlink" title="月明かりの宴"></a>月明かりの宴</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2057575871&auto=0&height=66"></iframe><br>同上</p><h3 id="prejudice"><a href="#prejudice" class="headerlink" title="prejudice"></a>prejudice</h3><p>钢琴与鼓组的结合，神作</p><h3 id="amnesia"><a href="#amnesia" class="headerlink" title="amnesia"></a>amnesia</h3><p>小时候听这首被感动哭了，神作中的神作</p><h3 id="leave-it-alone"><a href="#leave-it-alone" class="headerlink" title="leave it alone"></a>leave it alone</h3><p>欢快</p><h3 id="stargazer"><a href="#stargazer" class="headerlink" title="stargazer"></a>stargazer</h3><p>同样十分欢快</p><h3 id="天理鹤情"><a href="#天理鹤情" class="headerlink" title="天理鹤情"></a>天理鹤情</h3><p>劲爆的和风曲，小时候用这首曲子练三纵练哭了（不是</p><h3 id="Cheshire’s-dance"><a href="#Cheshire’s-dance" class="headerlink" title="Cheshire’s dance"></a>Cheshire’s dance</h3><p>感觉不太像hisa写的曲子？非常欢快的一首曲子</p><h3 id="sand-maze"><a href="#sand-maze" class="headerlink" title="sand maze"></a>sand maze</h3><p>性感法老，在线打碟</p><h3 id="gullinkambi"><a href="#gullinkambi" class="headerlink" title="gullinkambi"></a>gullinkambi</h3><p>凯尔特风的新曲子</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="校内部分"><a href="#校内部分" class="headerlink" title="校内部分"></a><a href="/fun/">校内部分</a></h1><h2 id="gec美妙的演奏"><a href="#gec美妙的演奏" class="headerlink" title="gec美妙的演奏"></a>gec美妙的演奏</h2><iframe src="//player.bilibili.com/player.html?bvid=BV1dk4y1V7Nr&page=1&high_quality=1&danmaku=0" allowfullscreen="allowfullscreen" width="100%" height="500" scrolling="no" autoplay=1 frameborder="20" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts"></iframe><h2 id="萍语"><a href="#萍语" class="headerlink" title="萍语"></a>萍语</h2><iframe src="/pdf/web/viewer.html?file=/pdf/萍语.pdf" style='width:100%;height:800px'></iframe>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>ginkiha</title>
+      <link href="/music/10/index.html"/>
+      <url>/music/10/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
       
     </entry>
     
@@ -282,22 +282,22 @@
     
     
     <entry>
-      <title>daisan</title>
-      <link href="/music/11/index.html"/>
-      <url>/music/11/index.html</url>
+      <title>大前司</title>
+      <link href="/music/13/index.html"/>
+      <url>/music/13/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/">daisan</a></h2><p>非常喜欢的一位曲师，似乎2015年后就不再活动了？</p><h3 id=""><a href="#" class="headerlink" title="+-"></a>+-</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2064545699&auto=0&height=66"></iframe><br>bof2013位7，神中神的曲子</p><h3 id="irregulyze"><a href="#irregulyze" class="headerlink" title="irregulyze"></a>irregulyze</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2069311833&auto=0&height=66"></iframe><br>bof2013参赛曲，同样是神中神</p><h3 id="ハイ色乞語リ"><a href="#ハイ色乞語リ" class="headerlink" title="ハイ色乞語リ"></a>ハイ色乞語リ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=41658578&auto=0&height=66"></iframe><br>bofu2015位38，民族风强烈的曲子</p><h3 id="Departure-Road"><a href="#Departure-Road" class="headerlink" title="Departure Road"></a>Departure Road</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2081565851&auto=0&height=66"></iframe><br>同样民族风的曲子</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>ginkiha</title>
-      <link href="/music/10/index.html"/>
-      <url>/music/10/index.html</url>
+      <title>a_hisa</title>
+      <link href="/music/1/index.html"/>
+      <url>/music/1/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ginkiha"><a href="#ginkiha" class="headerlink" title="ginkiha"></a><a href="/music/">ginkiha</a></h2><p>和风的神</p><h3 id="XING"><a href="#XING" class="headerlink" title="XING"></a>XING</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2024872049&auto=0&height=66"></iframe><br>欢快的和风</p><h3 id="Oriens"><a href="#Oriens" class="headerlink" title="Oriens"></a>Oriens</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=29444042&auto=0&height=66"></iframe><br>欢快而华丽的和风</p><h3 id="Aite"><a href="#Aite" class="headerlink" title="Aite"></a>Aite</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1443143736&auto=0&height=66"></iframe><br>节奏多变，错综交杂</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="a-hisa"><a href="#a-hisa" class="headerlink" title="a_hisa"></a><a href="/music/">a_hisa</a></h2><p>这位应该是我最早接触到的曲师了。一开始打喵的时候就一直被阿尔梅里亚的牢笼的曲风所吸引，然后发现不少神曲都是他写的，于是狠狠地迷上了</p><h3 id="アルメリアの鳥籠"><a href="#アルメリアの鳥籠" class="headerlink" title="アルメリアの鳥籠"></a>アルメリアの鳥籠</h3><p>非常好听小提琴，爱来自瓷器（就是一开始听的时候以为是东方曲</p><h3 id="Dysthymia"><a href="#Dysthymia" class="headerlink" title="Dysthymia"></a>Dysthymia</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1987415288&auto=0&height=66"></iframe><br>动听的artcore</p><h3 id="凛"><a href="#凛" class="headerlink" title="凛"></a>凛</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1809127634&auto=0&height=66"></iframe><br>一直以为和Rin是同一首曲子……</p><h3 id="Rin"><a href="#Rin" class="headerlink" title="Rin"></a>Rin</h3><p>同上</p><h3 id="Anhedonia"><a href="#Anhedonia" class="headerlink" title="Anhedonia"></a>Anhedonia</h3><p>空灵</p><h3 id="clockroom-amp-spirital-world"><a href="#clockroom-amp-spirital-world" class="headerlink" title="clockroom &amp; spirital world"></a>clockroom &amp; spirital world</h3><p>神作中的神作</p><h3 id="月明かりの宴"><a href="#月明かりの宴" class="headerlink" title="月明かりの宴"></a>月明かりの宴</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2057575871&auto=0&height=66"></iframe><br>同上</p><h3 id="prejudice"><a href="#prejudice" class="headerlink" title="prejudice"></a>prejudice</h3><p>钢琴与鼓组的结合，神作</p><h3 id="amnesia"><a href="#amnesia" class="headerlink" title="amnesia"></a>amnesia</h3><p>小时候听这首被感动哭了，神作中的神作</p><h3 id="leave-it-alone"><a href="#leave-it-alone" class="headerlink" title="leave it alone"></a>leave it alone</h3><p>欢快</p><h3 id="stargazer"><a href="#stargazer" class="headerlink" title="stargazer"></a>stargazer</h3><p>同样十分欢快</p><h3 id="天理鹤情"><a href="#天理鹤情" class="headerlink" title="天理鹤情"></a>天理鹤情</h3><p>劲爆的和风曲，小时候用这首曲子练三纵练哭了（不是</p><h3 id="Cheshire’s-dance"><a href="#Cheshire’s-dance" class="headerlink" title="Cheshire’s dance"></a>Cheshire’s dance</h3><p>感觉不太像hisa写的曲子？非常欢快的一首曲子</p><h3 id="sand-maze"><a href="#sand-maze" class="headerlink" title="sand maze"></a>sand maze</h3><p>性感法老，在线打碟</p><h3 id="gullinkambi"><a href="#gullinkambi" class="headerlink" title="gullinkambi"></a>gullinkambi</h3><p>凯尔特风的新曲子</p>]]></content>
       
     </entry>
     
@@ -326,22 +326,22 @@
     
     
     <entry>
-      <title>Esti</title>
-      <link href="/music/16/index.html"/>
-      <url>/music/16/index.html</url>
+      <title>Xeon</title>
+      <link href="/music/17/index.html"/>
+      <url>/music/17/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Halv</title>
-      <link href="/music/2/index.html"/>
-      <url>/music/2/index.html</url>
+      <title>daisan</title>
+      <link href="/music/11/index.html"/>
+      <url>/music/11/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/">Halv</a></h2><p>神中神，一流artcore</p><h3 id="月夜见"><a href="#月夜见" class="headerlink" title="月夜见"></a>月夜见</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1907845923&auto=0&height=66"></iframe><br>因为这个认识halv的，这首曲我可以吹一百年</p><h3 id="天照らす律動"><a href="#天照らす律動" class="headerlink" title="天照らす律動"></a>天照らす律動</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1968388822&auto=0&height=66"></iframe><br>挺好的和风曲，可惜落选了</p><h3 id="Khronostasis-Katharsis"><a href="#Khronostasis-Katharsis" class="headerlink" title="Khronostasis Katharsis"></a>Khronostasis Katharsis</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1456728399&auto=0&height=66"></iframe><br>神</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="daisan"><a href="#daisan" class="headerlink" title="daisan"></a><a href="/music/">daisan</a></h2><p>非常喜欢的一位曲师，似乎2015年后就不再活动了？</p><h3 id=""><a href="#" class="headerlink" title="+-"></a>+-</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2064545699&auto=0&height=66"></iframe><br>bof2013位7，神中神的曲子</p><h3 id="irregulyze"><a href="#irregulyze" class="headerlink" title="irregulyze"></a>irregulyze</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2069311833&auto=0&height=66"></iframe><br>bof2013参赛曲，同样是神中神</p><h3 id="ハイ色乞語リ"><a href="#ハイ色乞語リ" class="headerlink" title="ハイ色乞語リ"></a>ハイ色乞語リ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=41658578&auto=0&height=66"></iframe><br>bofu2015位38，民族风强烈的曲子</p><h3 id="Departure-Road"><a href="#Departure-Road" class="headerlink" title="Departure Road"></a>Departure Road</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2081565851&auto=0&height=66"></iframe><br>同样民族风的曲子</p>]]></content>
       
     </entry>
     
@@ -359,22 +359,33 @@
     
     
     <entry>
-      <title>大前司</title>
-      <link href="/music/13/index.html"/>
-      <url>/music/13/index.html</url>
+      <title>street</title>
+      <link href="/music/3/index.html"/>
+      <url>/music/3/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="大前司"><a href="#大前司" class="headerlink" title="大前司"></a><a href="/music/">大前司</a></h2><p>作的每一首曲都是艺术品</p><h3 id="LIFE"><a href="#LIFE" class="headerlink" title="LIFE"></a>LIFE</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2086633699&auto=0&height=66"></iframe><br>bofnt位8，虽然但是感觉弗若SONG</p><h3 id="SONG"><a href="#SONG" class="headerlink" title="SONG"></a>SONG</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2047317119&auto=0&height=66"></iframe><br>bofet参赛曲，神中神，艺术品中的艺术品</p>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="street"><a href="#street" class="headerlink" title="street"></a>street</h2><p>这位更是重量级爷爷，和风大神</p><h3 id="Sakura-Fubuki"><a href="#Sakura-Fubuki" class="headerlink" title="Sakura Fubuki"></a>Sakura Fubuki</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1346411737&auto=0&height=66"></iframe><br>bofu2015亚军的含金量，不必多说，吉他出来的时候我直接跪了</p><h3 id="雲雀"><a href="#雲雀" class="headerlink" title="雲雀"></a>雲雀</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1438597962&auto=0&height=66"></iframe><br>华丽的和风，有种遛鸟大爷的感觉？因这个曲子认识的street</p><h3 id="Φ"><a href="#Φ" class="headerlink" title="Φ"></a>Φ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1419316016&auto=0&height=66"></iframe><br>非常好听磁通量，使我的耳朵旋转</p><h3 id="nέο-κόsmo"><a href="#nέο-κόsmo" class="headerlink" title="nέο κόsmo"></a>nέο κόsmo</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1996903043&auto=0&height=66"></iframe><br>听力了</p>]]></content>
       
     </entry>
     
     
     
     <entry>
-      <title>Xeon</title>
-      <link href="/music/17/index.html"/>
-      <url>/music/17/index.html</url>
+      <title>Halv</title>
+      <link href="/music/2/index.html"/>
+      <url>/music/2/index.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Xeon"><a href="#Xeon" class="headerlink" title="Xeon"></a><a href="/music/">Xeon</a></h2>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Halv"><a href="#Halv" class="headerlink" title="Halv"></a><a href="/music/">Halv</a></h2><p>神中神，一流artcore</p><h3 id="月夜见"><a href="#月夜见" class="headerlink" title="月夜见"></a>月夜见</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1907845923&auto=0&height=66"></iframe><br>因为这个认识halv的，这首曲我可以吹一百年</p><h3 id="天照らす律動"><a href="#天照らす律動" class="headerlink" title="天照らす律動"></a>天照らす律動</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1968388822&auto=0&height=66"></iframe><br>挺好的和风曲，可惜落选了</p><h3 id="Khronostasis-Katharsis"><a href="#Khronostasis-Katharsis" class="headerlink" title="Khronostasis Katharsis"></a>Khronostasis Katharsis</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1456728399&auto=0&height=66"></iframe><br>神</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Esti</title>
+      <link href="/music/16/index.html"/>
+      <url>/music/16/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Esti"><a href="#Esti" class="headerlink" title="Esti"></a><a href="/music/">Esti</a></h2>]]></content>
       
     </entry>
     
@@ -392,44 +403,11 @@
     
     
     <entry>
-      <title>street</title>
-      <link href="/music/3/index.html"/>
-      <url>/music/3/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="street"><a href="#street" class="headerlink" title="street"></a>street</h2><p>这位更是重量级爷爷，和风大神</p><h3 id="Sakura-Fubuki"><a href="#Sakura-Fubuki" class="headerlink" title="Sakura Fubuki"></a>Sakura Fubuki</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1346411737&auto=0&height=66"></iframe><br>bofu2015亚军的含金量，不必多说，吉他出来的时候我直接跪了</p><h3 id="雲雀"><a href="#雲雀" class="headerlink" title="雲雀"></a>雲雀</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1438597962&auto=0&height=66"></iframe><br>华丽的和风，有种遛鸟大爷的感觉？因这个曲子认识的street</p><h3 id="Φ"><a href="#Φ" class="headerlink" title="Φ"></a>Φ</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1419316016&auto=0&height=66"></iframe><br>非常好听磁通量，使我的耳朵旋转</p><h3 id="nέο-κόsmo"><a href="#nέο-κόsmo" class="headerlink" title="nέο κόsmo"></a>nέο κόsmo</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1996903043&auto=0&height=66"></iframe><br>听力了</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>qfeileadh</title>
-      <link href="/music/5/index.html"/>
-      <url>/music/5/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>orangentle</title>
       <link href="/music/7/index.html"/>
       <url>/music/7/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="orangentle"><a href="#orangentle" class="headerlink" title="orangentle"></a><a href="/music/">orangentle</a></h2><p>别名Yu_Asahina，听的不多但都非常好听</p><h3 id="ЯUBY-LINTe"><a href="#ЯUBY-LINTe" class="headerlink" title="ЯUBY:LINTe"></a>ЯUBY:LINTe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1388172200&auto=0&height=66"></iframe><br>非常华丽的一首曲子</p><h3 id="HAELEQUIN"><a href="#HAELEQUIN" class="headerlink" title="HAELEQUIN"></a>HAELEQUIN</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2077782731&auto=0&height=66"></iframe><br>bof2012位2</p>]]></content>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ARForest</title>
-      <link href="/music/9/index.html"/>
-      <url>/music/9/index.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/">ARForest</a></h2><p>韩国艺术家，Artcore令人温暖、感动、心醉</p><h3 id="The-Last-Page"><a href="#The-Last-Page" class="headerlink" title="The Last Page"></a>The Last Page</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825200&auto=0&height=66"></iframe><br>bofxv位3，小时候听这首被感动哭了</p><h3 id="Inverted-World"><a href="#Inverted-World" class="headerlink" title="Inverted World"></a>Inverted World</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2099631232&auto=0&height=66"></iframe><br>Rotaeno独占，听哭了</p><h3 id="It’s-alright"><a href="#It’s-alright" class="headerlink" title="It’s alright"></a>It’s alright</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402824446&auto=0&height=66"></iframe><br>绮丽</p><h3 id="Travel-Begins"><a href="#Travel-Begins" class="headerlink" title="Travel Begins"></a>Travel Begins</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825201&auto=0&height=66"></iframe><br>绮丽</p>]]></content>
       
     </entry>
     
@@ -447,11 +425,33 @@
     
     
     <entry>
+      <title>ARForest</title>
+      <link href="/music/9/index.html"/>
+      <url>/music/9/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="ARForest"><a href="#ARForest" class="headerlink" title="ARForest"></a><a href="/music/">ARForest</a></h2><p>韩国艺术家，Artcore令人温暖、感动、心醉</p><h3 id="The-Last-Page"><a href="#The-Last-Page" class="headerlink" title="The Last Page"></a>The Last Page</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825200&auto=0&height=66"></iframe><br>bofxv位3，小时候听这首被感动哭了</p><h3 id="Inverted-World"><a href="#Inverted-World" class="headerlink" title="Inverted World"></a>Inverted World</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2099631232&auto=0&height=66"></iframe><br>Rotaeno独占，听哭了</p><h3 id="It’s-alright"><a href="#It’s-alright" class="headerlink" title="It’s alright"></a>It’s alright</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402824446&auto=0&height=66"></iframe><br>绮丽</p><h3 id="Travel-Begins"><a href="#Travel-Begins" class="headerlink" title="Travel Begins"></a>Travel Begins</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1402825201&auto=0&height=66"></iframe><br>绮丽</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>黄泉路テヂーモ</title>
       <link href="/music/8/index.html"/>
       <url>/music/8/index.html</url>
       
         <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="黄泉路テヂーモ"><a href="#黄泉路テヂーモ" class="headerlink" title="黄泉路テヂーモ"></a><a href="/music/">黄泉路テヂーモ</a></h2><p>爵士领域大神</p><h3 id="ロリキート-Flat-Design"><a href="#ロリキート-Flat-Design" class="headerlink" title="ロリキート ~Flat Design~"></a>ロリキート ~Flat Design~</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=41658564&auto=0&height=66"></iframe><br>g2r2014位30，七拍子的曲子</p><h3 id="浮世絵横丁"><a href="#浮世絵横丁" class="headerlink" title="浮世絵横丁"></a>浮世絵横丁</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1356293989&auto=0&height=66"></iframe><br>参与了bofu2017，爵士且和风，质量堪比nighttheatre</p><h3 id="葡萄茶の寫眞機"><a href="#葡萄茶の寫眞機" class="headerlink" title="葡萄茶の寫眞機"></a>葡萄茶の寫眞機</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436765&auto=0&height=66"></iframe><br>bofxvii参赛曲，不亚于浮世绘横町</p>]]></content>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>qfeileadh</title>
+      <link href="/music/5/index.html"/>
+      <url>/music/5/index.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="qfeileadh"><a href="#qfeileadh" class="headerlink" title="qfeileadh"></a><a href="/music/">qfeileadh</a></h2><p>q飞一串字母先生，或是起飞了啊大好先生（不是，活跃于bof</p><h3 id="ヒュブリスの頂に聳えるのは"><a href="#ヒュブリスの頂に聳えるのは" class="headerlink" title="ヒュブリスの頂に聳えるのは"></a>ヒュブリスの頂に聳えるのは</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1981627786&auto=0&height=66"></iframe><br>bofET位二，最可惜的一集，感觉比nyrb好不少，只能说不愧是气人大赛</p><h3 id="Head-BONK-ache"><a href="#Head-BONK-ache" class="headerlink" title="Head BONK ache"></a>Head BONK ache</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=2021404145&auto=0&height=66"></iframe><br>BOFXVII参赛曲</p><h3 id="breathe"><a href="#breathe" class="headerlink" title="breathe"></a>breathe</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1444723067&auto=0&height=66"></iframe><br>BOFXV位15，のあ最有表现力第一集</p><h3 id="アルスノヴァに喝采を"><a href="#アルスノヴァに喝采を" class="headerlink" title="アルスノヴァに喝采を"></a>アルスノヴァに喝采を</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1939436865&auto=0&height=66"></iframe><br>BOFXVII位七</p><h3 id="Psalms-～魂の還るばしょ～"><a href="#Psalms-～魂の還るばしょ～" class="headerlink" title="Psalms ～魂の還るばしょ～"></a>Psalms ～魂の還るばしょ～</h3><p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1838962812&auto=0&height=66"></iframe><br>BOFXVI中位数第一，平均分第二</p>]]></content>
       
     </entry>
     
