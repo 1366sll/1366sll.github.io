@@ -362,13 +362,6 @@
 
   
   <url>
-    <loc>https://1366sll.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2025-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://1366sll.top/tags/Europa-Universalis-IV/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -377,6 +370,13 @@
   
   <url>
     <loc>https://1366sll.top/tags/Eu4/</loc>
+    <lastmod>2025-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://1366sll.top/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
     <lastmod>2025-08-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
